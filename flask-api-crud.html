@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD mit Flask – APIs verstehen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">Start</a></li>
+      <li><a href="index.html#about">Über mich</a></li>
+      <li><a href="index.html#experience">Erfahrungen</a></li>
+      <li><a href="index.html#contact">Kontakt</a></li>
+      <li><a href="index.html#impressum">Impressum</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Ihre erste Flask-API erstellen</h1>
+    <h2>Flask CRUD – Bücher-API als Prüfungsübung</h2>
+  </div>
+</section>
+
+<section class="content">
+  <div class="content-container">
+    <h2> Projektstruktur</h2>
+    <pre><code>flask_api_project/
+├── app.py
+├── books.py
+├── models.py
+└── venv/
+</code></pre>
+
+    <h2> In-Memory Datenmodell (models.py)</h2>
+    <pre><code># models.py
+books = [
+  { 'id': 1, 'title': 'Der Hobbit', 'author': 'J.R.R. Tolkien', 'year': 1937 },
+  { 'id': 2, 'title': 'Harry Potter...', 'author': 'J.K. Rowling', 'year': 1997 },
+  { 'id': 3, 'title': 'Die Verwandlung', 'author': 'Franz Kafka', 'year': 1915 }
+]
+next_id = len(books) + 1
+# Funktionen: get_all_books(), get_book(), add_book(), update_book(), delete_book()</code></pre>
+
+    <h2> Flask-Routen – books.py</h2>
+    <pre><code># Blueprint + Endpoints
+@books_bp.route('/api/books', methods=['GET'])      # Alle Bücher
+@books_bp.route('/api/books/&lt;int:id&gt;', methods=['GET'])  # Einzelnes Buch
+@books_bp.route('/api/books', methods=['POST'])      # Neues Buch
+@books_bp.route('/api/books/&lt;int:id&gt;', methods=['PUT'])   # Buch aktualisieren
+@books_bp.route('/api/books/&lt;int:id&gt;', methods=['DELETE'])# Buch löschen</code></pre>
+
+    <h2> Hauptanwendung – app.py</h2>
+    <pre><code>from flask import Flask
+from books import books_bp
+
+app = Flask(__name__)
+app.register_blueprint(books_bp)
+
+@app.route('/api')
+def info():
+  return {'name': 'Book API', 'version': '1.0'}
+
+if __name__ == '__main__':
+  app.run(debug=True)</code></pre>
+
+    <h2> API testen (curl)</h2>
+    <ul>
+      <li><code>curl http://localhost:5000/api/books</code></li>
+      <li><code>curl -X POST -H "Content-Type: application/json" -d '{"title":"1984","author":"G. Orwell"}' http://localhost:5000/api/books</code></li>
+    </ul>
+
+    <h3> Gelernt:</h3>
+    <ul>
+      <li>CRUD mit Flask-Blueprints</li>
+      <li>HTTP-Methoden & JSON-Antworten</li>
+      <li>In-Memory Datenverwaltung</li>
+      <li>Fehlerbehandlung mit Statuscodes</li>
+    </ul>
+  </div>
+  <br>
+  <a href="blog.html" class="cv-button"> Zurück zum Blog</a>
+</div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 Jovanka Schauder</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+</body>
+</html>
+<!--  -->

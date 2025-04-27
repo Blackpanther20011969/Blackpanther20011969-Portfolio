@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mein IT-Blog – Jovanka Schauder</title>
+  <meta name="description" content="Technischer Blog von Jovanka Schauder mit Fokus auf APIs, Projektarbeit, Prüfungsvorbereitung und Softwareentwicklung.">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="header">
+  <nav class="nav">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">Start</a></li>
+      <li><a href="index.html#about">Über mich</a></li>
+      <li><a href="index.html#experience">Erfahrungen</a></li>
+      <li><a href="index.html#contact">Kontakt</a></li>
+      <li><a href="index.html#impressum">Impressum</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Mein IT-Blog</h1>
+    <h2>Gedanken, Projekte &amp; Prüfungsvorbereitung</h2>
+  </div>
+</section>
+
+<!-- Blog-Bereich -->
+<section id="blog" class="content">
+  <div class="content-container">
+    <h2>Mehr Beiträge entdecken</h2>
+
+    <!-- Blog-Karte 1 -->
+    <div class="blog-card">
+      <h3>Was ich über APIs gelernt habe</h3>
+      <p>APIs ermöglichen es Programmen, miteinander zu kommunizieren. In meiner Prüfungsvorbereitung habe ich intensiv mit REST, JSON, GET/POST und Authentifizierung gearbeitet.</p>
+      <a href="api-tutorial.html" class="blog-button">Beitrag lesen</a>
+      <a href="flask-api-uebungen.html" class="blog-button">Übung starten</a>
+      <p><strong>Veröffentlicht am:</strong> 26. April 2025</p>
+    </div>
+
+    <!-- Blog-Karte 2 -->
+    <div class="blog-card">
+      <h3>Ihre erste Flask-API erstellen</h3>
+      <p>Wie Sie eine einfache Bücher-API mit CRUD-Funktionalität in Flask bauen.</p>
+      <a href="flask-api-crud.html" class="blog-button">Beitrag lesen</a>
+    </div>
+
+    <!-- Blog-Karte 3 -->
+    <div class="blog-card">
+      <h3>Fortgeschrittene API-Konzepte</h3>
+      <p>Datenbank, Authentifizierung, Validierung und Dokumentation mit Swagger.</p>
+      <a href="flask-api-advanced.html" class="blog-button">Beitrag lesen</a>
+    </div>
+
+    <!-- Blog-Karte 4 -->
+    < class="blog-card">
+      <h3>Meine Lernreise – von Unsicherheit zu Aha-Momenten</h3>
+      <p>Ein persönlicher Einblick in meine Herausforderungen mit IDEs wie VS Code und GitHub – und was ich daraus gelernt habe.</p>
+    </ul>
+  
+  <br>
+  <a href="blog.html" class="cv-button"> Zurück zum Blog</a>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Jovanka Schauder</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>
+

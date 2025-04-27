@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortgeschrittene API-Konzepte - Jovanka Schauder</title>
+    <meta name="description" content="Erweiterte Themen rund um Flask-APIs wie SQLAlchemy, JWT, Marshmallow und Swagger.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="header">
+    <nav class="nav">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Start</a></li>
+            <li><a href="index.html#about">Über mich</a></li>
+            <li><a href="index.html#experience">Erfahrungen</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+            <li><a href="index.html#impressum">Impressum</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Fortgeschrittene API-Konzepte</h1>
+        <h2>Flask, Datenbanken, Authentifizierung & mehr</h2>
+    </div>
+</section>
+
+<!-- Inhalt -->
+<section class="content">
+    <div class="content-container">
+        <h2>1. Datenbankanbindung mit SQLAlchemy</h2>
+        <p>Flask lässt sich hervorragend mit SQLAlchemy als ORM verbinden. Wir definieren Models, konfigurieren die Datenbank und binden diese in unsere API ein.</p>
+        <pre><code>pip install flask-sqlalchemy</code></pre>
+
+        <h3>models.py</h3>
+        <pre><code>// Dein Book-Modell mit SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+db = SQLAlchemy()
+
+class Book(db.Model):
+    __tablename__ = 'books'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(200), nullable=False)
+    author = db.Column(db.String(100), nullable=False)
+    year = db.Column(db.Integer)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+</code></pre>
+
+        <h2>2. Authentifizierung mit JWT</h2>
+        <p>Wir sichern unsere API durch <strong>JSON Web Tokens</strong>.</p>
+        <pre><code>pip install flask-jwt-extended</code></pre>
+
+        <p>Beispiel-Routen:</p>
+        <ul>
+            <li>/api/register – Benutzer registrieren</li>
+            <li>/api/login – Benutzer einloggen & Token erhalten</li>
+        </ul>
+
+        <h2>3. Validierung mit Marshmallow</h2>
+        <p>Validierung von Nutzerdaten über <strong>flask-marshmallow</strong> sorgt für saubere Eingabeverarbeitung:</p>
+        <pre><code>pip install marshmallow flask-marshmallow</code></pre>
+
+        <h2>4. API-Dokumentation mit Swagger</h2>
+        <p>Mit Flasgger kannst du automatisch interaktive API-Dokumentation erzeugen:</p>
+        <pre><code>pip install flask-swagger-ui flasgger</code></pre>
+
+        <p>Swagger zeigt deine Endpunkte übersichtlich im Browser – inklusive Beispielantworten.</p>
+
+        <h2>Best Practices</h2>
+        <ul>
+            <li><strong>Sicherheit:</strong> Authentifizierung, HTTPS, Rate Limiting</li>
+            <li><strong>Versionierung:</strong> z. B. /api/v1/books</li>
+            <li><strong>Fehlerbehandlung:</strong> Einheitliche Fehlerstruktur, klare Statuscodes</li>
+            <li><strong>Dokumentation:</strong> Nutze Swagger/OpenAPI!</li>
+        </ul>
+    </div>
+    <br>
+    <a href="blog.html" class="cv-button"> Zurück zum Blog</a>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Jovanka Schauder</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

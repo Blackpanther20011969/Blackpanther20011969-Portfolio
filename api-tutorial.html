@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask & API Tutorial – Jovanka Schauder</title>
+    <meta name="description" content="Einsteigerfreundliches Flask-Tutorial zur Erstellung von APIs – ideal zur IHK-Prüfungsvorbereitung für Fachinformatiker.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="header">
+    <nav class="nav">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Start</a></li>
+            <li><a href="index.html#about">Über mich</a></li>
+            <li><a href="index.html#experience">Erfahrungen</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+            <li><a href="index.html#impressum">Impressum</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>API-Entwicklung mit Flask</h1>
+        <h2>Mein Weg zur Prüfungsvorbereitung</h2>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section class="content" id="blog-post">
+    <div class="content-container">
+        <h2> Einstieg in Flask & APIs – Tutorial für Fachinformatiker:innen</h2>
+        <p><strong>Veröffentlicht am:</strong> 26. März 2025</p>
+
+        <p>Willkommen zum <strong>Flask API Tutorial</strong> – speziell für angehende Fachinformatiker:innen, die sich auf die IHK-Prüfung vorbereiten. Hier lernst du Schritt für Schritt, wie du eine <strong>RESTful API mit Flask</strong> aufbaust – von den Grundlagen bis zur Datenbankanbindung und Fehlerbehandlung.</p>
+
+        <h3> Was dich erwartet:</h3>
+        <ul>
+            <li>Flask-Grundlagen & Installation</li>
+            <li>REST-Prinzipien & HTTP-Methoden</li>
+            <li>CRUD mit einer Bücherliste (Create, Read, Update, Delete)</li>
+            <li>Datenmodellierung & Routing</li>
+            <li>Fehlerbehandlung & JSON-Responses</li>
+        </ul>
+
+        <h3> Was ist eine API?</h3>
+        <p>APIs ermöglichen die Kommunikation zwischen Softwaresystemen. Eine <strong>REST-API</strong> verwendet HTTP-Methoden wie GET, POST oder DELETE, um Ressourcen wie <code>/books</code> zu verwalten.</p>
+
+        <h3> Projektstruktur</h3>
+        <pre><code>flask_api_project/
+├── app.py         # Hauptanwendung
+├── books.py       # API-Routen
+├── models.py      # Datenmodell
+└── venv/          # Virtuelle Umgebung
+        </code></pre>
+
+        <h3> Erste Flask-Anwendung:</h3>
+        <pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+
+        <h3> API-Endpoints</h3>
+        <ul>
+            <li><code>GET /api/books</code> – alle Bücher abrufen</li>
+            <li><code>POST /api/books</code> – neues Buch hinzufügen</li>
+            <li><code>PUT /api/books/&lt;id&gt;</code> – Buch aktualisieren</li>
+            <li><code>DELETE /api/books/&lt;id&gt;</code> – Buch löschen</li>
+        </ul>
+
+        <h3> JSON-Beispiel:</h3>
+        <pre><code>{
+  "id": 1,
+  "title": "1984",
+  "author": "George Orwell",
+  "year": 1949
+}</code></pre>
+
+        <h3> Gelernt:</h3>
+        <ul>
+            <li>Was eine REST-API ist und warum sie wichtig ist</li>
+            <li>Wie du in Python mit Flask eine eigene API entwickelst</li>
+            <li>Wie du JSON-Daten verarbeitest und Routen mit Blueprints organisierst</li>
+        </ul>
+
+        <p>Im nächsten Beitrag zeige ich dir, wie du <strong>Flask mit einer echten Datenbank</strong> verbindest und einfache Authentifizierung einbaust.</p>
+
+        <br>
+        <a href="blog.html" class="cv-button"> Zurück zum Blog</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Jovanka Schauder</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+</body>
+</html>
+<!-- End of file api-tutorial.html -->
+<!-- This file is part of the IT-Blog by Jovanka Schauder. It contains a tutorial on creating APIs with Flask, specifically designed for IHK exam preparation for IT specialists. The tutorial covers the basics of Flask, REST principles, CRUD operations, data modeling, routing, and error handling. The project structure and example code are provided to help readers understand how to build a simple API. The blog post concludes with a teaser for the next article on integrating Flask with a real database and implementing authentication. -->

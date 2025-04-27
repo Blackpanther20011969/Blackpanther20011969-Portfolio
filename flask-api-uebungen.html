@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask API Übungen – Jovanka Schauder</title>
+    <meta name="description" content="Praxisnahe Übungen zur Vorbereitung auf die IHK-Prüfung. Schritt für Schritt mit Flask.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="header">
+    <nav class="nav">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Start</a></li>
+            <li><a href="index.html#about">Über mich</a></li>
+            <li><a href="index.html#experience">Erfahrungen</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+            <li><a href="index.html#impressum">Impressum</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Praktische Übungen mit Flask</h1>
+        <h2>Zur Vorbereitung auf die IHK-Prüfung</h2>
+    </div>
+</section>
+
+<!-- Inhalt -->
+<section class="content">
+    <div class="content-container">
+        <h2>Übung 1: Todo-API mit Flask</h2>
+        <p>Erstellen Sie eine REST-API für eine Todo-Liste mit folgenden Endpunkten:</p>
+        <ul>
+            <li><code>GET /api/todos</code> – Alle Todos abrufen</li>
+            <li><code>GET /api/todos/{id}</code> – Ein bestimmtes Todo abrufen</li>
+            <li><code>POST /api/todos</code> – Neues Todo erstellen</li>
+            <li><code>PUT /api/todos/{id}</code> – Todo aktualisieren</li>
+            <li><code>DELETE /api/todos/{id}</code> – Todo löschen</li>
+        </ul>
+
+        <h3>Vorgaben</h3>
+        <p>Jedes Todo sollte folgende Felder haben:</p>
+        <ul>
+            <li><code>id</code> – automatisch vergeben</li>
+            <li><code>title</code> – Pflichtfeld</li>
+            <li><code>description</code> – optional</li>
+            <li><code>done</code> – <code>true</code> oder <code>false</code></li>
+        </ul>
+
+        <h3>Beispielcode</h3>
+        <pre><code>from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+todos = [
+    {"id": 1, "title": "Flask API lernen", "description": "REST API mit Flask erstellen", "done": False},
+    {"id": 2, "title": "Einkaufen gehen", "description": "Milch, Brot und Eier kaufen", "done": True}
+]
+
+next_id = len(todos) + 1
+
+@app.route('/api/todos', methods=['GET'])
+def get_todos():
+    return jsonify(todos)
+
+@app.route('/api/todos/&lt;int:todo_id&gt;', methods=['GET'])
+def get_todo(todo_id):
+    todo = next((item for item in todos if item['id'] == todo_id), None)
+    return jsonify(todo) if todo else (jsonify({'error': 'Todo nicht gefunden'}), 404)
+
+@app.route('/api/todos', methods=['POST'])
+def create_todo():
+    global next_id
+    if not request.json or 'title' not in request.json:
+        return jsonify({'error': 'Titel ist erforderlich'}), 400
+    todo = {
+        'id': next_id,
+        'title': request.json['title'],
+        'description': request.json.get('description', ''),
+        'done': request.json.get('done', False)
+    }
+    todos.append(todo)
+    next_id += 1
+    return jsonify(todo), 201
+
+@app.route('/api/todos/&lt;int:todo_id&gt;', methods=['PUT'])
+def update_todo(todo_id):
+    todo = next((item for item in todos if item['id'] == todo_id), None)
+    if not todo:
+        return jsonify({'error': 'Todo nicht gefunden'}), 404
+    if not request.json:
+        return jsonify({'error': 'Daten müssen im JSON-Format sein'}), 400
+    todo['title'] = request.json.get('title', todo['title'])
+    todo['description'] = request.json.get('description', todo['description'])
+    todo['done'] = request.json.get('done', todo['done'])
+    return jsonify(todo)
+
+@app.route('/api/todos/&lt;int:todo_id&gt;', methods=['DELETE'])
+def delete_todo(todo_id):
+    todo = next((item for item in todos if item['id'] == todo_id), None)
+    if not todo:
+        return jsonify({'error': 'Todo nicht gefunden'}), 404
+    todos.remove(todo)
+    return jsonify({'result': True})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+
+        <h3>Erklärung</h3>
+        <ul>
+            <li>Verwendung einer einfachen In-Memory-Datenbank (Liste)</li>
+            <li>Jede Route entspricht einer CRUD-Operation</li>
+            <li>Eingabedaten werden validiert</li>
+            <li>Statuscodes wie 201 (Created), 400 (Bad Request), 404 (Not Found)</li>
+        </ul>
+
+        <p><strong>Tipp:</strong> Probiere die API mit <code>curl</code> oder einem Tool wie <a href="https://www.postman.com/" target="_blank">Postman</a> aus!</p>
+    </div>
+    <br>
+    <a href="blog.html" class="cv-button"> Zurück zum Blog</a>
+</div>
+</section>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Jovanka Schauder</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
+<!-- Compare this snippet from flask-api-advanced.html: -->
+<!-- <section id="flask-api-advanced" class="content">  
+ -->

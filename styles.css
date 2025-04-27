@@ -1,0 +1,838 @@
+/* Allgemeine Einstellungen */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Die Seite erstreckt sich über die gesamte Höhe */
+}
+
+/* Hero-Bereich (großflächiger) */
+.hero {
+    height:60vh; /* Macht den Hero-Bereich etwas kleiner */
+}
+
+/* Hauptinhalt (nimmt verbleibende Höhe ein) */
+#content {
+    flex: 1;
+}
+
+/* Navigation - Fix für zentrierte Schrift */
+.header {
+    background: #1a252f;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 50px; /* Feste Höhe setzen */
+    display: flex;
+    align-items: center; /* Vertikal mittig */
+    justify-content: center; /* Zentriert */
+    padding: 0;
+}
+.header {
+    height: auto;
+    min-height: 60px;
+    width: 100%;
+}
+.header h1 {
+    font-size: 2rem;
+    color: #ff9800; /* Orange für den Header */
+    margin: 0;
+}
+.header h2 {
+    font-size: 1.5rem;
+    color: #fff; /* Weiß für den Header */
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    font-family: Arial, sans-serif;
+    background: #2c3e50; /* Dunkelblau für den Hintergrund */
+    color: white; /* Weißer Text für bessere Lesbarkeit */
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px; /* Mehr Padding für bessere Klickfläche */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+
+/* Hero-Bereich */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('img/Profilbild.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Verhindert, dass Text zu früh sichtbar wird */
+}
+.header {
+    height: auto;
+    min-height: 60px;
+    width: 100%;
+}
+.header h1 {
+    font-size: 2rem;
+    color: #ff9800; /* Orange für den Header */
+    margin: 0;
+}
+.header h2 {
+    font-size: 1.5rem;
+    color: #fff; /* Weiß für den Header */
+    margin: 0;
+}
+/* Dunkler Overlay für besseren Kontrast */
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero-Text weiter nach unten verschieben */
+.hero-content {
+    position: absolute;
+    bottom: 10%;  /* Statt oben mittig, jetzt näher am unteren Rand */
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: white;
+    opacity: 0;
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+/* Keyframe-Animation: Text fließt nach unten */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #ff9800;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1, .hero-content h2 {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Lebenslauf & Zertifikate */
+.cv-section {
+    background: #34495E; /* Dunkles Blau-Grau für professionellen Look */
+    text-align: center;
+    padding: 50px 10%;
+    border-radius: 10px;
+    color: white;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cv-section h2 {
+    color: #ff9800;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cv-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Download-Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cv-button {
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cv-button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+/* Über mich */
+.about {
+    background: linear-gradient(180deg, #22313F, #34495E); /* Dunkelblau mit Verlauf */
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+    border-radius: 10px;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1); /* Leichte Transparenz */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    color: #ff9800;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* IT-Projekte & Erfahrungen */
+.experience {
+    background: linear-gradient(180deg, #22313F, #34495E);
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.experience-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    width: 300px;
+}
+
+.experience-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(255, 152, 0, 0.5);
+}
+
+/* Icon-Styling */
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Link-Styling */
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.project-link:hover {
+    background: #e68900;
+}
+/* Systemanalyse & Projektarbeit */
+
+.systemanalyse {
+    background: linear-gradient(180deg, #34495E, #22313F);
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+}
+
+.systemanalyse h2 {
+    color: #ff9800;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.systemanalyse p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+/* Inhaltssystemanalyse */
+.content {
+    background: linear-gradient(180deg, #34495E, #22313F);
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: #ff9800;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Download-Button */
+.cv-button {
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cv-button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+/* Standard-Einstellungen für die Galerie */
+.image-gallery {
+    position: relative;
+    height: 300px; /* Platz für das Bild */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bilder standardmäßig verstecken */
+.hidden-image {
+    display: none;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Download-Button-Styling */
+.cv-button {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #ff9800;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Hover-Effekt */
+.cv-button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(255, 152, 0, 0.5);
+}
+
+/* Spezielle Klasse, um Bilder beim Hover anzuzeigen */
+.cv-button:hover + .image-gallery .hidden-image {
+    display: block;
+}
+
+/* Kontaktbereich */
+.contact {
+    background: linear-gradient(180deg, #4a90e2, #357ABD); /* Sanfteres Blau */
+    color: white;
+    text-align: center;
+    padding: 50px 10%;
+    border-radius: 10px;
+}
+
+/* Schmaleres Kontaktformular */
+.contact-container {
+    max-width: 500px; /* Begrenzte Breite */
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Eingabefelder */
+.contact input, 
+.contact textarea {
+    width: 100%; /* Breite bleibt flexibel */
+    max-width: 400px; /* Begrenzung der Eingabefelder */
+    padding: 12px;
+    margin: 10px auto; /* Gleichmäßige Abstände */
+    display: block;
+    border-radius: 5px;
+    border: none;
+    background: #ecf0f1;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Button */
+.contact button {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
+.contact button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #1a252f;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+}
+/* Projekt-Dokumente */
+#downloads {
+    background: linear-gradient(180deg, #22313F, #34495E); /* Dunkelblau mit Verlauf */
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Download-Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.cv-button {
+    background-color: #ff9800; /* Orange, passend zu Hover-Effekt */
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #ff9800; /* Rahmen in Orange */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cv-button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(255, 152, 0, 0.5); /* Glow-Effekt */
+}
+
+/* Strukturierte Inhalte */
+.content {
+    background: linear-gradient(180deg, #34495E, #22313F);
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.content h2 {
+    color: #ff9800;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.content h3 {
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    padding-left: 25px;
+    position: relative;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ff9800;
+    font-size: 1.2rem;
+}
+
+/* Mobile-Optimierung */
+@media (max-width: 768px) {
+    .content {
+        padding: 30px 5%;
+    }
+
+    .content-container {
+        padding: 20px;
+    }
+}
+
+/* Visualisierung & Diagramme */
+#bilder {
+    background: linear-gradient(180deg, #22313F, #34495E); /* Gleiche Farbpalette */
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+    border-radius: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Leichter Schatten für bessere Sichtbarkeit */
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+    border: 2px solid #ff9800; /* Gleiche Akzentfarbe wie Buttons */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(255, 152, 0, 0.5); /* Orange Glow */
+    filter: brightness(1.1); /* Heller beim Hover */
+}
+.blog-post {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.blog-post h3 {
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #eee;
+}
+
+
+.blog-post a:hover {
+    color: #e68900;
+    text-decoration: underline;
+}
+.blog-post {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.blog-post h3 {
+    color: #ff9800;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.blog-post h4 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #4a90e2;
+}
+
+.blog-post pre {
+    background: #1a252f;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-top: 10px;
+}
+.blog {
+    background: linear-gradient(180deg, #34495E, #22313F);
+    color: white;
+    padding: 60px 10%;
+    text-align: center;
+  }
+ /* Blogbereich */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff9800;
+    margin-bottom: 30px;
+}
+
+/* Blog-Karten */
+.blog-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 152, 0, 0.3);
+}
+
+.blog-card h3 {
+    color: #4a90e2;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.blog-button {
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.blog-button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .blog-card {
+        padding: 20px;
+    }
+
+    .blog-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .blog-button {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Impressum */
+.impressum {
+    background: linear-gradient(180deg, #34495E, #22313F); /* Gleiche Farbpalette wie der Rest der Seite */
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+    border-radius: 10px;
+}
+
+.impressum-container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1); /* Leichte Transparenz für besseren Kontrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Links im Impressum */
+.impressum a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.impressum a:hover {
+    color: #e68900;
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: #1a252f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jovanka Schauder - Fachinformatikerin für Anwendungsentwicklung</title>
+        <meta name="description" content="Portfolio von Jovanka Schauder, Fachinformatikerin für Anwendungsentwicklung mit Fokus auf IT-Projektmanagement, Systemanalyse und Webentwicklung.">
+        <meta name="keywords" content="Fachinformatikerin, IT-Projektmanagement, Webentwicklung, Python, TYPO3, Softwareentwicklung">
+        <meta name="author" content="Jovanka Schauder">
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Jovanka Schauder - Fachinformatikerin">
+        <meta property="og:description" content="Mein Portfolio als Fachinformatikerin mit Fokus auf IT-Projektmanagement und Webentwicklung.">
+        <meta property="og:image" content="https://deine-github-seite.com/img/Profilbild.jpg">
+        <meta property="og:url" content="https://deine-github-seite.com">
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="canonical" href="https://deine-github-seite.com">
+    </head>
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<header class="header">
+    <nav class="nav">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Start</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#experience">Erfahrungen</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#hero">Start</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#experience">Erfahrungen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#impressum">Impressum</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Hero-Bereich -->
+<section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Hallo! Ich bin Jovanka Schauder</h1>
+        <h2>Anwendungsentwicklerin aus Leidenschaft</h2>
+    </div>
+</section>
+
+<!-- Lebenslauf & Zertifikate -->
+<section id="cv" class="cv-section">
+    <div class="cv-container">
+        <h2>Mein Lebenslauf & Zertifikate</h2>
+        <p>Hier können Sie  meine aktuellen Lebenslauf und meine Zertifikate herunterladen.</p>
+        <div class="button-container">
+            <a href="dokument/CV_Jovanka Schauder.pdf" class="cv-button" download> Lebenslauf herunterladen</a>
+            <a href="zertifikate/zertifikate.pdf" class="cv-button" download> Zertifikat herunterladen</a>
+        </div>
+    </div>
+</section>
+
+<!-- Über mich -->
+<section id="about" class="about">
+    <div class="about-container">
+        <h2>Über mich</h2>
+        <p>Nach 16 Jahren Familienzeit und ehrenamtlicher Tätigkeit im Webteam der Friedenskirche Braunschweig 
+        habe ich 2022 bewusst den Schritt in die Softwareentwicklung gewagt.</p>
+
+        <p>Derzeit absolviere ich eine Umschulung zur Fachinformatikerin für Anwendungsentwicklung, 
+        die ich im Mai 2025 abschließen werde. Mein Fokus liegt auf 
+        Python, Projektmanagement und Systemanalyse und ermöglicht mir den beruflichen Wiedereinstieg.</p>
+
+        <p>Neben meiner Ausbildung engagiere ich mich weiterhin ehrenamtlich als 
+        TYPO3-Redakteurin und bringe Erfahrung in der technischen Umsetzung mit.</p>
+        
+        </div>
+</section>
+
+
+<!-- IT-Projekte & Erfahrungen -->
+<section id="experience" class="experience">
+    <h2>Meine IT-Projekte & Erfahrungen</h2>
+    <div class="experience-container">
+        
+        <!-- Python-Projekte (GitHub) -->
+        <div class="experience-item">
+            <h3>Python-Projekte</h3>
+            <p>Meine kleinen Python-Projekte auf GitHub.</p>
+            <a href="https://github.com/Blackpanther20011969" target="_blank">
+                <img src="img/icons8-github-50.png" alt="GitHub-Icon" class="icon">
+            </a>          
+        </div>
+    <!-- Blog (Unterseite) -->
+<div class="experience-item">
+    <h3>Mein IT-Blog</h3>
+    <p>Hier teile ich meine Lernprozesse und technische Einblicke – aktuell dreht sich vieles um APIs.</p>
+    <a href="blog.html" class="project-link">Zum Blog</a>
+</div>
+    
+
+        <!-- Systemanalyse & Projektarbeit (Link zur neuen Unterseite) -->
+        <div class="experience-item">
+            <h3>Systemanalyse & Projektarbeit</h3>
+            <p>Hier finden Sie meine Abschlussarbeit und Analysen.</p>
+            <a href="systemanalyse.html" class="project-link">Mehr erfahren</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Kontaktformular -->
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <h2>Schreiben Sie mir eine Nachricht!</h2>
+        <p>Ich freue mich auf Ihre Anfrage und melde mich so schnell wie möglich zurück.</p>
+        
+        <form action="mailto:Jovanka.Schauder@gmail.com" method="post">
+            <input type="text" name="name" placeholder="Ihr Name" required>
+            <input type="email" name="email" placeholder="Ihre E-Mail" required>
+            <textarea name="message" placeholder="Ihre Nachricht..." required></textarea>
+            <button type="submit">Absenden</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Impressum -->
+    <section id="impressum" class="impressum">
+        <div class="impressum-container">
+            <h2>Impressum</h2>
+            <p><strong>Jovanka Schauder</strong></p>
+            <p>Schiebeweg42, 38116 Braunschweig</p>
+            <p>E-Mail: <a href="mailto:Jovanka.Schauder@gmail.com">Jovanka.Schauder@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Jovanka Schauder</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
