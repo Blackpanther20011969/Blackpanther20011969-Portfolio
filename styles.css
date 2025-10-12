@@ -252,31 +252,38 @@ html, body {
 
 /* IT-Projekte & Erfahrungen */
 .experience {
-    background: linear-gradient(180deg, #22313F, #34495E);
+    background: #000; /* Schwarz wie dein restliches Layout */
     text-align: center;
     padding: 50px 10%;
     color: white;
 }
 
+.experience h2 {
+    color: #00CED1; /* Türkis passend zu deinem Hover-Stil */
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
 .experience-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .experience-item {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
     width: 300px;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+    transition: transform 0.3s ease-in-out;
 }
 
 .experience-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 6px 12px rgba(255, 152, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 /* Icon-Styling */
@@ -835,4 +842,5 @@ h2 {
     text-align: center;
     padding: 20px;
 }
+
 
