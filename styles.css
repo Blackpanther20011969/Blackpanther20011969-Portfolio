@@ -251,39 +251,41 @@ html, body {
 
 
 /* IT-Projekte & Erfahrungen */
-<section id="experience" class="experience">
-  <h2>Meine IT-Projekte & Erfahrungen</h2>
-  <div class="experience-container">
-
-    <!-- Python-Projekte (GitHub) -->
-    <div class="experience-item">
-      <h3>Python-Projekte</h3>
-      <p>Meine kleinen Python-Projekte auf GitHub.</p>
-      <a href="https://githubkpanther20011969
-        <img src="-github-50.png
-      </a>
-    </div>
-
-    <!-- Blog (Unterseite) -->
-    <div class="experience-item">
-      <h3>Mein IT-Blog</h3>
-      <p>Hier teile ich meine Lernprozesse und technische Einblicke – aktuell dreht sich vieles um APIs.</p>
-      blog.htmlZum Blog</a>
-    </div>
-
-  </div> <!-- Ende experience-container -->
-</section>
-/* Icon-Styling */
-.icon {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
-    transition: transform 0.3s ease;
+.experience {
+    background: linear-gradient(180deg, #22313F, #34495E);
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
 }
 
-.icon:hover {
-    transform: scale(1.1);
+.experience h2 {
+    color: #ff9800;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.experience-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
 
 /* Link-Styling */
 .project-link {
@@ -829,5 +831,6 @@ h2 {
     text-align: center;
     padding: 20px;
 }
+
 
 
