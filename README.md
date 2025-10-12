@@ -2,47 +2,46 @@
 
 ## Über mich
 
-Ich bin Fachinformatikerin für Anwendungsentwicklung (IHK, Abschluss Juni 2025) mit einem starken Fokus auf Projektmanagement und Prozessanalyse. Während meiner Ausbildung habe ich praktische Erfahrungen in **SQL-Datenbanken**, **Prozessautomatisierung** und **Analyse** gesammelt. Ergänzend bilde ich mich in den Bereichen Python, REST-APIs, Datenmodellierung, Interesse an KI &
-SPRACHEN Machine Learning weiter.
+Ich bin Fachinformatikerin für Anwendungsentwicklung (IHK, Abschluss Juni 2025) mit über 15 Jahren Erfahrung in der technischen Betreuung von TYPO3- und WordPress-Websites. Mein Fokus liegt auf Python-Programmierung, Datenanalyse und Prozessautomatisierung. Aktuell vertiefe ich mein Wissen in Zeitreihenanalyse, Machine Learning und REST-APIs durch Kurse am Hasso-Plattner-Institut.
 
---- 
+---
 
-## Stärken
+##  Stärken
 
-- Projektmanagement: Strukturierte Planung und Umsetzung technischer Lösungen
-- Prozessanalyse: Effiziente und sichere Digitalisierung von Geschäftsprozessen
-- IT-Grundlagen: Erfahrung mit Datenbanken, Automatisierung und Softwareentwicklung
-- Lernbereitschaft:Besonders interessiert an Security & Infrastruktur
+- **Projektmanagement**: Strukturierte Planung und Umsetzung technischer Lösungen
+- **Prozessanalyse**: Effiziente Digitalisierung von Geschäftsprozessen
+- **Technische Dokumentation**: Klar und praxisnah
+- **Lernbereitschaft**: Besonders interessiert an IT-Sicherheit, Infrastruktur und KI
 
 ---
 
 ##  Mein Mehrwert
 
-> „Ich unterstütze Sie bei der sicheren und effizienten Digitalisierung Ihrer Prozesse und bringe Erfahrung in Analyse und Projektkoordination mit.“
+> „Ich unterstütze Sie bei der sicheren und effizienten Digitalisierung Ihrer Prozesse – mit Erfahrung in Analyse, Projektkoordination und technischer Umsetzung.“
 
 ---
 
-## 📂 Mein Portfolio
+##  Mein Portfolio
 
-Sehen Sie sich meine Projekte an:  
-[🔗 blackpanther20011969.github.io/Blackpanther20011969-Portfolio/](https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/)
+🔗 [Zu meinen Projekten](https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/otebooks, Datenanalyse)  
+- SQL (Datenbankabfragen, Modellierung)  
+- HTML/CSS  
+
+**CMS & Tools**  
+- TYPO3, WordPress  
+- Git, Jira, Confluence, VS Code  
+- MS Office 365  
+
+**Methoden & Konzepte**  
+- Agile (Scrum, Kanban)  
+- REST-APIs, Datenmodellierung  
+- IT-Sicherheit, Netzwerke  
+- Technische Dokumentation  
+- Grundlagen in KI & Machine Learning
 
 ---
 
-##  Skills
-ProgrammiersprachenGrundlagen:  Python, SQL, HTML/CSS
-CMS: TYPO3, WordPress
-Tools: Jira, Confluence, Git, MS Office 365
-Methoden: Agile (Scrum, Kanban), Prozessanalyse,
-Dokumentation
-Grundlagen: IT-Sicherheit, Netzwerke, Datenorganisation
-Zusatz: REST-APIs, Datenmodellierung, Interesse an KI &
-SPRACHEN Machine Learning
----
 
-<!-- Social Links oder weitere Infos können hier ergänzt werden -->
-
-<!-- Fun Fact, Motto oder Lieblingszitat? Sag Bescheid, wenn du noch mehr einbauen möchtest! -->
 
 
 
