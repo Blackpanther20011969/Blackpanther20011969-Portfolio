@@ -250,37 +250,46 @@ html, body {
 }
 
 
-<!-- IT-Projekte & Erfahrungen -->
-<section id="experience" class="experience">
-    <h2>Meine IT-Projekte & Erfahrungen</h2>
-    <div class="experience-container">
-        
-        <!-- Python-Projekte (GitHub) -->
-        <div class="experience-item">
-            <h3>Python-Projekte</h3>
-            <p>Meine kleinen Python-Projekte auf GitHub.</p>
-            <a href="https://github.com/Blackpanther20011969" target="_blank">
-                <img src="img/icons8-github-50.png" alt="GitHub-Icon" class="icon">
-            </a>          
-        </div>
-    <!-- Blog (Unterseite) -->
-<div class="experience-item">
-    <h3>Mein IT-Blog</h3>
-    <p>Hier teile ich meine Lernprozesse und technische Einblicke – aktuell dreht sich vieles um APIs.</p>
-    <a href="blog.html" class="project-link">Zum Blog</a>
-</div>
-    
+/* IT-Projekte & Erfahrungen */
+.experience {
+    background: linear-gradient(180deg, #22313F, #34495E);
+    text-align: center;
+    padding: 50px 10%;
+    color: white;
+}
 
-        <!-- Systemanalyse & Projektarbeit (Link zur neuen Unterseite) -->
-        <div class="experience-item">
-            <h3>Systemanalyse & Projektarbeit</h3>
-            <p>Hier finden Sie meine Abschlussarbeit und Analysen.</p>
-            <a href="systemanalyse.html" class="project-link">Mehr erfahren</a>
-        </div>
+.experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-    </div>
-</section>
+.experience-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    width: 300px;
+}
 
+.experience-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(255, 152, 0, 0.5);
+}
+
+/* Icon-Styling */
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
 
 /* Link-Styling */
 .project-link {
@@ -826,7 +835,4 @@ h2 {
     text-align: center;
     padding: 20px;
 }
-
-
-
 
