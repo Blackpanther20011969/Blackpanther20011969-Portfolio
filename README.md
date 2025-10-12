@@ -1,13 +1,13 @@
-# 👋 Hi, I'm Blackpanther20011969!
+#  Hi, I'm Blackpanther20011969!
 
-## 🚀 Über mich
+## Über mich
 
 Ich bin Fachinformatikerin für Anwendungsentwicklung (IHK, Abschluss Juni 2025) mit einem starken Fokus auf Projektmanagement und Prozessanalyse. Während meiner Ausbildung habe ich praktische Erfahrungen in **SQL-Datenbanken**, **Prozessautomatisierung** und **Analyse** gesammelt. Ergänzend bilde ich mich in den Bereichen Python, REST-APIs, Datenmodellierung, Interesse an KI &
 SPRACHEN Machine Learning weiter.
 
 --- 
 
-## 💼 Stärken
+## Stärken
 
 - Projektmanagement: Strukturierte Planung und Umsetzung technischer Lösungen
 - Prozessanalyse: Effiziente und sichere Digitalisierung von Geschäftsprozessen
@@ -16,7 +16,7 @@ SPRACHEN Machine Learning weiter.
 
 ---
 
-## 🌟 Mein Mehrwert
+##  Mein Mehrwert
 
 > „Ich unterstütze Sie bei der sicheren und effizienten Digitalisierung Ihrer Prozesse und bringe Erfahrung in Analyse und Projektkoordination mit.“
 
@@ -29,7 +29,7 @@ Sehen Sie sich meine Projekte an:
 
 ---
 
-## 📈 Skills
+##  Skills
 ProgrammiersprachenGrundlagen:  Python, SQL, HTML/CSS
 CMS: TYPO3, WordPress
 Tools: Jira, Confluence, Git, MS Office 365
@@ -43,6 +43,7 @@ SPRACHEN Machine Learning
 <!-- Social Links oder weitere Infos können hier ergänzt werden -->
 
 <!-- Fun Fact, Motto oder Lieblingszitat? Sag Bescheid, wenn du noch mehr einbauen möchtest! -->
+
 
 
 
