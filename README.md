@@ -2,17 +2,27 @@
 
 ## Über mich
 
-Ich bin Fachinformatikerin für Anwendungsentwicklung (IHK, Abschluss Juni 2025) mit über 15 Jahren Erfahrung in der technischen Betreuung von TYPO3- und WordPress-Websites. Mein Fokus liegt auf Python-Programmierung, Datenanalyse und Prozessautomatisierung. Aktuell vertiefe ich mein Wissen in Zeitreihenanalyse, Machine Learning und REST-APIs durch Kurse am Hasso-Plattner-Institut.
+Quereinsteigerin IT – Requirements & Technische Dokumentation
+Kombiniert Anforderungsanalyse und technische Dokumentation: Ich erhebe und strukturiere
+Anforderungen, dokumentiere Prozesse & Schnittstellen und übersetze Technik in verständliche Anleitungen
+für Nutzer*innen und Dev‑Teams. Sicher in Jira/Confluence, geübt in klaren Release Notes und Use‑Cases.
 
 ---
 
-##  Stärken
+##  Methoden
 
-- **Projektmanagement**: Strukturierte Planung und Umsetzung technischer Lösungen
-- **Prozessanalyse**: Effiziente Digitalisierung von Geschäftsprozessen
-- **Technische Dokumentation**: Klar und praxisnah
-- **Lernbereitschaft**: Besonders interessiert an IT-Sicherheit, Infrastruktur und KI
-
+Requirements Engineering (Einsteigerin) 
+Anforderungsanalyse & Stakeholder‑Kommunikation 
+User Stories & Akzeptanzkriterien · Prozessdokumentation
+(BPMN/UML – Basics)
+Testfall‑/UAT‑Doku & Release Notes 
+Scrum/Kanban (Grundlagen)
+Tools
+Jira · Confluence · MS 365 (Word/Excel/PowerPoint) 
+Visio / diagrams.net · Markdown · Git/GitHub (Basics)
+Tech‑Grundlagen & Sprachen
+Python (Flask, Plotly – Basics) · SQL (Basics) · HTML/CSS
+(Basics) · Deutsch C2 · Englisch B2
 ---
 
 ##  Mein Mehrwert
@@ -23,23 +33,9 @@ Ich bin Fachinformatikerin für Anwendungsentwicklung (IHK, Abschluss Juni 2025)
 
 ##  Mein Portfolio
 
-🔗 [Zu meinen Projekten](https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/otebooks, Datenanalyse)  
-- SQL (Datenbankabfragen, Modellierung)  
-- HTML/CSS  
+🔗 [![Live Demo](https://img.shields.io/badge/Live%20Demo-online-2ea44f?style=for-the-badge)](https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/)
 
-**CMS & Tools**  
-- TYPO3, WordPress  
-- Git, Jira, Confluence, VS Code  
-- MS Office 365  
 
-**Methoden & Konzepte**  
-- Agile (Scrum, Kanban)  
-- REST-APIs, Datenmodellierung  
-- IT-Sicherheit, Netzwerke  
-- Technische Dokumentation  
-- Grundlagen in KI & Machine Learning
-
----
 
 
 
