@@ -3,33 +3,16 @@
 
 ## Über mich
 
-Quereinsteigerin IT – Requirements & Technische Dokumentation
-Kombiniert Anforderungsanalyse und technische Dokumentation: Ich erhebe und strukturiere
-Anforderungen, dokumentiere Prozesse & Schnittstellen und übersetze Technik in verständliche Anleitungen
-für Nutzer*innen und Dev‑Teams. Sicher in Jira/Confluence, geübt in klaren Release Notes und Use‑Cases.
+ Ich bin Fachinformatikerin für Anwendungsentwicklung (IHK, Abschluss 06/2025) mit Erfahrung in der technischen Betreuung von TYPO3- und WordPress-Websites sowie in strukturierter IT-Dokumentation und Prozessanalyse.
 
----
+Mein Schwerpunkt liegt auf der Analyse und Strukturierung von Anforderungen, der Dokumentation von Prozessen und der verständlichen Aufbereitung technischer Inhalte. Zur Unterstützung nutze ich Python für einfache Automatisierungen und Datenanalysen.
 
-##  Methoden
+Aktuell erweitere ich meine Kenntnisse durch praxisnahe Projekte und zertifizierte Online-Kurse (u. a. openHPI) mit Fokus auf Datenanalyse, Zeitreihen und KI-gestützte Methoden.
 
-Requirements Engineering (Einsteigerin) 
-Anforderungsanalyse & Stakeholder‑Kommunikation 
-User Stories & Akzeptanzkriterien · Prozessdokumentation
-(BPMN/UML – Basics)
-Testfall‑/UAT‑Doku & Release Notes 
-Scrum/Kanban (Grundlagen)
-Tools
-Jira · Confluence · MS 365 (Word/Excel/PowerPoint) 
-Visio / diagrams.net · Markdown · Git/GitHub (Basics)
-Tech‑Grundlagen & Sprachen
-Python (Flask, Plotly – Basics) · SQL (Basics) · HTML/CSS
-(Basics) · Deutsch C2 · Englisch B2
----
+Ziel ist es, datenbasierte und nachvollziehbare Lösungen zu entwickeln, die Teams in Projekten und Prozessen konkret unterstützen.
 
-##  Mein Mehrwert
-
-> „Ich unterstütze Sie bei der sicheren und effizienten Digitalisierung Ihrer Prozesse – mit Erfahrung in Analyse, Projektkoordination und technischer Umsetzung.“
-
+Tags:
+#Prozessanalyse #Anforderungsmanagement #TechnischeDokumentation #ITProjektassistenz #Datenanalyse #Python #Automatisierung #Jira #Confluence #Microsoft365 #BusinessAnalysis #ITSupport 
 ---
 
 
