@@ -1,61 +1,64 @@
-// Sanfter Scroll-Effekt für den Hero-Text
-window.addEventListener("scroll", () => {
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelector(".nav-links");
+    const menuButton = document.querySelector(".menu-icon");
+    const header = document.querySelector(".header");
     const heroContent = document.querySelector(".hero-content");
-    const cvSection = document.querySelector(".cv-section");
-    if (heroContent && cvSection) {
-        let scrollValue = window.scrollY * 0.3;
-        let maxScroll = cvSection.getBoundingClientRect().top - heroContent.getBoundingClientRect().top;
-        if (scrollValue > maxScroll) {
-            scrollValue = maxScroll;
+
+    // Mobile Navigation ein-/ausblenden
+    window.toggleMenu = function () {
+        if (navLinks) {
+            navLinks.classList.toggle("show");
         }
+    };
+
+    // Sanftes Scrollen zu internen Links mit Header-Ausgleich
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function (event) {
+            const targetId = this.getAttribute("href");
+
+            if (!targetId || targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (!targetElement) return;
+
+            event.preventDefault();
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const targetPosition =
+                targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
+            });
+
+            // Mobiles Menü nach Klick schließen
+            if (navLinks && navLinks.classList.contains("show")) {
+                navLinks.classList.remove("show");
+            }
+        });
+    });
+
+    // Leichter Parallax-/Scroll-Effekt für den Hero-Text
+    function handleHeroScroll() {
+        if (!heroContent) return;
+
+        const scrollValue = Math.min(window.scrollY * 0.25, 120);
         heroContent.style.transform = `translateY(${scrollValue}px)`;
     }
-});
 
-// Sanftes Scrollen zu internen Links (z. B. #projects)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+    window.addEventListener("scroll", handleHeroScroll);
 
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
+    // Optional: Menü schließen, wenn man außerhalb klickt
+    document.addEventListener("click", function (event) {
+        if (!navLinks || !menuButton) return;
+
+        const clickedInsideMenu = navLinks.contains(event.target);
+        const clickedMenuButton = menuButton.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedMenuButton) {
+            navLinks.classList.remove("show");
         }
     });
 });
-
-// Sanftes Scrollen zu internen Links beim Laden der Seite
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll("nav a").forEach(link => {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            document.getElementById(targetId).scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        });
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".download-btn");
-
-    buttons.forEach(button => {
-        button.addEventListener("mouseover", function () {
-            const imageId = this.getAttribute("data-image");
-            const image = document.getElementById(imageId);
-            if (image) {
-                image.style.display = "block";
-            }
-        });
-
-        button.addEventListener("mouseout", function () {
-            const imageId = this.getAttribute("data-image");
-            const image = document.getElementById(imageId);
-            if (image) {
-                image.style.display = "none";
-            }
-        });
-    });
-});
-
+``
