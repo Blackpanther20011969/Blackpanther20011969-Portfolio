@@ -1,2 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel-Automatisierung mit Python | Jovanka Schauder</title>
+    <meta name="description" content="Praxisnahes Blogbeispiel zur Analyse und Automatisierung wiederkehrender Excel-Arbeitsschritte mit Python.">
+    <meta name="keywords" content="Excel, Python, Automatisierung, Prozessanalyse, Pandas, Blogbeitrag">
+    <meta name="author" content="Jovanka Schauder">
+    <meta name="robots" content="index, follow">
 
-      
+    <meta property="og:title" content="Excel-Automatisierung mit Python | Jovanka Schauder">
+    <meta property="og:description" content="Ein praxisnahes Beispiel dafür, wie sich wiederkehrende Excel-Prozesse mit Python strukturieren und teilweise automatisieren lassen.">
+    <meta property="og:image" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/img/Jo_Portfolio.png">
+    <meta property="og:url" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/excel-automatisierung.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/excel-automatisierung.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Start</a></li>
+                <li><a href="index.html#about">Über mich</a></li>
+                <li><a href="index.html#experience">Projekte</a></li>
+                <li><a href="index.html#contact">Kontakt</a></li>
+                <li><a href="index.html#impressum">Impressum</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Excel-Automatisierung mit Python</h1>
+            <h2>Ein praxisnahes Beispiel für Analyse, Struktur und Entlastung</h2>
+        </div>
+    </section>
+
+    <!-- Inhalt -->
+    <section class="content" id="blog-post">
+        <div class="content-container">
+            <h2>Ausgangslage</h2>
+            <p>
+                In vielen Teams entstehen wiederkehrende Excel-Aufgaben: Dateien werden manuell geöffnet,
+                Daten bereinigt, Kennzahlen nachgetragen und Ergebnisse in neue Tabellen kopiert.
+                Das kostet Zeit und erhöht das Risiko für Übertragungsfehler.
+            </p>
+
+            <h2>Ziel</h2>
+            <p>
+                Ziel dieses Beispiels ist es, einen typischen Excel-Prozess zu vereinfachen:
+                Daten einlesen, strukturieren, berechnen und in einer nachvollziehbaren Form wieder ausgeben.
+                Der Fokus liegt nicht auf „kompliziertem Code“, sondern auf einer klaren und praxistauglichen Lösung.
+            </p>
+
+            <h2>Typischer Ablauf vor der Automatisierung</h2>
+            <ul>
+                <li>Excel-Datei öffnen und mehrere Tabellenblätter prüfen</li>
+                <li>Leere oder fehlerhafte Werte manuell korrigieren</li>
+                <li>Spalten umbenennen oder vereinheitlichen</li>
+                <li>Summen, Durchschnittswerte oder Statusfelder berechnen</li>
+                <li>Ergebnisse in eine neue Datei oder Übersicht übertragen</li>
+            </ul>
+
+            <h2>Beispielhafte Visualisierung</h2>
+            <p>
+                Die folgenden Abbildungen zeigen beispielhaft den Ausgangszustand,
+                einen strukturierten Zwischenschritt und das bereinigte Ergebnis nach der Aufbereitung.
+            </p>
+
+            <div class="portfolio-gallery">
+
+                <figure class="gallery-card">
+                    <a href="img/excel-vorher.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/excel-vorher.png" alt="Excel-Tabelle vor der Automatisierung" class="gallery-thumb">
+                    </a>
+                    <figcaption class="gallery-caption">
+                        <strong>Rohdaten nach dem Import</strong><br>
+                        Die CSV-Datei liegt zunächst unstrukturiert vor und muss für die weitere Auswertung aufbereitet werden.
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <a href="img/excel-prozess.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/excel-prozess.png" alt="Strukturierung in Excel" class="gallery-thumb">
+                    </a>
+                    <figcaption class="gallery-caption">
+                        <strong>Strukturierung in Excel</strong><br>
+                        Die Daten werden in Excel geprüft, geordnet und für die weitere Verarbeitung vorbereitet.
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <a href="img/excel-nachher.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/excel-nachher.png" alt="Bereinigte Tabelle für die Auswertung" class="gallery-thumb">
+                    </a>
+                    <figcaption class="gallery-caption">
+                        <strong>Bereinigte Tabelle für die Auswertung</strong><br>
+                        Die Daten liegen in einer einheitlichen Struktur vor und können für Analyse, Berichte und Visualisierung genutzt werden.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <h2>Beispiel für eine Lösung mit Python</h2>
+            <p>
+                Mit <strong>Pandas</strong> lässt sich ein solcher Ablauf oft deutlich vereinfachen.
+                Die Daten werden strukturiert eingelesen, geprüft und in wenigen Schritten ausgewertet.
+            </p>
+
+<pre><code>import pandas as pd
+
+# Excel-Datei einlesen
+df = pd.read_excel("projektstatus.xlsx")
+
+# Spalten vereinheitlichen
+df.columns = [c.strip().lower() for c in df.columns]
+
+# Fehlende Werte behandeln
+df["status"] = df["status"].fillna("offen")
+df["aufwand_stunden"] = pd.to_numeric(df["aufwand_stunden"], errors="coerce")
+
+# Kennzahl berechnen
+offene_tickets = (df["status"] == "offen").sum()
+gesamtaufwand = df["aufwand_stunden"].sum()
+
+# Ergebnis exportieren
+summary = pd.DataFrame({
+    "Kennzahl": ["Offene Tickets", "Gesamtaufwand"],
+    "Wert": [offene_tickets, gesamtaufwand]
+})
+summary.to_excel("auswertung.xlsx", index=False)
+</code></pre>
+
+            <h2>Nutzen</h2>
+            <ul>
+                <li>Weniger manuelle Eingriffe</li>
+                <li>Bessere Nachvollziehbarkeit der einzelnen Schritte</li>
+                <li>Weniger Fehler durch standardisierte Verarbeitung</li>
+                <li>Schnellere Wiederholung bei regelmäßig anfallenden Aufgaben</li>
+            </ul>
+
+            <h2>Was dieses Beispiel zeigt</h2>
+            <p>
+                Dieses Beispiel zeigt nicht nur ein kleines Python-Skript, sondern vor allem eine Arbeitsweise:
+                einen Prozess verstehen, unnötige Schritte erkennen und ihn so strukturieren,
+                dass er für andere nachvollziehbar und wiederverwendbar wird.
+            </p>
+
+            <h2>Mein Lerngewinn</h2>
+            <ul>
+                <li>Tabellenstrukturen schneller erfassen und vereinheitlichen</li>
+                <li>Datenbereinigung systematischer angehen</li>
+                <li>Fachliche Anforderungen besser in kleine Verarbeitungsschritte übersetzen</li>
+                <li>Technische Ergebnisse verständlich dokumentieren</li>
+            </ul>
+
+            <h2>Mögliche Erweiterungen</h2>
+            <ul>
+                <li>Visualisierung mit Diagrammen</li>
+                <li>Automatische Berichte für mehrere Dateien</li>
+                <li>Filter für Fachbereiche, Status oder Prioritäten</li>
+                <li>Export in Excel und PDF für Projektübersichten</li>
+            </ul>
+
+            <a href="blog.html" class="blog-button">Zurück zum Blog</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Jovanka Schauder</p>
+    </footer>
+
+    <!-- Menü-Skript -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+``
