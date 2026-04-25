@@ -3,17 +3,16 @@
 
 ## Über mich
 
- Ich bin Fachinformatikerin für Anwendungsentwicklung (IHK, Abschluss 06/2025) mit Erfahrung in der technischen Betreuung von TYPO3- und WordPress-Websites sowie in strukturierter IT-Dokumentation und Prozessanalyse.
+ Ich unterstütze Projekte an der Schnittstelle von IT, Fachbereich und Dokumentation. Mein Schwerpunkt liegt auf Prozessanalyse, Anforderungsaufnahme, technischer Dokumentation und strukturierter Projektunterstützung.
 
-Mein Schwerpunkt liegt auf der Analyse und Strukturierung von Anforderungen, der Dokumentation von Prozessen und der verständlichen Aufbereitung technischer Inhalte. Zur Unterstützung nutze ich Python für einfache Automatisierungen und Datenanalysen.
+Als Fachinformatikerin für Anwendungsentwicklung bringe ich technisches Verständnis mit und positioniere mich besonders dort, wo Koordination, Nachverfolgung, Analyse und verständliche Aufbereitung gefragt sind.
 
-Aktuell erweitere ich meine Kenntnisse durch praxisnahe Projekte und zertifizierte Online-Kurse (u. a. openHPI) mit Fokus auf Datenanalyse, Zeitreihen und KI-gestützte Methoden.
+In praxisnahen Projekten arbeite ich an Themen wie Prozessstrukturierung, Datenanalyse, Dokumentation und Automatisierung mit Python. Ergänzend erweitere ich meine Kenntnisse durch Online-Weiterbildungen mit Fokus auf Datenanalyse, Zeitreihen und datengetriebene Methoden.
 
-Ziel ist es, datenbasierte und nachvollziehbare Lösungen zu entwickeln, die Teams in Projekten und Prozessen konkret unterstützen.
+Mein Ziel ist es, nachvollziehbare und strukturierte Lösungen zu entwickeln, die Teams in Projekten und Prozessen konkret unterstützen.
 
-Tags:
-#Prozessanalyse #Anforderungsmanagement #TechnischeDokumentation #ITProjektassistenz #Datenanalyse #Python #Automatisierung #Jira #Confluence #Microsoft365 #BusinessAnalysis #ITSupport 
----
+Schwerpunkte:
+Projektassistenz, PMO-nahe Unterstützung, Prozessanalyse, technische Dokumentation, Datenanalyse mit Python, Automatisierung, TYPO3, WordPress, Microsoft 365 
 
 
 
