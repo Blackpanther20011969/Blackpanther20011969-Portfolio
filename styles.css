@@ -964,6 +964,93 @@ h2 {
         min-width: 900px;
     }
 }
+/* =========================
+   GRC/BCM – kompakte Register-/BCM-Darstellung
+========================= */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 16px 0 28px 0;
+    border-radius: 8px;
+}
+
+.sample-table {
+    width: 100%;
+    min-width: 980px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.sample-table thead th {
+    padding: 6px 8px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: rgba(255, 152, 0, 0.18);
+    color: #ff9800;
+    vertical-align: middle;
+}
+
+.sample-table th,
+.sample-table td {
+    border: 1px solid rgba(255,255,255,0.15);
+    text-align: left;
+    vertical-align: top;
+}
+
+.sample-table td {
+    padding: 6px 8px;
+    background: rgba(255,255,255,0.04);
+    color: #f2f2f2;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.kv-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 10px 14px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 18px;
+    margin: 16px 0 28px 0;
+}
+
+.kv-key {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.kv-value {
+    color: #f2f2f2;
+}
+
+.kv-value ul {
+    margin: 0;
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.kv-value ul li {
+    padding-left: 0;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    position: static;
+}
+
+.kv-value ul li::before {
+    content: none;
+}
+
+@media (max-width: 768px) {
+    .sample-table {
+        min-width: 900px;
+        font-size: 0.85rem;
+    }
+
+    .kv-grid {
+        grid-template-columns
 
 
 
