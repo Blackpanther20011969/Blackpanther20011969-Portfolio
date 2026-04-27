@@ -61,4 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-``
+
+// Expandable Risk Rows
+document.querySelectorAll('.expandable').forEach(row => {
+    row.addEventListener('click', () => {
+        row.classList.toggle('active');
+    });
+});
