@@ -60,10 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
             navLinks.classList.remove("show");
         }
         // Expandable Risk Rows
-document.querySelectorAll('.expandable').forEach(row => {
-    row.addEventListener('click', () => {
+row.addEventListener('click', (e) => {
+    if (!e.target.closest('.badge')) {
         row.classList.toggle('active');
-  
+    }
+});
 
     });
 });
