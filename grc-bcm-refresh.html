@@ -127,62 +127,43 @@
                 und passende Maßnahmen nachvollziehbar festzuhalten.
             </p>
 
-            <div class="sample-table-wrap">
-                <table class="sample-table">
-                    <thead>
-                        <tr>
-                            <th>Risiko-ID</th>
-                            <th>Bereich / Prozess</th>
-                            <th>Risiko</th>
-                            <th>Ursache</th>
-                            <th>Auswirkung</th>
-                            <th>Eintritt</th>
-                            <th>Bewertung</th>
-                            <th>Bestehende Maßnahme</th>
-                            <th>Empfohlene Maßnahme</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>R-01</td>
-                            <td>Kundenportal</td>
-                            <td>Ausfall des Portals durch Systemstörung</td>
-                            <td>Technischer Defekt / Hosting-Störung</td>
-                            <td>Unterbrechung der Kundenkommunikation und Bearbeitung</td>
-                            <td>Mittel</td>
-                            <td>Hoch</td>
-                            <td>Regelmäßige Backups</td>
-                            <td>Wiederanlaufprozess dokumentieren, Eskalationsweg klären</td>
-                            <td>Offen</td>
-                        </tr>
-                        <tr>
-                            <td>R-02</td>
-                            <td>Benutzerverwaltung</td>
-                            <td>Unzureichende Rechtevergabe</td>
-                            <td>Fehlende Rollenprüfung</td>
-                            <td>Fehlzugriffe / Compliance-Risiko</td>
-                            <td>Mittel</td>
-                            <td>Mittel</td>
-                            <td>Einzelfallprüfung bei Bedarf</td>
-                            <td>Regelmäßige Rechte-Reviews einführen</td>
-                            <td>In Planung</td>
-                        </tr>
-                        <tr>
-                            <td>R-03</td>
-                            <td>Dokumentenablage</td>
-                            <td>Verlust wichtiger Informationen</td>
-                            <td>Unvollständige Sicherung / manuelle Ablage</td>
-                            <td>Verzögerung, Mehraufwand, Informationslücken</td>
-                            <td>Niedrig</td>
-                            <td>Mittel</td>
-                            <td>Teilweise Backup vorhanden</td>
-                            <td>Ablagestruktur vereinheitlichen, Sicherungsumfang prüfen</td>
-                            <td>Offen</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <div class="risk-table">
+    <div class="risk-row risk-header">
+        <div>ID</div>
+        <div>Bereich</div>
+        <div>Risiko</div>
+        <div>Bewertung</div>
+        <div>Maßnahmen</div>
+        <div>Status</div>
+    </div>
+
+    <div class="risk-row">
+        <div>R-01</div>
+        <div>Kundenportal</div>
+        <div>Ausfall durch Systemstörung</div>
+        <div><span class="badge high">Hoch</span></div>
+        <div>Backups + Wiederanlaufprozess</div>
+        <div><span class="badge open">Offen</span></div>
+    </div>
+
+    <div class="risk-row">
+        <div>R-02</div>
+        <div>Benutzerverwaltung</div>
+        <div>Fehlende Rechteprüfung</div>
+        <div><span class="badge medium">Mittel</span></div>
+        <div>Regelmäßige Reviews</div>
+        <div><span class="badge progress">In Planung</span></div>
+    </div>
+
+    <div class="risk-row">
+        <div>R-03</div>
+        <div>Dokumentenablage</div>
+        <div>Informationsverlust</div>
+        <div><span class="badge medium">Mittel</span></div>
+        <div>Struktur & Backup verbessern</div>
+        <div><span class="badge open">Offen</span></div>
+    </div>
+</div>
 
             <h2 id="bcm-mini-plan">BCM Mini-Plan (Beispiel)</h2>
             <p>
