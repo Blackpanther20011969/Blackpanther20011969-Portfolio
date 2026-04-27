@@ -59,12 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!clickedInsideMenu && !clickedMenuButton) {
             navLinks.classList.remove("show");
         }
-    });
-});
-
-// Expandable Risk Rows
+        // Expandable Risk Rows
 document.querySelectorAll('.expandable').forEach(row => {
     row.addEventListener('click', () => {
         row.classList.toggle('active');
+  
+
     });
 });
+
