@@ -896,6 +896,76 @@ h2 {
         background: #22313f;
     }
 }
+<style>
+/* Wrapper für breite Tabellen */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 16px 0 28px 0;
+    border-radius: 8px;
+}
+
+/* Risk-Register-Tabelle */
+.sample-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+/* Kopfzeile */
+.sample-table thead th {
+    padding: 6px 8px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: rgba(255, 152, 0, 0.18);
+    color: #ff9800;
+    vertical-align: middle;
+}
+
+/* Zellen */
+.sample-table td {
+    padding: 6px 8px;
+    vertical-align: top;
+    background: rgba(255,255,255,0.04);
+    color: #f2f2f2;
+    word-break: break-word;
+}
+
+/* Rahmen */
+.sample-table th,
+.sample-table td {
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Hinweisbox */
+.sample-note {
+    background: rgba(255,255,255,0.06);
+    border-left: 4px solid #ff9800;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin: 18px 0 28px 0;
+}
+
+/* Buttons */
+.button-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 18px 0 24px 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .sample-table {
+        font-size: 0.85rem;
+        min-width: 900px;
+    }
+}
+</style>
+
 
 
 
