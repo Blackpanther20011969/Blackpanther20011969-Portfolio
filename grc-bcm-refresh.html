@@ -144,29 +144,62 @@
     <div><span class="badge high">Hoch</span></div>
     <div><span class="badge open">Offen</span></div>
 
-    <div class="risk-details">
-        <p><strong>Ursache:</strong> Technischer Defekt / Hosting-Störung</p>
-        <p><strong>Auswirkung:</strong> Unterbrechung der Kundenkommunikation</p>
-        <p><strong>Maßnahmen:</strong> Backups + Wiederanlaufprozess</p>
+    <div class="risk-table">
+
+    <!-- HEADER -->
+    <div class="risk-row risk-header">
+        <div>ID</div>
+        <div>Bereich</div>
+        <div>Risiko</div>
+        <div>Bewertung</div>
+        <div>Status</div>
     </div>
-</div>
-    <div class="risk-row">
+
+    <!-- R-01 -->
+    <div class="risk-row expandable">
+        <div>R-01</div>
+        <div>Kundenportal</div>
+        <div>Ausfall durch Systemstörung</div>
+        <div><span class="badge high">Hoch</span></div>
+        <div><span class="badge open">Offen</span></div>
+
+        <div class="risk-details">
+            <p><strong>Ursache:</strong> Technischer Defekt / Hosting-Störung</p>
+            <p><strong>Auswirkung:</strong> Unterbrechung der Kundenkommunikation</p>
+            <p><strong>Maßnahmen:</strong> Backups + Wiederanlaufprozess</p>
+        </div>
+    </div>
+
+    <!-- R-02 -->
+    <div class="risk-row expandable">
         <div>R-02</div>
         <div>Benutzerverwaltung</div>
         <div>Fehlende Rechteprüfung</div>
         <div><span class="badge medium">Mittel</span></div>
-        <div>Regelmäßige Reviews</div>
         <div><span class="badge progress">In Planung</span></div>
+
+        <div class="risk-details">
+            <p><strong>Ursache:</strong> Fehlende Rollenprüfung</p>
+            <p><strong>Auswirkung:</strong> Fehlzugriffe / Compliance-Risiko</p>
+            <p><strong>Maßnahmen:</strong> Regelmäßige Rechte-Reviews</p>
+        </div>
     </div>
 
-    <div class="risk-row">
+    <!-- R-03 -->
+    <div class="risk-row expandable">
         <div>R-03</div>
         <div>Dokumentenablage</div>
         <div>Informationsverlust</div>
         <div><span class="badge medium">Mittel</span></div>
-        <div>Struktur & Backup verbessern</div>
         <div><span class="badge open">Offen</span></div>
+
+        <div class="risk-details">
+            <p><strong>Ursache:</strong> Unvollständige Sicherung</p>
+            <p><strong>Auswirkung:</strong> Verzögerung, Mehraufwand</p>
+            <p><strong>Maßnahmen:</strong> Struktur & Backup verbessern</p>
+        </div>
     </div>
+
 </div>
 
             <h2 id="bcm-mini-plan">BCM Mini-Plan (Beispiel)</h2>
