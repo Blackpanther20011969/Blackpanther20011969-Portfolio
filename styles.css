@@ -1102,4 +1102,9 @@ h2 {
     .risk-header {
         display: none;
     }
+    .expandable::after {
+    content: "▼";
+    float: right;
+    opacity: 0.6;
+}
 }
