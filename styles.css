@@ -1,72 +1,299 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelector(".nav-links");
-    const menuButton = document.querySelector(".menu-icon");
-    const header = document.querySelector(".header");
-    const heroContent = document.querySelector(".hero-content");
+/* =========================
+   RESET & BASIS
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    // Mobile Navigation ein-/ausblenden
-    window.toggleMenu = function () {
-        if (navLinks) {
-            navLinks.classList.toggle("show");
-        }
-    };
+html {
+    scroll-behavior: smooth;
+}
 
-    // Sanftes Scrollen zu internen Links mit Header-Ausgleich
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener("click", function (event) {
-            const targetId = this.getAttribute("href");
+body {
+    font-family: Arial, sans-serif;
+    background: #2c3e50;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-top: 70px; /* Platz für fixen Header */
+}
 
-            if (!targetId || targetId === "#") return;
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #1a252f;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-            const targetElement = document.querySelector(targetId);
-            if (!targetElement) return;
+.nav {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
-            event.preventDefault();
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
 
-            const headerHeight = header ? header.offsetHeight : 0;
-            const targetPosition =
-                targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
+.nav-links a:hover {
+    color: #ff9800;
+}
 
-            // Mobiles Menü nach Klick schließen
-            if (navLinks && navLinks.classList.contains("show")) {
-                navLinks.classList.remove("show");
-            }
-        });
-    });
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
 
-    // Leichter Parallax-/Scroll-Effekt für den Hero-Text
-    function handleHeroScroll() {
-        if (!heroContent) return;
+/* =========================
+   HERO
+========================= */
+.hero {
+    position: relative;
+    min-height: 65vh;
+    background: url("img/Jo_Portfolio.png") no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-        const scrollValue = Math.min(window.scrollY * 0.25, 120);
-        heroContent.style.transform = `translateY(${scrollValue}px)`;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #ff9800;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/* =========================
+   CONTENT GRUNDSTRUKTUR
+========================= */
+section {
+    padding: 60px 10%;
+}
+
+.content {
+    background: linear-gradient(180deg, #34495e, #22313f);
+}
+
+.content-container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.blog-button,
+.project-link {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blog-button:hover,
+.project-link:hover {
+    background: #e68900;
+}
+
+/* =========================
+   INFOBOX
+========================= */
+.sample-note {
+    background: rgba(255,255,255,0.06);
+    border-left: 4px solid #ff9800;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* =========================
+   GRC / RISK REGISTER
+========================= */
+.risk-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.risk-row {
+    display: grid;
+    grid-template-columns: 80px 140px 1.5fr 120px 120px;
+    gap: 12px;
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+.risk-header {
+    font-weight: bold;
+    color: #ff9800;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.expandable {
+    cursor: pointer;
+    position: relative;
+}
+
+.expandable::after {
+    content: "▼";
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    opacity: 0.6;
+}
+
+.expandable.active::after {
+    content: "▲";
+}
+
+.risk-details {
+    grid-column: 1 / -1;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.expandable.active .risk-details {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+/* BADGES */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge.high { background: rgba(255,80,80,0.25); color: #ff6b6b; }
+.badge.medium { background: rgba(255,180,0,0.25); color: #ffc107; }
+.badge.low { background: rgba(0,200,150,0.25); color: #00c896; }
+.badge.open { background: rgba(255,255,255,0.2); }
+.badge.progress { background: rgba(0,150,255,0.25); color: #4dabf7; }
+
+/* =========================
+   BCM MINI PLAN
+========================= */
+.kv-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 12px 16px;
+    background: rgba(255,255,255,0.06);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.kv-key {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: #1a252f;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
     }
 
-    window.addEventListener("scroll", handleHeroScroll);
-
-    // Optional: Menü schließen, wenn man außerhalb klickt
-    document.addEventListener("click", function (event) {
-        if (!navLinks || !menuButton) return;
-
-        const clickedInsideMenu = navLinks.contains(event.target);
-        const clickedMenuButton = menuButton.contains(event.target);
-
-        if (!clickedInsideMenu && !clickedMenuButton) {
-            navLinks.classList.remove("show");
-        }
-        // Expandable Risk Rows
-row.addEventListener('click', (e) => {
-    if (!e.target.closest('.badge')) {
-        row.classList.toggle('active');
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        background: #1a252f;
+        padding: 14px;
+        border-radius: 8px;
     }
-});
 
-    });
-});
+    .nav-links.show {
+        display: flex;
+    }
+
+    .risk-row {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-header {
+        display: none;
+    }
+
+    .kv-grid {
+        grid-template-columns: 1fr;
+    }
+}
+     
 
  
