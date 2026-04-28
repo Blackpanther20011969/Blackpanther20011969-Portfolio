@@ -645,87 +645,132 @@ body {
    MODERNES RISK REGISTER (NEU)
 ========================= */
 
-.risk-table {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-/* Expandable Rows */
-.expandable {
-    cursor: pointer;
-}
+<div class="risk-register">
 
-.risk-details {
-    grid-column: 1 / -1;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    opacity: 0;
-    font-size: 0.9rem;
-    color: #ddd;
-}
+    <div class="risk-card">
+        <div class="risk-header">
+            <span class="risk-id">R-01</span>
+            <span class="risk-title">Kundenportal – Systemausfall</span>
+            <span class="badge high">Hoch</span>
+        </div>
 
-.expandable.active .risk-details {
-    max-height: 200px;
-    margin-top: 10px;
-    opacity: 1;
-}
-
-<div class="risk-row expandable">
-    <div>R-01</div>
-    <div>Kundenportal</div>
-    <div>Ausfall durch Systemstörung</div>
-    <div><span class="badge high">Hoch</span></div>
-    <div><span class="badge open">Offen</span></div>
-
-    <div class="risk-details">
-        <p><strong>Ursache:</strong> Technischer Defekt / Hosting-Störung</p>
-        <p><strong>Auswirkung:</strong> Unterbrechung der Kundenkommunikation</p>
-        <p><strong>Maßnahmen:</strong> Backups + Wiederanlaufprozess</p>
+        <div class="risk-body">
+            <p><strong>Ursache:</strong> Technischer Defekt / Hosting-Störung</p>
+            <p><strong>Auswirkung:</strong> Unterbrechung der Kundenkommunikation</p>
+            <p><strong>Maßnahmen:</strong> Backups + Wiederanlaufprozess</p>
+            <p><strong>Status:</strong> Offen</p>
+        </div>
     </div>
+
+    <div class="risk-card">
+        <div class="risk-header">
+            <span class="risk-id">R-02</span>
+            <span class="risk-title">Benutzerverwaltung – Rechtevergabe</span>
+            <span class="badge medium">Mittel</span>
+        </div>
+
+        <div class="risk-body">
+            <p><strong>Ursache:</strong> Fehlende Rollenprüfung</p>
+            <p><strong>Auswirkung:</strong> Fehlzugriffe / Compliance-Risiko</p>
+            <p><strong>Maßnahmen:</strong> Regelmäßige Reviews</p>
+            <p><strong>Status:</strong> In Planung</p>
+        </div>
+    </div>
+
+    <div class="risk-card">
+        <div class="risk-header">
+            <span class="risk-id">R-03</span>
+            <span class="risk-title">Dokumentenablage – Informationsverlust</span>
+            <span class="badge medium">Mittel</span>
+        </div>
+
+        <div class="risk-body">
+            <p><strong>Ursache:</strong> Unvollständige Sicherung</p>
+            <p><strong>Auswirkung:</strong> Verzögerung, Mehraufwand</p>
+            <p><strong>Maßnahmen:</strong> Struktur & Backup verbessern</p>
+            <p><strong>Status:</strong> Offen</p>
+        </div>
+    </div>
+
 </div>
-}
-
-.risk-row:hover {
-    background: rgba(255,255,255,0.08);
-    transform: translateY(-2px);
-}
-
-.risk-header {
-    background: transparent;
-    font-weight: 600;
-    color: #ff9800;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-
-.risk-row div {
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-/* BADGES */
-.badge {
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.badge.high { color: #ff6b6b; background: rgba(255,80,80,0.2); }
-.badge.medium { color: #ffc107; background: rgba(255,180,0,0.2); }
-.badge.low { color: #00c896; background: rgba(0,200,150,0.2); }
-
-.badge.open { color: #ddd; background: rgba(255,255,255,0.15); }
-.badge.progress { color: #4dabf7; background: rgba(0,150,255,0.2); }
-.badge.done { color: #00c896; background: rgba(0,200,150,0.2); }
-
 .expandable::after {
     content: "▼";
     float: right;
     opacity: 0.6;
 }
+/* =========================
+   RISK REGISTER – CLEAN VERSION
+========================= */
 
+.risk-register {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Karte wie deine content-box */
+.risk-card {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.risk-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255,152,0,0.25);
+}
+
+/* Header */
+.risk-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.risk-id {
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.risk-title {
+    flex: 1;
+    font-weight: 600;
+}
+
+/* Inhalt */
+.risk-body p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Badges (passt zu deinem System) */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge.high {
+    background: rgba(255,80,80,0.25);
+    color: #ff6b6b;
+}
+
+.badge.medium {
+    background: rgba(255,180,0,0.25);
+    color: #ffc107;
+}
+
+.badge.low {
+    background: rgba(0,200,150,0.25);
+    color: #00c896;
+}
 /* Mobile */
 @media (max-width: 768px) {
     .risk-row {
