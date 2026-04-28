@@ -1,1 +1,179 @@
+/* =========================
+   RESET & BASIS
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #2c3e50;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #1a252f;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    position: relative;
+    min-height: 70vh;
+    background: url("img/Profilbild.jpg") no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #ff9800;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    padding: 60px 10%;
+}
+
+.content,
+.about,
+.experience,
+.blog,
+.systemanalyse,
+.impressum,
+.cv-section {
+    background: linear-gradient(180deg, #34495E, #22313F);
+    text-align: center;
+}
+
+.content-container,
+.about-container,
+.cv-container,
+.impressum-container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.blog-button,
+.project-link,
+.cv-button {
+    background: #ff9800;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blog-button:hover,
+.project-link:hover,
+.cv-button:hover {
+    background: #e68900;
+}
+
+/* =========================
+   BLOG
+========================= */
+.blog-post {
+    background: rgba(255,255,255,0.08);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: #1a252f;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 6%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+``
