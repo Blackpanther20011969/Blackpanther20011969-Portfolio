@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 behavior: "smooth"
             });
 
-            /* Mobiles Menü nach Klick schließen */
             if (navLinks && navLinks.classList.contains("show")) {
                 navLinks.classList.remove("show");
             }
@@ -62,34 +61,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const riskCards = document.querySelectorAll(".risk-card");
 
     riskCards.forEach(function (card, index) {
-        const header = card.querySelector(".risk-header");
-        const body = card.querySelector(".risk-body");
+        const cardHeader = card.querySelector(".risk-header");
+        const cardBody = card.querySelector(".risk-body");
 
-        if (!header || !body) return;
+        if (!cardHeader || !cardBody) return;
 
-        /* Standard: erste Karte offen, alle anderen zu */
+        /* Erste Karte offen, Rest geschlossen */
         if (index === 0) {
-            body.style.display = "block";
+            cardBody.style.display = "block";
             card.classList.add("active");
         } else {
-            body.style.display = "none";
+            cardBody.style.display = "none";
         }
 
-        header.style.cursor = "pointer";
+        cardHeader.style.cursor = "pointer";
 
-        header.addEventListener("click", function (event) {
+        cardHeader.addEventListener("click", function (event) {
             event.stopPropagation();
 
             const isOpen = card.classList.contains("active");
 
             if (isOpen) {
                 card.classList.remove("active");
-                body.style.display = "none";
+                cardBody.style.display = "none";
             } else {
                 card.classList.add("active");
-                body.style.display = "block";
+                cardBody.style.display = "block";
             }
         });
     });
 });
-``
