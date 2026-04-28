@@ -720,6 +720,12 @@ body {
 .badge.progress { color: #4dabf7; background: rgba(0,150,255,0.2); }
 .badge.done { color: #00c896; background: rgba(0,200,150,0.2); }
 
+.expandable::after {
+    content: "▼";
+    float: right;
+    opacity: 0.6;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .risk-row {
