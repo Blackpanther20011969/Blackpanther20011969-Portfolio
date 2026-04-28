@@ -641,5 +641,94 @@ body {
     padding: 20px;
 }
 
+/* =========================
+   MODERNES RISK REGISTER (NEU)
+========================= */
 
+.risk-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+/* Expandable Rows */
+.expandable {
+    cursor: pointer;
+}
+
+.risk-details {
+    grid-column: 1 / -1;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.expandable.active .risk-details {
+    max-height: 200px;
+    margin-top: 10px;
+    opacity: 1;
+}
+
+<div class="risk-row expandable">
+    <div>R-01</div>
+    <div>Kundenportal</div>
+    <div>Ausfall durch Systemstörung</div>
+    <div><span class="badge high">Hoch</span></div>
+    <div><span class="badge open">Offen</span></div>
+
+    <div class="risk-details">
+        <p><strong>Ursache:</strong> Technischer Defekt / Hosting-Störung</p>
+        <p><strong>Auswirkung:</strong> Unterbrechung der Kundenkommunikation</p>
+        <p><strong>Maßnahmen:</strong> Backups + Wiederanlaufprozess</p>
+    </div>
+</div>
+}
+
+.risk-row:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-2px);
+}
+
+.risk-header {
+    background: transparent;
+    font-weight: 600;
+    color: #ff9800;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.risk-row div {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* BADGES */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge.high { color: #ff6b6b; background: rgba(255,80,80,0.2); }
+.badge.medium { color: #ffc107; background: rgba(255,180,0,0.2); }
+.badge.low { color: #00c896; background: rgba(0,200,150,0.2); }
+
+.badge.open { color: #ddd; background: rgba(255,255,255,0.15); }
+.badge.progress { color: #4dabf7; background: rgba(0,150,255,0.2); }
+.badge.done { color: #00c896; background: rgba(0,200,150,0.2); }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .risk-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .risk-header {
+        display: none;
+    }
+}
 
