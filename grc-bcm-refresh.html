@@ -65,57 +65,79 @@
         ========================= -->
         <h2 id="risk">Risk Register</h2>
 
-        <div class="risk-register">
+       <h2 id="risk">Risk Register</h2>
 
-            <!-- R-01 -->
-            <div class="risk-card">
-                <div class="risk-header">
-                    <span class="risk-id">R-01</span>
-                    <span class="risk-title">Kundenportal – Systemausfall</span>
-                    <span class="badge high">Hoch</span>
-                    <span class="badge open">Offen</span>
-                </div>
+<div class="jira-board">
 
-                <div class="risk-body">
-                    <p><strong>Ursache:</strong> Hosting / Technik</p>
-                    <p><strong>Auswirkung:</strong> Kommunikationsausfall</p>
-                    <p><strong>Maßnahmen:</strong> Backup + Wiederanlauf</p>
-                </div>
-            </div>
+  <!-- OFFEN -->
+  <div class="jira-column">
+    <h3>Offen</h3>
 
-            <!-- R-02 -->
-            <div class="risk-card">
-                <div class="risk-header">
-                    <span class="risk-id">R-02</span>
-                    <span class="risk-title">Fehlende Rechteprüfung</span>
-                    <span class="badge medium">Mittel</span>
-                    <span class="badge progress">In Planung</span>
-                </div>
+    <details class="risk-card" open>
+      <summary class="risk-header">
+        <span class="risk-id">R-01</span>
+        <span class="risk-title">Systemausfall Kundenportal</span>
+        <span class="badge high">Hoch</span>
+      </summary>
+      <div class="risk-body">
+        <p><strong>Beschreibung:</strong> Totalausfall des Kundenportals durch Infrastrukturfehler.</p>
+        <p><strong>Auswirkung:</strong> Umsatzverlust, Imageschaden</p>
+        <p><strong>Status:</strong> Offen</p>
+      </div>
+    </details>
 
-                <div class="risk-body">
-                    <p><strong>Ursache:</strong> Rollenmodell unklar</p>
-                    <p><strong>Auswirkung:</strong> Fehlzugriffe</p>
-                    <p><strong>Maßnahmen:</strong> Rechte-Reviews</p>
-                </div>
-            </div>
+    <details class="risk-card">
+      <summary class="risk-header">
+        <span class="risk-id">R-03</span>
+        <span class="risk-title">Informationsverlust</span>
+        <span class="badge medium">Mittel</span>
+      </summary>
+      <div class="risk-body">
+        <p><strong>Beschreibung:</strong> Fehlende redundante Datensicherung.</p>
+        <p><strong>Status:</strong> Offen</p>
+      </div>
+    </details>
 
-            <!-- R-03 -->
-            <div class="risk-card">
-                <div class="risk-header">
-                    <span class="risk-id">R-03</span>
-                    <span class="risk-title">Informationsverlust</span>
-                    <span class="badge medium">Mittel</span>
-                    <span class="badge open">Offen</span>
-                </div>
+  </div>
 
-                <div class="risk-body">
-                    <p><strong>Ursache:</strong> Unzureichende Backups</p>
-                    <p><strong>Auswirkung:</strong> Verzögerung</p>
-                    <p><strong>Maßnahmen:</strong> Backup verbessern</p>
-                </div>
-            </div>
+  <!-- IN PLANUNG -->
+  <div class="jira-column">
+    <h3>In Planung</h3>
 
-        </div>
+    <details class="risk-card">
+      <summary class="risk-header">
+        <span class="risk-id">R-02</span>
+        <span class="risk-title">Fehlende Rechteprüfung</span>
+        <span class="badge medium">Mittel</span>
+      </summary>
+      <div class="risk-body">
+        <p><strong>Maßnahme:</strong> Rollenkonzept entwickeln</p>
+        <p><strong>Status:</strong> In Planung</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- ERLEDIGT -->
+  <div class="jira-column">
+    <h3>Erledigt</h3>
+
+    <details class="risk-card">
+      <summary class="risk-header">
+        <span class="risk-id">R-04</span>
+        <span class="risk-title">Backup-Prozess dokumentiert</span>
+        <span class="badge low">Niedrig</span>
+      </summary>
+      <div class="risk-body">
+        <p><strong>Ergebnis:</strong> Dokumentation im ISMS abgelegt</p>
+        <p><strong>Status:</strong> Abgeschlossen</p>
+      </div>
+    </details>
+
+  </div>
+
+</div>
+
 
         <!-- =========================
              BCM
