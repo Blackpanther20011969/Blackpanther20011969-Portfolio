@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>GRC/BCM Refresh: Risk Register & BCM Mini-Plan | Jovanka Schauder</title>
+
+    <meta name="description" content="Arbeitsprobe von Jovanka Schauder: Risk Register und BCM Mini-Plan.">
+    <meta name="author" content="Jovanka Schauder">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header class="header">
+    <nav class="nav">
+        <button class="menu-icon" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Start</a></li>
+            <li><a href="index.html#about">Über mich</a></li>
+            <li><a href="index.html#experience">Projekte</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+            <li><a href="index.html#impressum">Impressum</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>GRC / BCM</h1>
+        <h2>Risk Register & Mini-Plan</h2>
+    </div>
+</section>
+
+<!-- Content -->
+<section class="content">
+    <div class="content-container">
+
+        <h2>Worum es geht</h2>
+        <p>
+            Diese Arbeitsprobe zeigt ein kompaktes Beispiel für ein Risk Register sowie
+            einen BCM Mini-Plan zur strukturierten Risikoerfassung und Absicherung
+            geschäftskritischer Prozesse.
+        </p>
+
+        <div class="sample-note">
+            <strong>Hinweis:</strong><br>
+            Kompakt gehaltene Beispielstruktur zur Demonstration von Analyse,
+            Bewertung und Maßnahmenplanung.
+        </div>
+
+        <div class="button-row">
+            <a href="#risk" class="blog-button">Risk Register</a>
+            <a href="#bcm" class="blog-button">BCM Plan</a>
+        </div>
+
+        <!-- =========================
+             RISK REGISTER (SAUBER)
+        ========================= -->
+        <h2 id="risk">Risk Register</h2>
+
+        <div class="risk-register">
+
+            <!-- R-01 -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <span class="risk-id">R-01</span>
+                    <span class="risk-title">Kundenportal – Systemausfall</span>
+                    <span class="badge high">Hoch</span>
+                    <span class="badge open">Offen</span>
+                </div>
+
+                <div class="risk-body">
+                    <p><strong>Ursache:</strong> Hosting / Technik</p>
+                    <p><strong>Auswirkung:</strong> Kommunikationsausfall</p>
+                    <p><strong>Maßnahmen:</strong> Backup + Wiederanlauf</p>
+                </div>
+            </div>
+
+            <!-- R-02 -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <span class="risk-id">R-02</span>
+                    <span class="risk-title">Fehlende Rechteprüfung</span>
+                    <span class="badge medium">Mittel</span>
+                    <span class="badge progress">In Planung</span>
+                </div>
+
+                <div class="risk-body">
+                    <p><strong>Ursache:</strong> Rollenmodell unklar</p>
+                    <p><strong>Auswirkung:</strong> Fehlzugriffe</p>
+                    <p><strong>Maßnahmen:</strong> Rechte-Reviews</p>
+                </div>
+            </div>
+
+            <!-- R-03 -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <span class="risk-id">R-03</span>
+                    <span class="risk-title">Informationsverlust</span>
+                    <span class="badge medium">Mittel</span>
+                    <span class="badge open">Offen</span>
+                </div>
+
+                <div class="risk-body">
+                    <p><strong>Ursache:</strong> Unzureichende Backups</p>
+                    <p><strong>Auswirkung:</strong> Verzögerung</p>
+                    <p><strong>Maßnahmen:</strong> Backup verbessern</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- =========================
+             BCM
+        ========================= -->
+        <h2 id="bcm">BCM Mini-Plan</h2>
+
+        <div class="sample-table-wrap">
+            <table class="sample-table">
+                <tr>
+                    <th>Prozess</th>
+                    <td>Kundenanfragen bearbeiten</td>
+                </tr>
+                <tr>
+                    <th>Ausfall</th>
+                    <td>Portal nicht erreichbar</td>
+                </tr>
+                <tr>
+                    <th>Auswirkung</th>
+                    <td>Verzögerung, Reputationsrisiko</td>
+                </tr>
+                <tr>
+                    <th>Wiederanlauf</th>
+                    <td>Innerhalb 4 Stunden</td>
+                </tr>
+                <tr>
+                    <th>Maßnahmen</th>
+                    <td>Ersatzkommunikation aktivieren</td>
+                </tr>
+            </table>
+        </div>
+
+        <a href="blog.html" class="blog-button">← Zurück zum Blog</a>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2026 Jovanka Schauder</p>
+</footer>
+
+<!-- Script -->
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
