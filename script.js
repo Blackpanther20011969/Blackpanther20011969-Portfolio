@@ -55,40 +55,43 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    /* =========================
-       Risk Cards ein-/ausklappen
-    ========================= */
-    const riskCards = document.querySelectorAll(".risk-card");
+  /* =========================
+   DRAG & DROP JIRA BOARD
+========================= */
 
-    riskCards.forEach(function (card, index) {
-        const cardHeader = card.querySelector(".risk-header");
-        const cardBody = card.querySelector(".risk-body");
+const cards = document.querySelectorAll('.risk-card');
+const columns = document.querySelectorAll('.jira-column');
 
-        if (!cardHeader || !cardBody) return;
+let draggedCard = null;
 
-        /* Erste Karte offen, Rest geschlossen */
-        if (index === 0) {
-            cardBody.style.display = "block";
-            card.classList.add("active");
-        } else {
-            cardBody.style.display = "none";
+cards.forEach(card => {
+    card.addEventListener('dragstart', () => {
+        draggedCard = card;
+        card.classList.add('dragging');
+    });
+
+    card.addEventListener('dragend', () => {
+        card.classList.remove('dragging');
+        draggedCard = null;
+    });
+});
+
+columns.forEach(column => {
+    column.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        column.classList.add('drag-over');
+    });
+
+    column.addEventListener('dragleave', () => {
+        column.classList.remove('drag-over');
+    });
+
+    column.addEventListener('drop', () => {
+        column.classList.remove('drag-over');
+
+        if (draggedCard) {
+            column.appendChild(draggedCard);
         }
-
-        cardHeader.style.cursor = "pointer";
-
-        cardHeader.addEventListener("click", function (event) {
-            event.stopPropagation();
-
-            const isOpen = card.classList.contains("active");
-
-            if (isOpen) {
-                card.classList.remove("active");
-                cardBody.style.display = "none";
-            } else {
-                card.classList.add("active");
-                cardBody.style.display = "block";
-            }
-        });
     });
 });
 
