@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>GRC/BCM Refresh: Risk Register & BCM Mini-Plan | Jovanka Schauder</title>
+
+    <meta name="description" content="Arbeitsprobe von Jovanka Schauder: Risk Register und BCM Mini-Plan.">
+    <meta name="author" content="Jovanka Schauder">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="grc-bcm.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header class="header">
+    <nav class="nav">
+        <button class="menu-icon" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Start</a></li>
+            <li><a href="index.html#about">Über mich</a></li>
+            <li><a href="index.html#experience">Projekte</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+            <li><a href="index.html#impressum">Impressum</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>GRC / BCM</h1>
+        <h2>Risk Register & Mini-Plan</h2>
+    </div>
+</section>
+
+<!-- Content -->
+<section class="content">
+    <div class="content-container">
+
+        <h2>Worum es geht</h2>
+        <p>
+            Diese Arbeitsprobe zeigt ein kompaktes Beispiel für ein Risk Register sowie
+            einen BCM Mini-Plan zur strukturierten Risikoerfassung und Absicherung
+            geschäftskritischer Prozesse.
+        </p>
+
+        <div class="sample-note">
+            <strong>Hinweis:</strong><br>
+            Kompakt gehaltene Beispielstruktur zur Demonstration von Analyse,
+            Bewertung und Maßnahmenplanung.
+        </div>
+
+        <div class="button-row">
+            <a href="#risk" class="blog-button">Risk Register</a>
+            <a href="#bcm" class="blog-button">BCM Plan</a>
+        </div>
+
+        <!-- =========================
+             RISK REGISTER
+        ========================= -->
+
+        <h2 id="risk">Risk Register</h2>
+
+        <div class="jira-board">
+
+            <!-- OFFEN -->
+            <div class="jira-column column-open">
+                <h3>Offen</h3>
+
+                <details class="risk-card" open>
+                    <summary class="risk-header">
+                        <span class="risk-id">R-01</span>
+                        <span class="risk-title">Systemausfall Kundenportal</span>
+                        <span class="badge high">Hoch</span>
+                    </summary>
+
+                    <div class="risk-body">
+                        <p><strong>Beschreibung:</strong> Totalausfall des Kundenportals durch Infrastrukturfehler.</p>
+                        <p><strong>Auswirkung:</strong> Umsatzverlust, Reputationsschaden, eingeschränkte Erreichbarkeit.</p>
+                        <p><strong>Maßnahme:</strong> Eskalationsweg definieren, Notfallkommunikation vorbereiten, Wiederanlauf prüfen.</p>
+                        <p><strong>Status:</strong> Offen</p>
+                    </div>
+                </details>
+
+                <details class="risk-card">
+                    <summary class="risk-header">
+                        <span class="risk-id">R-03</span>
+                        <span class="risk-title">Informationsverlust</span>
+                        <span class="badge medium">Mittel</span>
+                    </summary>
+
+                    <div class="risk-body">
+                        <p><strong>Beschreibung:</strong> Fehlende oder unvollständige redundante Datensicherung.</p>
+                        <p><strong>Auswirkung:</strong> Datenverlust, Verzögerungen im Tagesgeschäft, Nacharbeiten.</p>
+                        <p><strong>Maßnahme:</strong> Backup-Prozess prüfen, Verantwortlichkeiten dokumentieren.</p>
+                        <p><strong>Status:</strong> Offen</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- IN PLANUNG -->
+            <div class="jira-column column-planned">
+                <h3>In Planung</h3>
+
+                <details class="risk-card">
+                    <summary class="risk-header">
+                        <span class="risk-id">R-02</span>
+                        <span class="risk-title">Fehlende Rechteprüfung</span>
+                        <span class="badge medium">Mittel</span>
+                    </summary>
+
+                    <div class="risk-body">
+                        <p><strong>Beschreibung:</strong> Rollen und Berechtigungen sind nicht ausreichend dokumentiert.</p>
+                        <p><strong>Auswirkung:</strong> Unklare Verantwortlichkeiten, mögliche Zugriffskonflikte.</p>
+                        <p><strong>Maßnahme:</strong> Rollenkonzept entwickeln, Berechtigungen prüfen, Freigabeprozess beschreiben.</p>
+                        <p><strong>Status:</strong> In Planung</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- ERLEDIGT -->
+            <div class="jira-column column-done">
+                <h3>Erledigt</h3>
+
+                <details class="risk-card">
+                    <summary class="risk-header">
+                        <span class="risk-id">R-04</span>
+                        <span class="risk-title">Backup-Prozess dokumentiert</span>
+                        <span class="badge low">Niedrig</span>
+                    </summary>
+
+                    <div class="risk-body">
+                        <p><strong>Beschreibung:</strong> Backup-Ablauf wurde beschrieben und als Arbeitsgrundlage dokumentiert.</p>
+                        <p><strong>Ergebnis:</strong> Dokumentation liegt vor und kann im ISMS/BCM-Kontext weiterverwendet werden.</p>
+                        <p><strong>Status:</strong> Abgeschlossen</p>
+                    </div>
+                </details>
+            </div>
+
+        </div>
+
+        <!-- =========================
+             BCM MINI PLAN
+        ========================= -->
+
+        <div class="bcm-mini-plan" id="bcm">
+            <h3>BCM Mini-Plan</h3>
+
+            <div class="sample-table-wrap">
+                <table class="sample-table">
+                    <tr>
+                        <th>Prozess</th>
+                        <td>Kundenanfragen bearbeiten</td>
+                    </tr>
+                    <tr>
+                        <th>Ausfall</th>
+                        <td>Portal nicht erreichbar</td>
+                    </tr>
+                    <tr>
+                        <th>Auswirkung</th>
+                        <td>Verzögerung, Reputationsrisiko, zusätzlicher manueller Kommunikationsaufwand</td>
+                    </tr>
+                    <tr>
+                        <th>Wiederanlauf</th>
+                        <td>Innerhalb von 4 Stunden</td>
+                    </tr>
+                    <tr>
+                        <th>Maßnahmen</th>
+                        <td>Ersatzkommunikation aktivieren, Support informieren, Statusmeldung vorbereiten</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="button-row">
+                <a href="dokument/bcm-mini-plan-beispiel.pdf" class="blog-button" target="_blank">
+                    📄 BCM Mini-Plan als PDF
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2026 Jovanka Schauder</p>
+</footer>
+
+<!-- Script für bestehendes mobiles Menü -->
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
