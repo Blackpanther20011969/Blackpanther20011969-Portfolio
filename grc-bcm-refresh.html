@@ -67,7 +67,7 @@
 
        <h2 id="risk">Risk Register</h2>
 
-<div class="jira-board">
+<div class="jira-column column-open">
 
   <!-- OFFEN -->
   <div class="jira-column">
@@ -101,7 +101,7 @@
   </div>
 
   <!-- IN PLANUNG -->
-  <div class="jira-column">
+ <div class="jira-column column-planned">
     <h3>In Planung</h3>
 
     <details class="risk-card">
@@ -119,7 +119,7 @@
   </div>
 
   <!-- ERLEDIGT -->
-  <div class="jira-column">
+ <div class="jira-column column-done">
     <h3>Erledigt</h3>
 
     <details class="risk-card">
@@ -142,44 +142,38 @@
         <!-- =========================
              BCM
         ========================= -->
- <div class="bcm-mini-plan">
-  <h3>BCM Mini‑Plan</h3>
-  <div class="sample-table-wrap">
-      <!-- Tabelle -->
-  </div>
-</div>
-``       
-        <h2 id="bcm">BCM Mini-Plan</h2>
+ <div class="bcm-mini-plan" id="bcm">
+    <h3>BCM Mini-Plan</h3>
 
-        <div class="sample-table-wrap">
-            <table class="sample-table">
-                <tr>
-                    <th>Prozess</th>
-                    <td>Kundenanfragen bearbeiten</td>
-                </tr>
-                <tr>
-                    <th>Ausfall</th>
-                    <td>Portal nicht erreichbar</td>
-                </tr>
-                <tr>
-                    <th>Auswirkung</th>
-                    <td>Verzögerung, Reputationsrisiko</td>
-                </tr>
-                <tr>
-                    <th>Wiederanlauf</th>
-                    <td>Innerhalb 4 Stunden</td>
-                </tr>
-                <tr>
-                    <th>Maßnahmen</th>
-                    <td>Ersatzkommunikation aktivieren</td>
-                </tr>
-            </table>
-        </div>
-
-        <a href="blog.html" class="blog-button">← Zurück zum Blog</a>
-
+    <div class="sample-table-wrap">
+        <table class="sample-table">
+            <tr>
+                <th>Prozess</th>
+                <td>Kundenanfragen bearbeiten</td>
+            </tr>
+            <tr>
+                <th>Ausfall</th>
+                <td>Portal nicht erreichbar</td>
+            </tr>
+            <tr>
+                <th>Auswirkung</th>
+                <td>Verzögerung, Reputationsrisiko</td>
+            </tr>
+            <tr>
+                <th>Wiederanlauf</th>
+                <td>Innerhalb 4 Stunden</td>
+            </tr>
+            <tr>
+                <th>Maßnahmen</th>
+                <td>Ersatzkommunikation aktivieren</td>
+            </tr>
+        </table>
     </div>
-</section>
+
+    <a href="dokument/bcm-mini-plan-beispiel.pdf" class="blog-button" target="_blank">
+        📄 BCM Mini-Plan als PDF
+    </a>
+</div>
 
 <!-- Footer -->
 <footer class="footer">
