@@ -71,8 +71,16 @@
     opacity: 0.6;
 }
 
+.risk-card summary::after {
+    content: "▼";
+    margin-left: auto;
+    opacity: 0.6;
+}
+
 .risk-card[open] summary::after {
     content: "▲";
+}
+
 }
 .risk-card {
     margin-bottom: 12px;
