@@ -360,7 +360,77 @@
     outline: 2px dashed rgba(255,255,255,0.30);
     outline-offset: 4px;
 }
+/* =========================
+   FEINSCHLIFF – RUHIGERES BOARD UND BCM
+========================= */
 
+.jira-column {
+    position: relative;
+}
+
+.jira-column::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 48px;
+    border-radius: 999px;
+    margin: 0 auto 12px;
+    background: rgba(255,255,255,0.35);
+}
+
+.column-open::before {
+    background: #ff6b6b;
+}
+
+.column-planned::before {
+    background: #ffc107;
+}
+
+.column-done::before {
+    background: #00c896;
+}
+
+.risk-card {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.14);
+}
+
+.risk-card:hover {
+    transform: translateY(-1px);
+}
+
+.risk-id {
+    background: rgba(255,152,0,0.12);
+    padding: 3px 7px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.risk-body {
+    background: rgba(0,0,0,0.08);
+}
+
+.risk-body strong {
+    color: #ffb347;
+    font-weight: 600;
+}
+
+.bcm-mini-plan {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-top: 4px solid rgba(140,200,240,0.85);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.bcm-grid-item {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(140,200,240,0.18);
+}
+
+.content-container > .button-row:last-child {
+    border-top: 1px solid rgba(255,255,255,0.10);
+    padding-top: 24px;
+    margin-top: 36px;
+}
 /* =========================
    MOBILE
 ========================= */
