@@ -65,12 +65,25 @@
     box-shadow: 0 3px 9px rgba(0,0,0,0.14);
 }
 
+/* NEU ergänzen */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
 .jira-column h3 {
     margin-bottom: 12px;
     text-align: center;
     font-weight: 600;
     font-size: 1.08rem;
 }
+.column-done {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
 
 /* =========================
    STATUS-SPALTEN – FARBEN
