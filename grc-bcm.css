@@ -39,6 +39,13 @@
     font-size: 1rem;
     line-height: 1.6;
 }
+.work-sample-meta {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #b0c4d8;
+    margin-bottom: 18px;
+    letter-spacing: 0.3px;
+}
 
 /* =========================
    BOARD
