@@ -131,11 +131,8 @@
 }
 
 .risk-card summary {
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
+    min-height: 48px;   /* bessere Klickfläche */
+}
     
     /* GANZE ZEILE klickbar */
     width: 100%;
