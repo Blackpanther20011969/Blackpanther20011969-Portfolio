@@ -577,6 +577,7 @@ pre,
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-top: 20px;
+   align-items: stretch;
 }
 
 /* Spalten */
