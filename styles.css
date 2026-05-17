@@ -615,3 +615,55 @@ pre,
 .task-card p {
     margin: 4px 0;
 }
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px;
+    position: relative;
+}
+
+/* Linie */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.2);
+    z-index: 0;
+}
+
+/* Steps */
+.timeline-step {
+    position: relative;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+}
+
+/* Text unter den Punkten */
+.timeline-step span {
+    display: block;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #ddd;
+}
+
+/* Erledigt */
+.timeline-step.done {
+    background: #00c896;
+}
+
+/* Aktuell */
+.timeline-step.active {
+    background: #ffc107;
+}
