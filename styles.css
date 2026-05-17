@@ -584,11 +584,14 @@ pre,
 .dashboard-column {
     background: rgba(255,255,255,0.05);
     border-radius: 12px;
-    padding: 14px;
-    min-height: 220px;
+    padding: 16px;
+    min-height: 240px;
+
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);  /* NEU */
 }
 
 /* gleiche Logik wie Risk Board */
@@ -663,7 +666,6 @@ pre,
     background: #00c896;
 }
 
-/* Aktuell */
 .timeline-step.active {
     background: #ffc107;
 }
