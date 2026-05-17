@@ -197,7 +197,9 @@ section {
     margin-top: 24px;
     margin-bottom: 12px;
 }
-
+h2 {
+    margin-top: 30px;
+}
 .about p,
 .cv-section p,
 .contact p,
