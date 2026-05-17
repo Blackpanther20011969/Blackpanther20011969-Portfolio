@@ -613,17 +613,18 @@ pre,
     padding: 12px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
 }
 
-.task-card p {
-    margin: 4px 0;
+.task-card:hover {
+    transform: translateY(-2px);
 }
 /* =========================
    TIMELINE
 ========================= */
 
 .timeline {
-    display: flex;
+   margin: 35px 0 25px;
     justify-content: space-between;
     align-items: center;
     margin: 30px 0 20px;
