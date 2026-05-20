@@ -136,15 +136,18 @@
 .column-done .risk-card {
     border-left-color: #00c896;
 }
-
 .risk-card summary {
-    min-height: 48px;   /* bessere Klickfläche */
+  min-height: 48px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  cursor: pointer;
+  list-style: none;
 }
-    
-    /* GANZE ZEILE klickbar */
-    width: 100%;
-    position: relative;
-}
+
 
 /* Pfeil klickbarer & größer */
 .risk-card summary::after {
