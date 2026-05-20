@@ -987,9 +987,23 @@ ARBEITSPROBE – VISUELLE BOXEN
 }
 
 /* Listen besser lesbar */
-.process-list li,
-.check-list li {
-  margin-bottom: 8px;
+.process-list {
+  counter-reset: section;
+}
+
+.process-list li {
+  list-style: none;
+  position: relative;
+  padding-left: 28px;
+}
+
+.process-list li::before {
+  counter-increment: section;
+  content: counter(section) ".";
+  position: absolute;
+  left: 0;
+  color: #ff9800;
+  font-weight: bold;
 }
 .content h1 {
   font-size: 2.5rem;
