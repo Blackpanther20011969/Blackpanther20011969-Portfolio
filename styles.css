@@ -937,3 +937,58 @@ RESPONSIVE
 .timeline-step.active {
     background: #ffc107;
 }
+/* =========================
+ARBEITSPROBE – VISUELLE BOXEN
+========================= */
+
+.work-sample-hero {
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 5px solid #ff9800;
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.sample-section {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 26px 30px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+  border-left: 4px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.sample-section:hover {
+  transform: translateY(-3px);
+  border-left-color: #ff9800;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.28);
+}
+
+.sample-section h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* REQUIREMENTS GRID */
+.requirement-card {
+  margin-bottom: 14px;
+}
+
+/* User Stories ein bisschen moderner */
+.story-card {
+  border-left: 4px solid #4a90e2;
+}
+
+/* SOP hervorheben */
+.sop-box {
+  background: rgba(255,255,255,0.05);
+  border-left: 4px solid #4a90e2;
+}
+
+/* Listen besser lesbar */
+.process-list li,
+.check-list li {
+  margin-bottom: 8px;
+}
