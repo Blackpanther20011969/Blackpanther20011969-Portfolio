@@ -109,11 +109,21 @@
 
 .process-page .check-list li {
     display: grid;
-    grid-template-columns: 25px 1fr;
+    grid-template-columns: 28px auto; 
     gap: 10px;
 
     padding: 14px;
     border-radius: 8px;
+
+    align-items: flex-start;
+}
+.process-page .check-list li {
+    word-break: normal;
+    overflow-wrap: break-word;
+
+}
+.process-page .check-list li {
+    line-height: 1.5;
 }
 
 /* Häkchen */
