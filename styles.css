@@ -324,45 +324,7 @@ HERO
     cursor: pointer;
 }
 
-/* =========================
-   HERO
-========================= */
-.hero {
-    position: relative;
-    min-height: 70vh;
-    background: url("img/Profilbild.jpg") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-}
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-    padding: 20px;
-    animation: fadeUp 1.2s ease-out forwards;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    color: #ff9800;
-    margin-bottom: 12px;
-}
-
-.hero-content h2 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    font-weight: normal;
-}
 
 /* =========================
    GENERIC SECTIONS
