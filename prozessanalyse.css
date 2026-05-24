@@ -205,4 +205,28 @@
         grid-template-columns: 1fr;
     }
 }
-``
+
+@media print {
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .sample-section,
+    .process-intro-card {
+        background: white;
+        box-shadow: none;
+        color: black;
+    }
+
+    h2 {
+        color: black;
+    }
+
+    .check-list li,
+    .process-list li {
+        background: none;
+    }
+}
+
