@@ -89,29 +89,51 @@ HERO
 ========================= */
 
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: url("img/Profilbild.jpg") center/cover no-repeat;
+  position: relative;
+  height: 100vh;
+  background-image: url("img/Profilbild.jpg");
+  background-size: cover;
+  background-position: right center;
 }
 
+/* der Schleier – jetzt korrekt */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(20,30,40,0.9), rgba(20,30,40,0.6));
+
+  /* sauberer Verlauf statt grauem Block */
+  background: linear-gradient(
+    to right,
+    rgba(15, 25, 35, 0.92) 0%,
+    rgba(15, 25, 35, 0.85) 35%,
+    rgba(15, 25, 35, 0.5) 65%,
+    rgba(15, 25, 35, 0.2) 100%
+  );
 }
 
-.hero-content {
+/* WICHTIG: Layout-Wrapper */
+.hero-wrapper {
   position: relative;
-  max-width: 700px;
-  margin-left: 60px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Content sauber links */
+.hero-content {
+  max-width: 600px;
   padding: 40px;
 
-  background: rgba(0,0,0,0.5);
-  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
 
+  border-radius: 16px;
   border-left: 5px solid #ff9800;
 }
+``
 
 /* =========================
 BUTTONS
