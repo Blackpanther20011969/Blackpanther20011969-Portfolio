@@ -2,69 +2,7 @@
 HERO
 ========================= */
 
-.hero {
-  position: relative;
-  height: 100vh;
-  background-image: url("img/Profilbild.jpg");
-  background-size: cover;
-  background-position: right center;
-}
 
-/* Overlay sauber */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(15,25,35,0.92) 0%,
-    rgba(15,25,35,0.85) 35%,
-    rgba(15,25,35,0.5) 65%,
-    rgba(15,25,35,0.2) 100%
-  );
-}
-
-/* Wrapper */
-.hero-wrapper {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* Content */
-.hero-content {
-  max-width: 600px;
-  padding: 40px;
-  background: rgba(0,0,0,0.45);
-  border-radius: 16px;
-  border-left: 5px solid #ff9800;
-}
-
-/* TYPO */
-.hero-kicker {
-  font-size: 0.8rem;
-  color: #ffb347;
-  margin-bottom: 10px;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  color: #ff9800;
-}
-
-.hero-content h2 {
-  font-size: 1.3rem;
-  margin-top: 10px;
-}
-
-/* TEXT */
-.hero-text {
-  margin-top: 15px;
-  max-width: 55ch;
-}
 
 /* BUTTONS FIX */
 .hero-buttons {
