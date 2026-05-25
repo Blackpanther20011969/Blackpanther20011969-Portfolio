@@ -12,7 +12,7 @@ BODY
 ========================= */
 body {
   font-family: Arial, sans-serif;
-  background: red;
+  background: #2c3e50;  /* ← DAS IST DIE RICHTIGE FARBE */
   color: #ffffff;
   line-height: 1.6;
   padding-top: 70px;
@@ -203,4 +203,16 @@ FOOTER
   padding: 20px;
   background: #1a252f;
 }
-``
+
+/* =========================
+SKILL LIST
+========================= */
+.skill-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.skill-list li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
