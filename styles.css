@@ -1,1 +1,315 @@
+/* =========================
+RESET & BASIS
+========================= */
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #2c3e50, #1f2a36);
+  color: #ffffff;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+a {
+  color: #ff9800;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e68900;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.3;
+}
+
+section {
+  padding: 70px 10%;
+}
+
+/* =========================
+HEADER / NAVIGATION
+========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(20, 30, 40, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+}
+
+.nav {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255,255,255,0.08);
+  color: #ff9800;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* =========================
+HERO (deutlich moderner)
+========================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  background: url("img/Profilbild.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20,30,40,0.95),
+    rgba(20,30,40,0.7)
+  );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 750px;
+  padding: 40px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  border-left: 5px solid #ff9800;
+}
+
+/* moderne Typografie */
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: #eaeaea;
+  margin-bottom: 25px;
+}
+
+/* Buttons moderner */
+.btn {
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* =========================
+SECTIONS (weniger langweilig 😉)
+========================= */
+
+.about,
+.experience,
+.content,
+.systemanalyse,
+.blog,
+.impressum {
+  background: linear-gradient(180deg, #34495e, #22313f);
+}
+
+.contact {
+  background: linear-gradient(180deg, #4a90e2, #357abd);
+}
+
+/* Container schöner */
+.about-container,
+.contact-container,
+.impressum-container,
+.content-container {
+  max-width: 950px;
+  margin: auto;
+  padding: 35px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Überschriften auffälliger */
+h2 {
+  text-align: center;
+  color: #ff9800;
+  margin-bottom: 25px;
+}
+
+/* Fließtext LESBAR */
+p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  max-width: 75ch;  /* optimale Leselänge */
+}
+
+/* =========================
+KARTEN (viel schöner!)
+========================= */
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Karten modernisiert */
+.experience-item {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 14px;
+
+  transition: 0.3s;
+  border-top: 4px solid transparent;
+
+  min-width: 0;
+}
+
+/* Hover-Effekt */
+.experience-item:hover {
+  transform: translateY(-6px);
+  border-top: 4px solid #ff9800;
+  box-shadow: 0 10px 25px rgba(255,152,0,0.25);
+}
+
+/* Karten Überschrift */
+.experience-item h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+/* =========================
+LISTEN
+========================= */
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+/* schöner Haken */
+ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff9800;
+}
+
+/* =========================
+TEXTUMBRUCH FIX (DEIN PROBLEM!)
+========================= */
+
+p, li, h1, h2, h3 {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a252f;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  section {
+    padding: 50px 6%;
+  }
+
+  .hero-content {
+    padding: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .experience-container {
+    grid-template-columns: 1fr;
+  }
+}
+``
