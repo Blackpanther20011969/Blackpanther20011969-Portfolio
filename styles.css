@@ -1,1 +1,287 @@
+/* =========================
+RESET & BASIS
+========================= */
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #2c3e50, #1f2a36);
+  color: white;
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+/* =========================
+TYPOGRAFIE (HIER PASSIERT MAGIE)
+========================= */
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #ff9800;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ff9800;
+}
+
+h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+p {
+  max-width: 75ch;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+
+  /* GANZ WICHTIG gegen dein Umbruchproblem */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* kleine Hervorhebungsfarbe */
+strong {
+  color: #ffb347;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(20,30,40,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(255,255,255,0.1);
+  color: #ff9800;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("img/Profilbild.jpg") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(20,30,40,0.9), rgba(20,30,40,0.6));
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  margin-left: 60px;
+  padding: 40px;
+
+  background: rgba(0,0,0,0.5);
+  border-radius: 16px;
+
+  border-left: 5px solid #ff9800;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #e68900;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+}
+
+/* =========================
+SECTIONS
+========================= */
+
+section {
+  padding: 60px 10%;
+}
+
+.about,
+.experience,
+.impressum {
+  background: linear-gradient(180deg, #34495e, #22313f);
+}
+
+.contact {
+  background: linear-gradient(180deg, #4a90e2, #357abd);
+}
+
+/* Kartencontainer */
+.about-container,
+.contact-container,
+.impressum-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+
+  border-radius: 16px;
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+/* =========================
+EXPERIENCE (HIER IST DEIN WOW-EFFEKT)
+========================= */
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* einzelne Karte */
+.experience-item {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 14px;
+
+  position: relative;
+  transition: 0.3s;
+
+  min-width: 0;
+}
+
+/* linker Farbstreifen */
+.experience-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #ff9800;
+}
+
+/* Hover Effekt */
+.experience-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(255,152,0,0.3);
+}
+
+/* kleine Headline unter Titel */
+.tagline {
+  font-size: 0.9rem;
+  color: #ffb347;
+  margin-bottom: 10px;
+}
+
+/* =========================
+SKILL LIST (DEIN CODE!)
+========================= */
+
+.skill-list {
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.skill-list li {
+  list-style: none;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 6px;
+
+  position: relative;
+  padding-left: 20px;
+}
+
+.skill-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #ff9800;
+}
+
+/* =========================
+BUTTON LINKS IN KARTEN
+========================= */
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+
+  background: #ff9800;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+.project-link:hover {
+  background: #e68900;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a252f;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-left: 10px;
+    padding: 20px;
+  }
+
+  .experience-container {
+    grid-template-columns: 1fr;
+  }
+}
