@@ -96,7 +96,7 @@ HERO
   background-position: right center;
 }
 
-/* der Schleier – jetzt korrekt */
+/* der Schleier  */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -212,7 +212,7 @@ section {
 }
 
 /* =========================
-EXPERIENCE (HIER IST DEIN WOW-EFFEKT)
+EXPERIENCE 
 ========================= */
 
 .experience-container {
