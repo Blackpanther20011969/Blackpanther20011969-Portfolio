@@ -288,3 +288,31 @@
   hyphens: auto;
 }
 
+/* =========================
+ TEXTUMBRUCH-FIX
+========================= */
+
+.process-page *,
+.process-page *::before,
+.process-page *::after {
+  box-sizing: border-box;
+}
+
+.process-page .sample-section,
+.process-page .process-intro-card,
+.process-page .sop-box,
+.process-page .sop-block,
+.process-page .card-grid,
+.process-page .requirement-card {
+  min-width: 0;
+}
+
+.process-page p,
+.process-page li,
+.process-page h1,
+.process-page h2,
+.process-page h3 {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
