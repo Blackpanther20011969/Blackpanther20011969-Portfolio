@@ -485,3 +485,59 @@
     display: none;
   }
 }
+/* =========================
+   AKTIONSBUTTONS UNTEN
+========================= */
+
+.process-page .process-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.process-page .process-actions .btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.22s ease;
+}
+
+.process-page .process-actions .btn-primary {
+  background: #ff9800;
+  color: #ffffff;
+}
+
+.process-page .process-actions .btn-primary:hover {
+  background: #e68900;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.process-page .process-actions .btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.process-page .process-actions .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.20);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 560px) {
+  .process-page .process-actions {
+    flex-direction: column;
+  }
+
+  .process-page .process-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
