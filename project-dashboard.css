@@ -1,1 +1,452 @@
+/* =========================
+   PROJECT DASHBOARD – ISOLIERT
+   Diese Datei ergänzt styles.css
+   Wichtig: Die HTML-Seite braucht <body class="dashboard-page">
+========================= */
 
+/* =========================
+   GRUNDLAYOUT
+========================= */
+
+.dashboard-page {
+  background: linear-gradient(180deg, #34495e, #22313f);
+  color: #ffffff;
+}
+
+.dashboard-page .dashboard-main {
+  background:
+    radial-gradient(circle at top left, rgba(255, 152, 0, 0.10), transparent 34%),
+    linear-gradient(180deg, #34495e, #22313f);
+  padding: 70px 10%;
+}
+
+.dashboard-page .dashboard-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HAUPTSEKTIONEN
+========================= */
+
+.dashboard-page .dashboard-intro-card,
+.dashboard-page .dashboard-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 34px auto;
+  padding: 32px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.07)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-page .dashboard-intro-card {
+  border-left: 6px solid #ff9800;
+}
+
+.dashboard-page .dashboard-section h2,
+.dashboard-page .dashboard-intro-card h2 {
+  color: #ff9800;
+  margin-bottom: 22px;
+  text-align: left;
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+.dashboard-page .dashboard-section h3,
+.dashboard-page .dashboard-intro-card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.dashboard-page .dashboard-section p,
+.dashboard-page .dashboard-intro-card p {
+  max-width: 880px;
+  margin: 12px 0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.dashboard-page strong {
+  color: #ffffff;
+}
+
+/* =========================
+   META-LABEL
+========================= */
+
+.dashboard-page .work-sample-meta,
+.dashboard-page .dashboard-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 152, 0, 0.16);
+  color: #ffb347;
+  font-size: 0.84rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+/* =========================
+   INFO-KARTEN
+========================= */
+
+.dashboard-page .info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.dashboard-page .info-card {
+  position: relative;
+  min-height: 135px;
+  padding: 22px;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.065)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-left: 5px solid #ff9800;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.dashboard-page .info-card h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.dashboard-page .info-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =========================
+   KANBAN-DASHBOARD
+========================= */
+
+.dashboard-page .dashboard-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.dashboard-page .dashboard-column {
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.065)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.dashboard-page .dashboard-column h3 {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.dashboard-page .column-open {
+  border-top: 5px solid #ff6b6b;
+}
+
+.dashboard-page .column-open h3 {
+  background: rgba(255, 107, 107, 0.18);
+  color: #ffb3b3;
+}
+
+.dashboard-page .column-progress {
+  border-top: 5px solid #ff9800;
+}
+
+.dashboard-page .column-progress h3 {
+  background: rgba(255, 152, 0, 0.18);
+  color: #ffb347;
+}
+
+.dashboard-page .column-done {
+  border-top: 5px solid #4a90e2;
+}
+
+.dashboard-page .column-done h3 {
+  background: rgba(74, 144, 226, 0.20);
+  color: #7db7f0;
+}
+
+.dashboard-page .task-card {
+  padding: 15px 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 1.55;
+}
+
+.dashboard-page .task-card p {
+  margin: 0;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.dashboard-page .timeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.dashboard-page .timeline-step {
+  position: relative;
+  min-height: 85px;
+  padding: 18px 12px;
+  text-align: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.dashboard-page .timeline-step span {
+  display: block;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.dashboard-page .timeline-step.done {
+  border-left: 5px solid #4a90e2;
+  background: rgba(74, 144, 226, 0.12);
+}
+
+.dashboard-page .timeline-step.active {
+  border-left: 5px solid #ff9800;
+  background: rgba(255, 152, 0, 0.14);
+  box-shadow: 0 0 18px rgba(255, 152, 0, 0.14);
+}
+
+/* =========================
+   LISTEN
+========================= */
+
+.dashboard-page .dashboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+}
+
+.dashboard-page .dashboard-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  text-align: left;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-page .dashboard-list li::before {
+  content: "✔";
+  color: #ff9800;
+  font-weight: bold;
+  flex: 0 0 22px;
+}
+
+/* =========================
+   RISIKO / KOMMUNIKATION
+========================= */
+
+.dashboard-page .two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.dashboard-page .detail-card {
+  padding: 22px;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.065)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-left: 5px solid #ff9800;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.dashboard-page .detail-card h3 {
+  color: #ff9800;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   HOVER-EFFEKTE
+========================= */
+
+@media (hover: hover) {
+  .dashboard-page .info-card:hover,
+  .dashboard-page .dashboard-column:hover,
+  .dashboard-page .detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 16px 32px rgba(0, 0, 0, 0.30),
+      0 0 18px rgba(255, 152, 0, 0.16);
+    border-color: rgba(255, 152, 0, 0.30);
+  }
+}
+
+/* =========================
+   AKTIONSBUTTONS UNTEN
+========================= */
+
+.dashboard-page .dashboard-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+/* =========================
+   TEXTUMBRUCH-FIX
+========================= */
+
+.dashboard-page *,
+.dashboard-page *::before,
+.dashboard-page *::after {
+  box-sizing: border-box;
+}
+
+.dashboard-page p,
+.dashboard-page li,
+.dashboard-page h1,
+.dashboard-page h2,
+.dashboard-page h3 {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+  .dashboard-page .info-grid,
+  .dashboard-page .dashboard-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-page .timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page .dashboard-main {
+    padding: 50px 6%;
+  }
+
+  .dashboard-page .dashboard-intro-card,
+  .dashboard-page .dashboard-section {
+    padding: 26px 22px;
+  }
+
+  .dashboard-page .info-grid,
+  .dashboard-page .dashboard-board,
+  .dashboard-page .two-column-grid,
+  .dashboard-page .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-page .dashboard-actions {
+    flex-direction: column;
+  }
+
+  .dashboard-page .dashboard-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-page .dashboard-section h2,
+  .dashboard-page .dashboard-intro-card h2 {
+    font-size: 1.45rem;
+  }
+}
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .header,
+  .footer,
+  .dashboard-page .dashboard-actions {
+    display: none;
+  }
+
+  .dashboard-page,
+  .dashboard-page .dashboard-main,
+  .dashboard-page .dashboard-intro-card,
+  .dashboard-page .dashboard-section,
+  .dashboard-page .info-card,
+  .dashboard-page .dashboard-column,
+  .dashboard-page .detail-card,
+  .dashboard-page .task-card,
+  .dashboard-page .timeline-step {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: none;
+  }
+
+  .dashboard-page .dashboard-board,
+  .dashboard-page .info-grid,
+  .dashboard-page .two-column-grid,
+  .dashboard-page .timeline {
+    display: block;
+  }
+
+  .dashboard-page .info-card,
+  .dashboard-page .dashboard-column,
+  .dashboard-page .detail-card,
+  .dashboard-page .timeline-step {
+    margin-bottom: 12px;
+  }
+}
