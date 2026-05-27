@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Jovanka Schauder | Prozessanalyse, Anforderungsmanagement & technische Dokumentation</title>
+
+  <meta name="description" content="Portfolio von Jovanka Schauder mit Fokus auf Prozessanalyse, Anforderungsmanagement, technischer Dokumentation und IT-naher Projektunterstützung.">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="nav">
+      <button class="menu-icon" onclick="toggleMenu()">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="#hero">Start</a></li>
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#experience">Arbeitsproben</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">
+        Prozessanalyse · Anforderungsmanagement · Technische Dokumentation
+      </p>
+
+      <h1>Jovanka Schauder</h1>
+
+      <h2>
+        Strukturierte IT-Generalistin an der Schnittstelle zwischen Fachbereich und IT
+      </h2>
+
+      <p class="hero-text">
+        Ich unterstütze Teams dabei, Abläufe sichtbar zu machen, Anforderungen verständlich zu formulieren
+        und technische Zusammenhänge so zu dokumentieren, dass Fachbereiche und IT effektiv zusammenarbeiten.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">Arbeitsproben ansehen</a>
+        <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ÜBER MICH -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <h2>Über mich</h2>
+
+      <p>
+        Ich verbinde technisches Grundverständnis mit strukturierter Analyse und klarer Dokumentation.
+      </p>
+
+      <p>
+        Meine Stärke liegt darin, Prozesse zu durchdringen, Schwachstellen sichtbar zu machen
+        und daraus nachvollziehbare Anforderungen abzuleiten.
+      </p>
+
+      <p>
+        <strong>Schwerpunkte:</strong><br>
+        Prozessanalyse · Anforderungsmanagement · Technische Dokumentation · Projektassistenz
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ARBEITSPROBEN -->
+  <section id="experience" class="experience">
+    <h2>Ausgewählte Arbeitsproben</h2>
+
+    <div class="experience-container">
+
+      <div class="experience-item">
+        <h3>Prozessanalyse & Anforderungsableitung</h3>
+        <p>Analyse eines Veröffentlichungsprozesses inkl. Soll-Prozess, Anforderungen und SOP.</p>
+        <a href="prozessanalyse-anforderungen.html" class="project-link">
+          Arbeitsprobe ansehen
+        </a>
+      </div>
+
+      <div class="experience-item">
+        <h3>Projekt-Dashboard & Risk Register</h3>
+        <p>Visualisierung von Aufgaben, Risiken und Fortschritt.</p>
+        <a href="project-dashboard.html" class="project-link">
+          Arbeitsprobe ansehen
+        </a>
+      </div>
+
+      <div class="experience-item">
+        <h3>GRC & BCM</h3>
+        <p>Strukturierte Überarbeitung von Governance- und BCM-Dokumentation.</p>
+        <a href="grc-bcm-refresh.html" class="project-link">
+          Arbeitsprobe ansehen
+        </a>
+      </div>
+
+      <div class="experience-item">
+        <h3>Excel Automatisierung</h3>
+        <p>Datenaufbereitung und Automatisierung mit Python.</p>
+        <a href="excel-automatisierung.html" class="project-link">
+          Arbeitsprobe ansehen
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- KONTAKT -->
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2>Kontakt</h2>
+
+      <p>
+        <a href="mailto:Jovanka.Schauder@gmail.com">
+          Jovanka.Schauder@gmail.com
+        </a>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Jovanka Schauder</p>
+  </footer>
+
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
