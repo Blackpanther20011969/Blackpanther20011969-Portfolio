@@ -3,7 +3,7 @@
 
 ## Über mich
 
-ch bin Fachinformatikerin für Anwendungsentwicklung und verbinde technisches Grundverständnis mit strukturierter Analyse, klarer Dokumentation und einem guten Blick für Prozesse.
+Ich bin Fachinformatikerin für Anwendungsentwicklung und verbinde technisches Grundverständnis mit strukturierter Analyse, klarer Dokumentation und einem guten Blick für Prozesse.
 
 Meine Stärke liegt darin, Abläufe zu durchdringen, Schwachstellen sichtbar zu machen und daraus nachvollziehbare Anforderungen für die technische Umsetzung abzuleiten.
 
