@@ -1,0 +1,60 @@
+.api-advanced-page {
+  background: linear-gradient(180deg, #34495e, #22313f);
+  color: white;
+}
+
+.advanced-main {
+  padding: 60px 10%;
+}
+
+.advanced-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.advanced-section {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.advanced-section h2 {
+  color: #ff9800;
+}
+
+.card-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.07);
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.box {
+  background: rgba(255,255,255,0.07);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #18242e;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.actions {
+  margin-top: 20px;
+}
