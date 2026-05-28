@@ -1,0 +1,443 @@
+/* =========================
+   FLASK API ÜBUNGEN – ISOLIERT
+   Diese Datei ergänzt styles.css
+   Wichtig: Die HTML-Seite braucht <body class="flask-exercise-page">
+========================= */
+
+/* =========================
+   GRUNDLAYOUT
+========================= */
+
+.flask-exercise-page {
+  background: linear-gradient(180deg, #34495e, #22313f);
+  color: #ffffff;
+}
+
+.flask-exercise-page .flask-exercise-main {
+  background:
+    radial-gradient(circle at top left, rgba(255, 152, 0, 0.10), transparent 34%),
+    linear-gradient(180deg, #34495e, #22313f);
+  padding: 70px 10%;
+}
+
+.flask-exercise-page .flask-exercise-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HAUPTKARTEN / SEKTIONEN
+========================= */
+
+.flask-exercise-page .exercise-intro-card,
+.flask-exercise-page .exercise-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 34px auto;
+  padding: 32px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.07)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.flask-exercise-page .exercise-intro-card {
+  border-left: 6px solid #ff9800;
+}
+
+/* =========================
+   HEADLINES / TEXTE
+========================= */
+
+.flask-exercise-page .exercise-section h2,
+.flask-exercise-page .exercise-intro-card h2 {
+  color: #ff9800;
+  margin-bottom: 22px;
+  text-align: left;
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+.flask-exercise-page .exercise-section h3,
+.flask-exercise-page .exercise-intro-card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.flask-exercise-page .exercise-section p,
+.flask-exercise-page .exercise-intro-card p {
+  max-width: 880px;
+  margin: 12px 0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.flask-exercise-page strong {
+  color: #ffffff;
+}
+
+.flask-exercise-page code {
+  color: #ffb347;
+}
+
+.flask-exercise-page .section-intro {
+  color: #f2f2f2;
+  margin: 10px 0 24px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   META / LABELS / NOTE
+========================= */
+
+.flask-exercise-page .work-sample-meta,
+.flask-exercise-page .exercise-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 152, 0, 0.16);
+  color: #ffb347;
+  font-size: 0.84rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.flask-exercise-page .exercise-note {
+  background: rgba(255, 255, 255, 0.075);
+  border-left: 5px solid #ff9800;
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin: 22px 0 26px;
+  color: #f2f2f2;
+  line-height: 1.65;
+}
+
+/* =========================
+   GRIDS
+========================= */
+
+.flask-exercise-page .info-grid,
+.flask-exercise-page .model-grid,
+.flask-exercise-page .explain-grid,
+.flask-exercise-page .learn-grid,
+.flask-exercise-page .next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.flask-exercise-page .model-grid,
+.flask-exercise-page .explain-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flask-exercise-page .endpoint-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* =========================
+   KARTEN
+========================= */
+
+.flask-exercise-page .info-card,
+.flask-exercise-page .model-card,
+.flask-exercise-page .endpoint-card,
+.flask-exercise-page .explain-card,
+.flask-exercise-page .learn-card,
+.flask-exercise-page .next-card {
+  position: relative;
+  min-height: 150px;
+  padding: 22px;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.065)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-left: 5px solid #ff9800;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.flask-exercise-page .info-card h3,
+.flask-exercise-page .model-card h3,
+.flask-exercise-page .endpoint-card h3,
+.flask-exercise-page .explain-card h3,
+.flask-exercise-page .learn-card h3,
+.flask-exercise-page .next-card h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.flask-exercise-page .info-card p,
+.flask-exercise-page .model-card p,
+.flask-exercise-page .endpoint-card p,
+.flask-exercise-page .explain-card p,
+.flask-exercise-page .learn-card p,
+.flask-exercise-page .next-card p {
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   METHOD BADGES / ENDPOINTS
+========================= */
+
+.flask-exercise-page .method-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.flask-exercise-page .method-badge.get {
+  background: rgba(74, 144, 226, 0.20);
+  color: #9bc9f5;
+}
+
+.flask-exercise-page .method-badge.post {
+  background: rgba(0, 200, 150, 0.20);
+  color: #32d6ad;
+}
+
+.flask-exercise-page .method-badge.put {
+  background: rgba(255, 152, 0, 0.18);
+  color: #ffb347;
+}
+
+.flask-exercise-page .method-badge.delete {
+  background: rgba(255, 107, 107, 0.18);
+  color: #ffb3b3;
+}
+
+.flask-exercise-page .endpoint-card code {
+  display: block;
+  margin-bottom: 10px;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+/* =========================
+   CODE-BLOCK
+========================= */
+
+.flask-exercise-page .code-card {
+  overflow: hidden;
+  margin-top: 24px;
+  border-radius: 18px;
+  background: #18242e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.flask-exercise-page .code-header {
+  padding: 12px 18px;
+  background: rgba(255, 152, 0, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  color: #ffb347;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.flask-exercise-page pre {
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  background: transparent;
+}
+
+.flask-exercise-page pre code {
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #f4f4f4;
+}
+
+/* =========================
+   AKTIONSBUTTONS
+========================= */
+
+.flask-exercise-page .exercise-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+@media (hover: hover) {
+  .flask-exercise-page .info-card:hover,
+  .flask-exercise-page .model-card:hover,
+  .flask-exercise-page .endpoint-card:hover,
+  .flask-exercise-page .explain-card:hover,
+  .flask-exercise-page .learn-card:hover,
+  .flask-exercise-page .next-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 16px 32px rgba(0, 0, 0, 0.30),
+      0 0 18px rgba(255, 152, 0, 0.16);
+    border-color: rgba(255, 152, 0, 0.30);
+  }
+}
+
+/* =========================
+   TEXTUMBRUCH-FIX
+========================= */
+
+.flask-exercise-page *,
+.flask-exercise-page *::before,
+.flask-exercise-page *::after {
+  box-sizing: border-box;
+}
+
+.flask-exercise-page p,
+.flask-exercise-page li,
+.flask-exercise-page h1,
+.flask-exercise-page h2,
+.flask-exercise-page h3,
+.flask-exercise-page span,
+.flask-exercise-page code {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+  .flask-exercise-page .info-grid,
+  .flask-exercise-page .learn-grid,
+  .flask-exercise-page .next-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .flask-exercise-page .flask-exercise-main {
+    padding: 50px 6%;
+  }
+
+  .flask-exercise-page .exercise-intro-card,
+  .flask-exercise-page .exercise-section {
+    padding: 26px 22px;
+  }
+
+  .flask-exercise-page .info-grid,
+  .flask-exercise-page .model-grid,
+  .flask-exercise-page .endpoint-list,
+  .flask-exercise-page .explain-grid,
+  .flask-exercise-page .learn-grid,
+  .flask-exercise-page .next-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flask-exercise-page .exercise-actions {
+    flex-direction: column;
+  }
+
+  .flask-exercise-page .exercise-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .flask-exercise-page .exercise-section h2,
+  .flask-exercise-page .exercise-intro-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .flask-exercise-page pre {
+    padding: 18px;
+  }
+
+  .flask-exercise-page pre code {
+    font-size: 0.84rem;
+  }
+}
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .header,
+  .footer,
+  .flask-exercise-page .exercise-actions {
+    display: none;
+  }
+
+  .flask-exercise-page,
+  .flask-exercise-page .flask-exercise-main,
+  .flask-exercise-page .exercise-intro-card,
+  .flask-exercise-page .exercise-section,
+  .flask-exercise-page .info-card,
+  .flask-exercise-page .model-card,
+  .flask-exercise-page .endpoint-card,
+  .flask-exercise-page .explain-card,
+  .flask-exercise-page .learn-card,
+  .flask-exercise-page .next-card,
+  .flask-exercise-page .code-card {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: none;
+  }
+
+  .flask-exercise-page .info-grid,
+  .flask-exercise-page .model-grid,
+  .flask-exercise-page .endpoint-list,
+  .flask-exercise-page .explain-grid,
+  .flask-exercise-page .learn-grid,
+  .flask-exercise-page .next-grid {
+    display: block;
+  }
+
+  .flask-exercise-page .info-card,
+  .flask-exercise-page .model-card,
+  .flask-exercise-page .endpoint-card,
+  .flask-exercise-page .explain-card,
+  .flask-exercise-page .learn-card,
+  .flask-exercise-page .next-card {
+    margin-bottom: 12px;
+  }
+
+  .flask-exercise-page pre code,
+  .flask-exercise-page code {
+    color: #000000;
+  }
+}
