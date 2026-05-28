@@ -1,1 +1,425 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>API-Grundlagen mit Flask | Jovanka Schauder</title>
+
+  <meta name="description" content="Technische Lernnotiz von Jovanka Schauder zu API-Grundlagen, Flask, REST, HTTP-Methoden, JSON, Routing und CRUD-Logik.">
+  <meta name="keywords" content="Flask, API, REST, Python, JSON, HTTP-Methoden, CRUD, Routing, technische Notizen, Lernprojekt">
+  <meta name="author" content="Jovanka Schauder">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="API-Grundlagen mit Flask | Jovanka Schauder">
+  <meta property="og:description" content="Strukturierte technische Notiz zu Flask, REST-APIs, HTTP-Methoden, JSON und CRUD-Grundlagen.">
+  <meta property="og:image" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/img/Jo_Portfolio.png">
+  <meta property="og:url" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/api-tutorial.html">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/api-tutorial.html">
+
+  <link rel="stylesheet" href="styles.css">
+  api-tutorial.css
+</head>
+
+<body class="api-page">
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Start</a></li>
+        <li>index.html#aboutÜber mich</a></li>
+        <li><a href="index.html#experience">Arbeitsproben</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+        <li><a href="blog.html">Notizen</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">
+        Technische Notiz · API · Flask · REST · Python
+      </p>
+
+      <h1>API-Grundlagen mit Flask</h1>
+
+      <h2>
+        REST, HTTP-Methoden, JSON und CRUD-Logik nachvollziehbar erklärt
+      </h2>
+
+      <p class="hero-text">
+        Diese Seite dokumentiert meine Beschäftigung mit API-Grundlagen und zeigt,
+        wie ich technische Konzepte strukturiere, verstehe und verständlich aufbereite.
+      </p>
+    </div>
+  </section>
+
+  <!-- Inhalt -->
+  <main class="api-main">
+    <div class="api-wrapper">
+
+      <!-- Intro -->
+      <section class="api-intro-card">
+        <p class="work-sample-meta">
+          Lernnotiz · Flask · REST-API · Routing · JSON · CRUD
+        </p>
+
+        <h2>Einstieg in Flask &amp; APIs</h2>
+
+        <p>
+          Diese technische Notiz zeigt die Grundlagen einer einfachen REST-API mit Flask.
+          Der Fokus liegt darauf, API-Konzepte verständlich zu erklären und typische Bausteine
+          wie Routen, HTTP-Methoden, JSON-Daten und CRUD-Operationen nachvollziehbar darzustellen.
+        </p>
+
+        <p>
+          Die Seite ergänzt meine Arbeitsproben, weil sie zeigt, wie ich technische Themen
+          strukturiere, dokumentiere und in kleine verständliche Abschnitte zerlege.
+        </p>
+
+        <div class="api-note">
+          <strong>Einordnung:</strong><br>
+          Dies ist keine große Produktiv-Anwendung, sondern eine technische Lernnotiz.
+          Sie zeigt Grundlagenverständnis, Dokumentationsfähigkeit und die Fähigkeit,
+          technische Inhalte verständlich aufzubereiten.
+        </div>
+      </section>
+
+      <!-- Überblick -->
+      <section class="api-section">
+        <h2>1. Was diese Seite zeigt</h2>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <span class="api-label">Flask</span>
+            <h3>Webanwendung starten</h3>
+            <p>
+              Eine kleine Flask-Anwendung dient als Grundlage, um Routen und Responses
+              praktisch zu verstehen.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <span class="api-label">REST</span>
+            <h3>Ressourcen verwalten</h3>
+            <p>
+              REST-Prinzipien helfen dabei, Daten wie Bücher über klare URLs und HTTP-Methoden
+              bereitzustellen.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <span class="api-label">JSON</span>
+            <h3>Daten austauschen</h3>
+            <p>
+              JSON eignet sich als leicht verständliches Format für den Datenaustausch
+              zwischen Client und Server.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Erwartung -->
+      <section class="api-section">
+        <h2>2. Was behandelt wird</h2>
+
+        <div class="topic-grid">
+          <div class="topic-card">
+            <span class="api-label">Grundlagen</span>
+            <h3>Flask &amp; Installation</h3>
+            <p>Erste Struktur einer kleinen Flask-Anwendung.</p>
+          </div>
+
+          <div class="topic-card">
+            <span class="api-label">REST</span>
+            <h3>HTTP-Methoden</h3>
+            <p>GET, POST, PUT und DELETE als typische Operationen.</p>
+          </div>
+
+          <div class="topic-card">
+            <span class="api-label">CRUD</span>
+            <h3>Bücherliste</h3>
+            <p>Create, Read, Update und Delete anhand einer einfachen Ressource.</p>
+          </div>
+
+          <div class="topic-card">
+            <span class="api-label">Routing</span>
+            <h3>Endpunkte</h3>
+            <p>Routen definieren und Ressourcen über URLs erreichbar machen.</p>
+          </div>
+
+          <div class="topic-card">
+            <span class="api-label">JSON</span>
+            <h3>Responses</h3>
+            <p>Daten strukturiert zurückgeben und weiterverarbeiten.</p>
+          </div>
+
+          <div class="topic-card">
+            <span class="api-label">Fehler</span>
+            <h3>Fehlerbehandlung</h3>
+            <p>Nachvollziehbare Rückmeldungen bei fehlenden oder ungültigen Daten.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Was ist API -->
+      <section class="api-section">
+        <h2>3. Was ist eine API?</h2>
+
+        <p>
+          APIs ermöglichen die Kommunikation zwischen Softwaresystemen.
+          Eine REST-API verwendet HTTP-Methoden wie <code>GET</code>, <code>POST</code>,
+          <code>PUT</code> oder <code>DELETE</code>, um Ressourcen zu lesen, anzulegen,
+          zu ändern oder zu löschen.
+        </p>
+
+        <div class="method-grid">
+          <div class="method-card get">
+            <span class="api-label">GET</span>
+            <h3>Daten abrufen</h3>
+            <p>Beispiel: alle Bücher anzeigen.</p>
+          </div>
+
+          <div class="method-card post">
+            <span class="api-label">POST</span>
+            <h3>Daten anlegen</h3>
+            <p>Beispiel: neues Buch hinzufügen.</p>
+          </div>
+
+          <div class="method-card put">
+            <span class="api-label">PUT</span>
+            <h3>Daten ändern</h3>
+            <p>Beispiel: bestehendes Buch aktualisieren.</p>
+          </div>
+
+          <div class="method-card delete">
+            <span class="api-label">DELETE</span>
+            <h3>Daten löschen</h3>
+            <p>Beispiel: Buch aus der Liste entfernen.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projektstruktur -->
+      <section class="api-section">
+        <h2>4. Beispielhafte Projektstruktur</h2>
+
+        <p>
+          Eine einfache Projektstruktur hilft dabei, Anwendung, Routen und Datenmodell
+          getrennt zu betrachten.
+        </p>
+
+        <div class="code-card">
+          <div class="code-header">
+            <span>Projektstruktur</span>
+          </div>
+
+<pre><code>flask_api_project/
+├── app.py         # Hauptanwendung
+├── books.py       # API-Routen
+├── models.py      # Datenmodell
+└── venv/          # Virtuelle Umgebung</code></pre>
+        </div>
+      </section>
+
+      <!-- Flask App -->
+      <section class="api-section">
+        <h2>5. Erste Flask-Anwendung</h2>
+
+        <p>
+          Der Einstieg beginnt mit einer minimalen Flask-Anwendung.
+          Eine Route gibt eine einfache Antwort zurück.
+        </p>
+
+        <div class="code-card">
+          <div class="code-header">
+            <span>Python · Flask</span>
+          </div>
+
+<pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "Hello, World!"
+
+if __name__ == "__main__":
+    app.run(debug=True)</code></pre>
+        </div>
+      </section>
+
+      <!-- Endpoints -->
+      <section class="api-section">
+        <h2>6. Beispielhafte API-Endpunkte</h2>
+
+        <p>
+          Die Endpunkte zeigen, wie eine Ressource über verschiedene HTTP-Methoden
+          verwaltet werden kann.
+        </p>
+
+        <div class="endpoint-list">
+          <div class="endpoint-card">
+            <span class="method-badge get">GET</span>
+            <code>/api/books</code>
+            <p>Alle Bücher abrufen</p>
+          </div>
+
+          <div class="endpoint-card">
+            <span class="method-badge post">POST</span>
+            <code>/api/books</code>
+            <p>Neues Buch hinzufügen</p>
+          </div>
+
+          <div class="endpoint-card">
+            <span class="method-badge put">PUT</span>
+            <code>/api/books/&lt;id&gt;</code>
+            <p>Buch aktualisieren</p>
+          </div>
+
+          <div class="endpoint-card">
+            <span class="method-badge delete">DELETE</span>
+            <code>/api/books/&lt;id&gt;</code>
+            <p>Buch löschen</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- JSON -->
+      <section class="api-section">
+        <h2>7. JSON-Beispiel</h2>
+
+        <p>
+          JSON-Daten sind gut lesbar und werden häufig genutzt, um strukturierte Daten
+          zwischen Anwendungen auszutauschen.
+        </p>
+
+        <div class="code-card">
+          <div class="code-header">
+            <span>JSON</span>
+          </div>
+
+<pre><code>{
+  "id": 1,
+  "title": "1984",
+  "author": "George Orwell",
+  "year": 1949
+}</code></pre>
+        </div>
+      </section>
+
+      <!-- Gelernt -->
+      <section class="api-section">
+        <h2>8. Gelernt</h2>
+
+        <div class="learn-grid">
+          <div class="learn-card">
+            <span class="api-label">Verständnis</span>
+            <h3>REST-API einordnen</h3>
+            <p>Ich habe verstanden, wofür REST-APIs genutzt werden und wie Ressourcen angesprochen werden.</p>
+          </div>
+
+          <div class="learn-card">
+            <span class="api-label">Umsetzung</span>
+            <h3>Flask anwenden</h3>
+            <p>Ich kann eine kleine Flask-Anwendung strukturieren und einfache Routen definieren.</p>
+          </div>
+
+          <div class="learn-card">
+            <span class="api-label">Dokumentation</span>
+            <h3>Technisch erklären</h3>
+            <p>Ich kann technische Konzepte so dokumentieren, dass sie nachvollziehbar bleiben.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weiterführend -->
+      <section class="api-section">
+        <h2>9. Weiterführende Übungen</h2>
+
+        <p>
+          Die API-Grundlagen lassen sich in weiteren Übungen vertiefen:
+          CRUD-Logik, Validierung, Datenbankanbindung und strukturierte API-Dokumentation.
+        </p>
+
+        <div class="next-grid">
+          <div class="next-card">
+            <span class="api-label">CRUD</span>
+            <h3>Flask-API mit CRUD</h3>
+            <p>Vertiefung der Grundlogik mit Create, Read, Update und Delete.</p>
+
+            flask-api-crud.html
+              CRUD ansehen
+            </a>
+          </div>
+
+          <div class="next-card">
+            <span class="api-label">Übung</span>
+            <h3>API-Übungen</h3>
+            <p>Kleine praktische Aufgaben zur Wiederholung und Festigung.</p>
+
+            flask-api-uebungen.html
+              Übungen ansehen
+            </a>
+          </div>
+
+          <div class="next-card">
+            <span class="api-label">Advanced</span>
+            <h3>Fortgeschrittene API-Konzepte</h3>
+            <p>Weiterführende Themen wie Validierung, Datenbank und Dokumentation.</p>
+
+            flask-api-advanced.html
+              Advanced ansehen
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fazit -->
+      <section class="api-section">
+        <h2>10. Fazit</h2>
+
+        <p>
+          Diese Seite zeigt mein Grundlagenverständnis für APIs und meine Fähigkeit,
+          technische Themen klar zu strukturieren. Besonders wichtig ist mir,
+          technische Inhalte so aufzubereiten, dass sie nachvollziehbar und wiederverwendbar sind.
+        </p>
+
+        <div class="api-actions">
+          <a href="blog.html" class="btn btn-primary">
+            Zurück zu den technischen Notizen
+          </a>
+
+          <a href="index.html#contact" class="btn btn-secondary">
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Jovanka Schauder</p>
+  </footer>
+
+  <!-- Menü-Skript -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
