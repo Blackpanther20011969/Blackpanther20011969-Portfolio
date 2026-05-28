@@ -3,16 +3,14 @@
 
 ## Über mich
 
- Ich unterstütze Projekte an der Schnittstelle von IT, Fachbereich und Dokumentation. Mein Schwerpunkt liegt auf Prozessanalyse, Anforderungsaufnahme, technischer Dokumentation und strukturierter Projektunterstützung.
+ch bin Fachinformatikerin für Anwendungsentwicklung und verbinde technisches Grundverständnis mit strukturierter Analyse, klarer Dokumentation und einem guten Blick für Prozesse.
 
-Als Fachinformatikerin für Anwendungsentwicklung bringe ich technisches Verständnis mit und positioniere mich besonders dort, wo Koordination, Nachverfolgung, Analyse und verständliche Aufbereitung gefragt sind.
+Meine Stärke liegt darin, Abläufe zu durchdringen, Schwachstellen sichtbar zu machen und daraus nachvollziehbare Anforderungen für die technische Umsetzung abzuleiten.
 
-In praxisnahen Projekten arbeite ich an Themen wie Prozessstrukturierung, Datenanalyse, Dokumentation und Automatisierung mit Python. Ergänzend erweitere ich meine Kenntnisse durch Online-Weiterbildungen mit Fokus auf Datenanalyse, Zeitreihen und datengetriebene Methoden.
-
-Mein Ziel ist es, nachvollziehbare und strukturierte Lösungen zu entwickeln, die Teams in Projekten und Prozessen konkret unterstützen.
+Besonders wohl fühle ich mich an der Schnittstelle zwischen Fachbereich, IT und Projektorganisation – zum Beispiel in Prozessanalyse, Anforderungsmanagement, technischer Dokumentation oder IT-naher Projektunterstützung.
 
 Schwerpunkte:
-Projektassistenz, PMO-nahe Unterstützung, Prozessanalyse, technische Dokumentation, Datenanalyse mit Python, Automatisierung, TYPO3, WordPress, Microsoft 365 
+Prozessanalyse · Anforderungsmanagement · Technische Dokumentation · Projektassistenz · IT-Projektunterstützung 
 
 
 
