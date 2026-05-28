@@ -1,0 +1,58 @@
+.flask-crud-page {
+  background: linear-gradient(180deg, #34495e, #22313f);
+  color: white;
+}
+
+.crud-main {
+  padding: 60px 10%;
+}
+
+.crud-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.crud-section {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.crud-section h2 {
+  color: #ff9800;
+}
+
+.crud-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.crud-card {
+  background: rgba(255,255,255,0.07);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.badge.get { background: #4a90e2; }
+.badge.post { background: #00c896; }
+.badge.put { background: #ff9800; }
+.badge.delete { background: #ff6b6b; }
+
+pre {
+  background: #18242e;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.actions {
+  margin-top: 20px;
+}
