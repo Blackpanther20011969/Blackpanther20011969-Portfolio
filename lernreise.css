@@ -1,0 +1,49 @@
+.lernreise-page {
+  background: linear-gradient(180deg, #34495e, #22313f);
+  color: white;
+}
+
+.lernreise-main {
+  padding: 60px 10%;
+}
+
+.lernreise-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.intro-card,
+.lernreise-section {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.lernreise-section h2,
+.intro-card h2 {
+  color: #ff9800;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.07);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.highlight {
+  background: rgba(255,152,0,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.actions {
+  margin-top: 20px;
+}
