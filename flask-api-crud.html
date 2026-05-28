@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Flask API CRUD | Jovanka Schauder</title>
+
+  <meta name="description" content="CRUD-API mit Flask: Bücher verwalten, Routen strukturieren, JSON verstehen und APIs testen.">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flask-api-crud.css">
+</head>
+
+<body class="flask-crud-page">
+
+<header class="header">
+  <nav class="nav">
+    <button class="menu-icon" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html#hero">Start</a></li>
+      <li><a href="index.html#experience">Arbeitsproben</a></li>
+      <li><a href="blog.html">Notizen</a></li>
+      <li><a href="index.html#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">Flask · CRUD · API-Design</p>
+    <h1>Flask API CRUD</h1>
+    <h2>Bücher-API mit Struktur, Routen und JSON</h2>
+  </div>
+</section>
+
+<main class="crud-main">
+<div class="crud-wrapper">
+
+<section class="crud-section">
+<h2>Projektstruktur</h2>
+
+<pre><code>flask_api_project/
+├── app.py
+├── books.py
+├── models.py
+└── venv/</code></pre>
+</section>
+
+<section class="crud-section">
+<h2>Datenmodell</h2>
+
+<pre><code>books = [
+ { "id": 1, "title": "Der Hobbit", "author": "Tolkien" },
+ { "id": 2, "title": "Harry Potter", "author": "Rowling" }
+]</code></pre>
+
+<p>Kleine In-Memory-Struktur für einfache Tests ohne Datenbank.</p>
+</section>
+
+<section class="crud-section">
+<h2>CRUD Endpunkte</h2>
+
+<div class="crud-grid">
+
+<div class="crud-card">
+<span class="badge get">GET</span>
+<p>/api/books → alle Bücher</p>
+</div>
+
+<div class="crud-card">
+<span class="badge post">POST</span>
+<p>/api/books → neues Buch</p>
+</div>
+
+<div class="crud-card">
+<span class="badge put">PUT</span>
+<p>/api/books/id → ändern</p>
+</div>
+
+<div class="crud-card">
+<span class="badge delete">DELETE</span>
+<p>/api/books/id → löschen</p>
+</div>
+
+</div>
+</section>
+
+<section class="crud-section">
+<h2>Flask Routing</h2>
+
+<pre><code>@books_bp.route('/api/books', methods=['GET'])
+@books_bp.route('/api/books', methods=['POST'])
+@books_bp.route('/api/books/<id>', methods=['PUT'])
+@books_bp.route('/api/books/<id>', methods=['DELETE'])</code></pre>
+</section>
+
+<section class="crud-section">
+<h2>API testen</h2>
+
+<pre><code>curl http://localhost:5000/api/books
+
+curl -X POST -H "Content-Type: application/json" \
+-d '{"title":"1984"}' \
+http://localhost:5000/api/books</code></pre>
+</section>
+
+<section class="crud-section">
+<h2>Was ich gelernt habe</h2>
+
+<ul>
+<li>CRUD-Struktur sauber aufbauen</li>
+<li>HTTP-Methoden gezielt einsetzen</li>
+<li>Daten mit JSON strukturieren</li>
+<li>API gezielt testen (Postman / curl)</li>
+</ul>
+
+<div class="actions">
+<a href="blog.html" class="btn btn-primary">Zurück zu Notizen</a>
+</div>
+
+</section>
+
+</div>
+</main>
+
+<footer class="footer">
+<p>&copy; 2026 Jovanka Schauder</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
