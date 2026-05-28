@@ -1,1 +1,485 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Flask API Übungen | Jovanka Schauder</title>
+
+  <meta name="description" content="Technische Übungsseite von Jovanka Schauder zu Flask, REST-API, CRUD-Operationen, JSON, Fehlerbehandlung und Statuscodes.">
+  <meta name="keywords" content="Flask, API, REST, CRUD, Python, JSON, Statuscodes, Routing, technische Übungen, Lernprojekt">
+  <meta name="author" content="Jovanka Schauder">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Flask API Übungen | Jovanka Schauder">
+  <meta property="og:description" content="Praxisnahe technische Übung zu einer Todo-API mit Flask, CRUD-Endpunkten, JSON und Fehlerbehandlung.">
+  <meta property="og:image" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/img/Jo_Portfolio.png">
+  <meta property="og:url" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/flask-api-uebungen.html">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/flask-api-uebungen.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flask-api-uebungen.css">
+</head>
+
+<body class="flask-exercise-page">
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Start</a></li>
+        <li><a href="index.html#about">Über mich</a></li>
+        <li><a href="index.html#experience">Arbeitsproben</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+        <li><a href="blog.html">Notizen</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">
+        Technische Übung · Flask · REST · CRUD · JSON
+      </p>
+
+      <h1>Flask API Übungen</h1>
+
+      <h2>
+        Eine Todo-API als praktische Übung für Routing, CRUD und Fehlerbehandlung
+      </h2>
+
+      <p class="hero-text">
+        Diese Seite zeigt eine praktische API-Übung mit Flask. Ziel ist es,
+        typische Endpunkte, Datenstrukturen, Validierung und Statuscodes nachvollziehbar zu dokumentieren.
+      </p>
+    </div>
+  </section>
+
+  <!-- Inhalt -->
+  <main class="flask-exercise-main">
+    <div class="flask-exercise-wrapper">
+
+      <!-- Intro -->
+      <section class="exercise-intro-card">
+        <p class="work-sample-meta">
+          Lernübung · Todo-API · Flask · CRUD · Statuscodes
+        </p>
+
+        <h2>Übung: Todo-API mit Flask</h2>
+
+        <p>
+          Diese Übungsseite zeigt eine einfache REST-API für eine Todo-Liste.
+          Der Fokus liegt auf grundlegenden API-Konzepten: Endpunkte definieren,
+          Daten als JSON zurückgeben, neue Einträge erstellen, bestehende Einträge aktualisieren
+          und Fehler verständlich behandeln.
+        </p>
+
+        <p>
+          Die Übung ergänzt meine technischen Notizen, weil sie zeigt, wie ich aus einem Konzept
+          eine nachvollziehbare kleine API-Struktur ableite und dokumentiere.
+        </p>
+
+        <div class="exercise-note">
+          <strong>Einordnung:</strong><br>
+          Die Daten werden bewusst in einer einfachen Liste gespeichert. Das ist für eine Lernübung
+          übersichtlich und zeigt die Grundlogik, ersetzt aber keine produktive Datenbanklösung.
+        </div>
+      </section>
+
+      <!-- Überblick -->
+      <section class="exercise-section">
+        <h2>1. Ziel der Übung</h2>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <span class="exercise-label">Routing</span>
+            <h3>Endpunkte definieren</h3>
+            <p>
+              Die API stellt verschiedene URLs bereit, über die Todos gelesen,
+              angelegt, geändert und gelöscht werden können.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <span class="exercise-label">CRUD</span>
+            <h3>Operationen abbilden</h3>
+            <p>
+              Die Todo-Liste zeigt Create, Read, Update und Delete anhand
+              einer leicht verständlichen Ressource.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <span class="exercise-label">Fehler</span>
+            <h3>Statuscodes nutzen</h3>
+            <p>
+              Fehlende Daten oder nicht gefundene Einträge werden mit passenden
+              HTTP-Statuscodes zurückgegeben.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Endpunkte -->
+      <section class="exercise-section">
+        <h2>2. Geplante API-Endpunkte</h2>
+
+        <p class="section-intro">
+          Die Todo-API verwendet typische REST-Endpunkte. Jeder Endpunkt steht für eine
+          konkrete Aktion auf der Ressource <code>Todo</code>.
+        </p>
+
+        <div class="endpoint-list">
+          <div class="endpoint-card">
+            <span class="method-badge get">GET</span>
+            <code>/api/todos</code>
+            <p>Alle Todos abrufen</p>
+          </div>
+
+          <div class="endpoint-card">
+            <span class="method-badge get">GET</span>
+            <code>/api/todos/&lt;id&gt;</code>
+            <p>Ein bestimmtes Todo abrufen</p>
+          </div>
+
+          <div class="endpoint-card">
+            <span class="method-badge post">POST</span>
+            <code>/api/todos</code>
+            <p>Neues Todo erstellen</p>
+          </div>
+
+          <div class="endpoint-card">
+            <span class="method-badge put">PUT</span>
+            <code>/api/todos/&lt;id&gt;</code>
+            <p>Todo aktualisieren</p>
+          </div>
+
+          <div class="endpoint-card">
+            <span class="method-badge delete">DELETE</span>
+            <code>/api/todos/&lt;id&gt;</code>
+            <p>Todo löschen</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Datenmodell -->
+      <section class="exercise-section">
+        <h2>3. Datenmodell</h2>
+
+        <p>
+          Jedes Todo besitzt einfache Felder. Dadurch bleibt die Übung übersichtlich,
+          zeigt aber trotzdem typische Strukturen einer API.
+        </p>
+
+        <div class="model-grid">
+          <div class="model-card">
+            <span class="exercise-label">id</span>
+            <h3>Automatische ID</h3>
+            <p>Eindeutige Kennung für jedes Todo.</p>
+          </div>
+
+          <div class="model-card">
+            <span class="exercise-label">title</span>
+            <h3>Pflichtfeld</h3>
+            <p>Kurzer Titel des Todos. Ohne Titel wird kein neues Todo erstellt.</p>
+          </div>
+
+          <div class="model-card">
+            <span class="exercise-label">description</span>
+            <h3>Optional</h3>
+            <p>Zusätzliche Beschreibung des Todos.</p>
+          </div>
+
+          <div class="model-card">
+            <span class="exercise-label">done</span>
+            <h3>Status</h3>
+            <p>Wert <code>true</code> oder <code>false</code>, um den Bearbeitungsstand zu zeigen.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beispielcode -->
+      <section class="exercise-section">
+        <h2>4. Beispielcode</h2>
+
+        <p>
+          Der folgende Code zeigt eine einfache Todo-API mit Flask.
+          Die Daten liegen in einer Liste, damit die CRUD-Logik gut nachvollziehbar bleibt.
+        </p>
+
+        <div class="code-card">
+          <div class="code-header">
+            <span>Python · Flask · Todo-API</span>
+          </div>
+
+<pre><code>from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+todos = [
+    {
+        "id": 1,
+        "title": "Flask API lernen",
+        "description": "REST API mit Flask erstellen",
+        "done": False
+    },
+    {
+        "id": 2,
+        "title": "Dokumentation ergänzen",
+        "description": "Endpunkte und Statuscodes beschreiben",
+        "done": True
+    }
+]
+
+next_id = len(todos) + 1
+
+
+@app.route("/api/todos", methods=["GET"])
+def get_todos():
+    return jsonify(todos)
+
+
+@app.route("/api/todos/&lt;int:todo_id&gt;", methods=["GET"])
+def get_todo(todo_id):
+    todo = next((item for item in todos if item["id"] == todo_id), None)
+
+    if not todo:
+        return jsonify({"error": "Todo nicht gefunden"}), 404
+
+    return jsonify(todo)
+
+
+@app.route("/api/todos", methods=["POST"])
+def create_todo():
+    global next_id
+
+    if not request.json or "title" not in request.json:
+        return jsonify({"error": "Titel ist erforderlich"}), 400
+
+    todo = {
+        "id": next_id,
+        "title": request.json["title"],
+        "description": request.json.get("description", ""),
+        "done": request.json.get("done", False)
+    }
+
+    todos.append(todo)
+    next_id += 1
+
+    return jsonify(todo), 201
+
+
+@app.route("/api/todos/&lt;int:todo_id&gt;", methods=["PUT"])
+def update_todo(todo_id):
+    todo = next((item for item in todos if item["id"] == todo_id), None)
+
+    if not todo:
+        return jsonify({"error": "Todo nicht gefunden"}), 404
+
+    if not request.json:
+        return jsonify({"error": "Daten müssen im JSON-Format sein"}), 400
+
+    todo["title"] = request.json.get("title", todo["title"])
+    todo["description"] = request.json.get("description", todo["description"])
+    todo["done"] = request.json.get("done", todo["done"])
+
+    return jsonify(todo)
+
+
+@app.route("/api/todos/&lt;int:todo_id&gt;", methods=["DELETE"])
+def delete_todo(todo_id):
+    todo = next((item for item in todos if item["id"] == todo_id), None)
+
+    if not todo:
+        return jsonify({"error": "Todo nicht gefunden"}), 404
+
+    todos.remove(todo)
+
+    return jsonify({"result": True})
+
+
+if __name__ == "__main__":
+    app.run(debug=True)</code></pre>
+        </div>
+      </section>
+
+      <!-- Erklärung -->
+      <section class="exercise-section">
+        <h2>5. Erklärung der wichtigsten Bausteine</h2>
+
+        <div class="explain-grid">
+          <div class="explain-card">
+            <span class="exercise-label">In-Memory</span>
+            <h3>Einfache Datenhaltung</h3>
+            <p>
+              Die Todos werden in einer Python-Liste gespeichert. Das macht die Übung leicht verständlich.
+            </p>
+          </div>
+
+          <div class="explain-card">
+            <span class="exercise-label">Route</span>
+            <h3>Eine Route pro Aktion</h3>
+            <p>
+              Jede Route entspricht einer CRUD-Operation und ist über eine klare URL erreichbar.
+            </p>
+          </div>
+
+          <div class="explain-card">
+            <span class="exercise-label">Validierung</span>
+            <h3>Eingaben prüfen</h3>
+            <p>
+              Beim Erstellen eines Todos wird geprüft, ob ein Titel vorhanden ist.
+            </p>
+          </div>
+
+          <div class="explain-card">
+            <span class="exercise-label">Statuscodes</span>
+            <h3>Rückmeldungen geben</h3>
+            <p>
+              Die API nutzt z. B. <code>201</code> für erstellt, <code>400</code> für ungültige Daten
+              und <code>404</code> für nicht gefundene Todos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testen -->
+      <section class="exercise-section">
+        <h2>6. Testen der API</h2>
+
+        <p>
+          Eine API kann mit Tools wie Postman oder mit einfachen Terminal-Befehlen getestet werden.
+          Wichtig ist, Anfrage, Methode, URL und JSON-Daten sauber zu unterscheiden.
+        </p>
+
+        <div class="code-card">
+          <div class="code-header">
+            <span>Beispiel · curl</span>
+          </div>
+
+<pre><code>curl -X POST http://127.0.0.1:5000/api/todos \
+  -H "Content-Type: application/json" \
+  -d '{"title": "API testen", "description": "POST-Anfrage prüfen"}'</code></pre>
+        </div>
+
+        <div class="exercise-note">
+          <strong>Tipp:</strong><br>
+          Beim Testen lohnt es sich, bewusst Fehlerfälle auszuprobieren:
+          fehlender Titel, falsche ID oder ungültige JSON-Daten.
+        </div>
+      </section>
+
+      <!-- Gelernt -->
+      <section class="exercise-section">
+        <h2>7. Was diese Übung zeigt</h2>
+
+        <div class="learn-grid">
+          <div class="learn-card">
+            <span class="exercise-label">API-Verständnis</span>
+            <h3>CRUD praktisch anwenden</h3>
+            <p>
+              Die Übung zeigt, wie typische API-Operationen in Flask abgebildet werden.
+            </p>
+          </div>
+
+          <div class="learn-card">
+            <span class="exercise-label">Fehlerbehandlung</span>
+            <h3>Antworten nachvollziehbar machen</h3>
+            <p>
+              Statuscodes und Fehlermeldungen helfen, API-Verhalten verständlich zu dokumentieren.
+            </p>
+          </div>
+
+          <div class="learn-card">
+            <span class="exercise-label">Dokumentation</span>
+            <h3>Technische Schritte erklären</h3>
+            <p>
+              Die Seite zeigt, wie eine technische Übung strukturiert beschrieben werden kann.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <section class="exercise-section">
+        <h2>8. Weiterführende Notizen</h2>
+
+        <p>
+          Diese Übung gehört zu meinen technischen API-Notizen und baut auf den API-Grundlagen auf.
+        </p>
+
+        <div class="next-grid">
+          <div class="next-card">
+            <span class="exercise-label">Grundlagen</span>
+            <h3>API-Grundlagen mit Flask</h3>
+            <p>
+              Einstieg in REST, HTTP-Methoden, JSON und einfache Flask-Strukturen.
+            </p>
+
+            <a href="api-tutorial.html" class="btn btn-primary">
+              Grundlagen ansehen
+            </a>
+          </div>
+
+          <div class="next-card">
+            <span class="exercise-label">CRUD</span>
+            <h3>Flask API CRUD</h3>
+            <p>
+              Vertiefende Übung zu Create, Read, Update und Delete mit einer Beispielressource.
+            </p>
+
+            <a href="flask-api-crud.html" class="btn btn-primary">
+              CRUD ansehen
+            </a>
+          </div>
+
+          <div class="next-card">
+            <span class="exercise-label">Advanced</span>
+            <h3>Fortgeschrittene API-Konzepte</h3>
+            <p>
+              Weiterführende Themen wie Validierung, Datenbankanbindung und Dokumentation.
+            </p>
+
+            <a href="flask-api-advanced.html" class="btn btn-primary">
+              Advanced ansehen
+            </a>
+          </div>
+        </div>
+
+        <div class="exercise-actions">
+          <a href="blog.html" class="btn btn-primary">
+            Zurück zu den technischen Notizen
+          </a>
+
+          <a href="index.html#contact" class="btn btn-secondary">
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Jovanka Schauder</p>
+  </footer>
+
+  <!-- Menü-Skript -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
