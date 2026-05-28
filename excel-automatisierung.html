@@ -215,11 +215,18 @@
 
 <pre><code>import pandas as pd
 
+
 # Excel-Datei einlesen
 df = pd.read_excel("projektstatus.xlsx")
 
-# Spalten vereinheitlichen
-df.columns = [c.strip().lower() for c in df.columns]
+# Spalten vereinheitlichen:
+# - Leerzeichen am Anfang/Ende entfernen
+# - alles klein schreiben
+# - Leerzeichen innerhalb des Spaltennamens durch Unterstriche ersetzen
+df.columns = [
+    c.strip().lower().replace(" ", "_")
+    for c in df.columns
+]
 
 # Fehlende Werte behandeln
 df["status"] = df["status"].fillna("offen")
@@ -233,7 +240,7 @@ gesamtaufwand = df["aufwand_stunden"].sum()
 summary = pd.DataFrame({
     "Kennzahl": ["Offene Tickets", "Gesamtaufwand"],
     "Wert": [offene_tickets, gesamtaufwand]
-})
+
 
 summary.to_excel("auswertung.xlsx", index=False)</code></pre>
         </div>
