@@ -572,7 +572,9 @@ section {
   .contact h2,
   .impressum h2,
   .experience h2 {
-     
+    font-size: 1.8rem;
+  }
+}
 /* =========================
 POSITIONIERUNG (FINAL)
 ========================= */
