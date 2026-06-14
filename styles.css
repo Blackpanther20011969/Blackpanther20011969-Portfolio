@@ -161,6 +161,19 @@ section {
   font-size: 1.1rem;
   max-width: 680px;
 }
+.hero-focus {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #e0e0e0;
+}
+
+.hero-meta {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #cccccc;
+  line-height: 1.6;
+}
 
 /* =========================
    BUTTONS
