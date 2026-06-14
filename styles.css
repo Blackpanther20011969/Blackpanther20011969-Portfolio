@@ -573,3 +573,52 @@ section {
   .impressum h2,
   .experience h2 {
 
+/* =========================
+   POSITIONIERUNG (NEU)
+========================= */
+
+.positioning {
+  padding: 70px 10%;
+}
+
+.positioning-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.positioning h2 {
+  color: #ff9800;
+  margin-bottom: 30px;
+}
+
+.positioning-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.position-card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.position-card h3 {
+  margin-bottom: 15px;
+}
+
+.position-card ul {
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.work-model {
+  margin-top: 15px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .positioning-grid {
+    grid-template-columns: 1fr;
+  }
+}
