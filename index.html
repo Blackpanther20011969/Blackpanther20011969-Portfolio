@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -23,19 +23,20 @@ Projektassistenz,Projektkoordination,Requirements Engineering,Prozessmanagement,
 
 <body>
 
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="nav">
-            <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
-            <ul class="nav-links">
-                <li><a href="#hero">Start</a></li>
-                <li><a href="#about">Meine Arbeitsweise</a></li>
-                <li><a href="#experience">Arbeitsproben</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#impressum">Impressum</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="#hero">Start</a></li>
+        <li><a href="#about">Meine Arbeitsweise</a></li>
+        <li><a href="#experience">Arbeitsproben</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <!-- Hero -->
 <section id="hero" class="hero">
@@ -69,76 +70,46 @@ Projektassistenz,Projektkoordination,Requirements Engineering,Prozessmanagement,
 </section>
 
 
-  <!-- Positionierung / Arbeitsweise -->
-  <section id="positioning" class="positioning">
-    <div class="positioning-wrapper">
+<!-- ✅ NEU: Positionierung -->
+<section class="positioning">
+  <div class="positioning-wrapper">
 
-      <h2>Wo ich Mehrwert stifte</h2>
+    <h2>Wo ich Mehrwert stifte</h2>
 
-      <div class="positioning-grid">
+    <div class="positioning-grid">
 
-        <div class="position-card">
-          <h3>Meine Schwerpunkte</h3>
-
-          <ul>
-            <li>PMO &amp; Projektassistenz</li>
-            <li>Projektkoordination</li>
-            <li>Prozessanalyse</li>
-            <li>Anforderungsmanagement</li>
-            <li>Technische Dokumentation</li>
-            <li>Schnittstelle Fachbereich &amp; IT</li>
-          </ul>
-        </div>
-
-        <div class="position-card">
-          <h3>Gesuchte Rollen</h3>
-
-          <ul>
-            <li>PMO / Projektassistenz</li>
-            <li>Projektkoordination</li>
-            <li>Requirements Engineering</li>
-            <li>Technische Dokumentation</li>
-          </ul>
-
-          <p class="work-model">
-            <strong>Arbeitsmodell:</strong><br>
-            Remote · Hybrid · Braunschweig / Hannover
-          </p>
-        </div>
-
+      <!-- Box 1 -->
+      <div class="position-card">
+        <h3>Meine Schwerpunkte</h3>
+        <ul>
+          <li>PMO & Projektassistenz</li>
+          <li>Projektkoordination</li>
+          <li>Prozessanalyse</li>
+          <li>Anforderungsmanagement</li>
+          <li>Technische Dokumentation</li>
+          <li>Schnittstelle Fachbereich & IT</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- Über mich -->
-  <section id="about" class="about">
-    <div class="about-container">
+      <!-- Box 2 -->
+      <div class="position-card">
+       <h3>Gesuchte Rollen</h3>
+        <ul>
+          <li>PMO / Projektassistenz</li>
+          <li>Projektkoordination</li>
+          <li>Requirements Engineering</li>
+          <li>Technische Dokumentation</li>
+        </ul>
 
-      <h2>Über mich</h2>
-
-      <p>
-        Ich bin Fachinformatikerin für Anwendungsentwicklung und verbinde technisches Grundverständnis
-        mit strukturierter Analyse, klarer Dokumentation und einem guten Blick für Prozesse.
-      </p>
-
-      <p>
-        Meine Stärke liegt darin, Abläufe zu durchdringen, Schwachstellen sichtbar zu machen
-        und daraus nachvollziehbare Anforderungen für die technische Umsetzung abzuleiten.
-      </p>
-
-      <p>
-        Besonders wohl fühle ich mich an der Schnittstelle zwischen Fachbereich, IT und Projektorganisation –
-        zum Beispiel in Prozessanalyse, Anforderungsmanagement, technischer Dokumentation oder IT-naher Projektunterstützung.
-      </p>
-
-      <p>
-        <strong>Schwerpunkte:</strong><br>
-        Prozessanalyse · Anforderungsmanagement · Technische Dokumentation · Projektassistenz · IT-Projektunterstützung
-      </p>
+        <p class="work-model">
+          <strong>Arbeitsmodell:</strong><br>
+          Remote · Hybrid · Braunschweig / Hannover
+        </p>
+      </div>
 
     </div>
-  </section>
-
+  </div>
+</section>
   <!-- Arbeitsproben -->
   <section id="experience" class="experience">
     <h2>Ausgewählte Arbeitsproben</h2>
@@ -146,35 +117,11 @@ Projektassistenz,Projektkoordination,Requirements Engineering,Prozessmanagement,
     <div class="experience-container">
 
       <div class="experience-item">
-        <h3>Analyse &amp; PMO – Arbeitsproben</h3>
-
-        <p>
-          Die Arbeitsproben zeigen eine durchgehende Perspektive:
-          von der Analyse eines Prozesses über Anforderungen bis hin
-          zu einer möglichen technischen Umsetzung.
-        </p>
-
-        <p>
-          Fokus: Schnittstelle zwischen Fachbereich, Organisation und IT.
-        </p>
-
-        <a href="prozessanalyse-anforderungen.html" class="project-link">
-          Prozessanalyse ansehen
-        </a>
-
-        <a href="project-dashboard.html" class="project-link">
-          Dashboard ansehen
-        </a>
-      </div>
-
-      <div class="experience-item">
         <h3>Prozessanalyse &amp; Anforderungsableitung</h3>
-
-        <p>
-          Analyse eines Veröffentlichungsprozesses mit Ist-/Soll-Betrachtung,
-          Schwachstellenanalyse, Anforderungen und SOP-Struktur.
-        </p>
-
+       <p>
+  Analyse eines Veröffentlichungsprozesses mit Ist-/Soll-Betrachtung,
+  Schwachstellenanalyse, Anforderungen und SOP-Struktur.
+</p>
         <a href="prozessanalyse-anforderungen.html" class="project-link">
           Arbeitsprobe ansehen
         </a>
@@ -182,12 +129,10 @@ Projektassistenz,Projektkoordination,Requirements Engineering,Prozessmanagement,
 
       <div class="experience-item">
         <h3>Projekt-Dashboard &amp; Risk Register</h3>
-
         <p>
-          Strukturierung von Aufgaben, Risiken und Fortschritt in einem übersichtlichen
-          Projekt-Dashboard mit Risk Register.
-        </p>
-
+  Strukturierung von Aufgaben, Risiken und Fortschritt in einem übersichtlichen
+  Projekt-Dashboard mit Risk Register.
+</p>
         <a href="project-dashboard.html" class="project-link">
           Arbeitsprobe ansehen
         </a>
@@ -195,35 +140,30 @@ Projektassistenz,Projektkoordination,Requirements Engineering,Prozessmanagement,
 
       <div class="experience-item">
         <h3>GRC &amp; BCM</h3>
-
         <p>
-          Überarbeitung und Strukturierung von Governance-, Risiko- und BCM-Dokumentation
-          mit Fokus auf Verständlichkeit und Nachvollziehbarkeit.
-        </p>
-
-        grc-bcm-refresh.html
+  Überarbeitung und Strukturierung von Governance-, Risiko- und BCM-Dokumentation
+  mit Fokus auf Verständlichkeit und Nachvollziehbarkeit.
+</p>
+        <a href="grc-bcm-refresh.html" class="project-link">
           Arbeitsprobe ansehen
         </a>
       </div>
 
       <div class="experience-item">
         <h3>Excel-Automatisierung</h3>
-
         <p>
-          Automatisierte Datenaufbereitung mit Python zur Reduzierung manueller Arbeitsschritte
-          und besseren Weiterverarbeitung von Excel-Daten.
-        </p>
-
-        excel-automatisierung.html
+  Automatisierte Datenaufbereitung mit Python zur Reduzierung manueller Arbeitsschritte
+  und besseren Weiterverarbeitung von Excel-Daten.
+</p>
+        <a href="excel-automatisierung.html" class="project-link">
           Arbeitsprobe ansehen
         </a>
       </div>
 
       <div class="experience-item">
         <h3>Systemanalyse &amp; Projektdokumentation</h3>
-
         <p>
-            Einblick in Systemanalyse, technische Dokumentation und strukturierte Umsetzung
+  Einblick in Systemanalyse, technische Dokumentation und strukturierte Umsetzung
   eines IT-Projekts im Rahmen der Abschlussarbeit.
 </p>
         <a href="systemanalyse.html" class="project-link">
