@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Jovanka Schauder | Prozessanalyse & PMO</title>
+  <title>Jovanka Schauder | Prozessanalyse, PMO & technische Dokumentation</title>
 
-  <meta name="description" content="Portfolio von Jovanka Schauder">
+  <meta name="description" content="Portfolio von Jovanka Schauder mit Fokus auf PMO, Prozessanalyse und technische Dokumentation.">
   <meta name="author" content="Jovanka Schauder">
 
   <link rel="stylesheet" href="styles.css">
@@ -16,7 +16,7 @@
 
 <!-- Navigation -->
 <header class="header">
-  <nav class="nav">
+  <nav class="nav" aria-label="Navigation">
     <button class="menu-icon" onclick="toggleMenu()">☰</button>
 
     <ul class="nav-links">
@@ -29,80 +29,126 @@
   </nav>
 </header>
 
-<!-- Hero -->
+<!-- HERO (mit Bild bleibt über CSS erhalten) -->
 <section id="hero" class="hero">
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
+    <p class="hero-kicker">
+      Prozessanalyse · Anforderungsmanagement · Technische Dokumentation
+    </p>
+
     <h1>Jovanka Schauder</h1>
-    <h2>Projektassistenz · Prozessanalyse · PMO</h2>
+
+    <h2>
+      Schnittstelle zwischen IT, Fachbereich & Projektorganisation
+    </h2>
+
+    <p class="hero-focus">
+      PMO · Prozessanalyse · Requirements · Dokumentation
+    </p>
+
+    <p class="hero-meta">
+      Tools: Jira, Confluence, M365, Excel, Python, GitHub<br>
+      Fachinformatikerin Anwendungsentwicklung
+    </p>
+
+    <div class="hero-actions">
+      <a href="#experience" class="project-link">Projekte ansehen</a>
+      <a href="#contact" class="project-link">Kontakt</a>
+    </div>
   </div>
 </section>
 
-<!-- Über mich -->
+<!-- POSITIONIERUNG -->
 <section id="about" class="about">
   <div class="about-container">
+
     <h2>Über mich</h2>
 
     <p>
       Ich arbeite an der Schnittstelle zwischen IT, Fachbereich und Projektorganisation
-      mit Fokus auf Prozessanalyse und Dokumentation.
+      mit Fokus auf Prozessanalyse, Strukturierung und Dokumentation.
     </p>
 
     <p>
-      Mein Ziel ist es, komplexe Abläufe verständlich und strukturiert aufzubereiten.
+      Mein Ziel ist es, komplexe Abläufe verständlich, nachvollziehbar und strukturiert aufzubereiten.
     </p>
+
   </div>
 </section>
 
-<!-- Projekte -->
+<!-- PROJEKTE -->
 <section id="experience" class="experience">
-  <h2>Projekte</h2>
+
+  <h2>Ausgewählte Arbeitsproben</h2>
 
   <div class="experience-container">
 
     <div class="experience-item">
-      <h3>Python & Analyse</h3>
-      <a href="https://github.com/Blackpanther20011969" target="_blank">GitHub</a>
+      <h3>Analyse & PMO</h3>
+      <p>Prozessanalyse, Anforderungen und Dokumentation</p>
+      <a class="project-link" href="prozessanalyse-anforderungen.html">Ansehen</a>
+    </div>
+
+    <div class="experience-item">
+      <h3>Dashboard</h3>
+      <p>Projektstruktur & Risk Register</p>
+      <a class="project-link" href="project-dashboard.html">Ansehen</a>
     </div>
 
     <div class="experience-item">
       <h3>Systemanalyse</h3>
-      <a href="systemanalyse.html">Projekt ansehen</a>
+      <p>Technische Dokumentation & Projektstruktur</p>
+      <a class="project-link" href="systemanalyse.html">Ansehen</a>
     </div>
 
     <div class="experience-item">
-      <h3>Blog</h3>
-      <a href="blog.html">Blog öffnen</a>
+      <h3>GitHub Projekte</h3>
+      <p>Python, Automatisierung & Analyse</p>
+      <a class="project-link" target="_blank"
+         href="https://github.com/Blackpanther20011969">
+         GitHub
+      </a>
     </div>
 
   </div>
 </section>
 
-<!-- Kontakt -->
+<!-- KONTAKT -->
 <section id="contact" class="contact">
   <div class="contact-container">
+
     <h2>Kontakt</h2>
 
     <p>
       <a href="mailto:Jovanka.Schauder@gmail.com">
-        E-Mail schreiben
+        Jovanka.Schauder@gmail.com
       </a>
     </p>
+
   </div>
 </section>
 
-<!-- Impressum -->
+<!-- IMPRESSUM -->
 <section id="impressum" class="impressum">
   <div class="impressum-container">
+
     <h2>Impressum</h2>
 
-    <p>Jovanka Schauder</p>
+    <p><strong>Jovanka Schauder</strong></p>
     <p>Braunschweig</p>
+
+    <p>
+      <a href="mailto:Jovanka.Schauder@gmail.com">
+        E-Mail senden
+      </a>
+    </p>
+
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer class="footer">
   <p>© 2026 Jovanka Schauder</p>
 </footer>
