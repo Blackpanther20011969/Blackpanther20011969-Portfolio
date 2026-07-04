@@ -1,0 +1,310 @@
+/* =========================
+   MEINE ARBEITSWEISE – ISOLIERT
+   Diese Datei ergänzt styles.css
+   Wichtig: Die HTML-Seite braucht <body class="workflow-page">
+========================= */
+
+.workflow-page {
+  background: linear-gradient(180deg, #34495e, #22313f);
+  color: #ffffff;
+}
+
+.workflow-page .workflow-main {
+  background:
+    radial-gradient(circle at top left, rgba(255, 152, 0, 0.10), transparent 34%),
+    linear-gradient(180deg, #34495e, #22313f);
+  padding: 70px 10%;
+}
+
+.workflow-page .workflow-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.workflow-page .workflow-intro-card,
+.workflow-page .workflow-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 34px auto;
+  padding: 32px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.07)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.workflow-page .workflow-intro-card {
+  border-left: 6px solid #ff9800;
+}
+
+.workflow-page .workflow-section h2,
+.workflow-page .workflow-intro-card h2 {
+  color: #ff9800;
+  margin-bottom: 22px;
+  text-align: left;
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+.workflow-page .workflow-section h3,
+.workflow-page .workflow-intro-card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.workflow-page .workflow-section p,
+.workflow-page .workflow-intro-card p {
+  max-width: 880px;
+  margin: 12px 0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.workflow-page strong {
+  color: #ffffff;
+}
+
+.workflow-page .work-sample-meta,
+.workflow-page .workflow-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 152, 0, 0.16);
+  color: #ffb347;
+  font-size: 0.84rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.workflow-page .workflow-note {
+  background: rgba(255, 255, 255, 0.075);
+  border-left: 5px solid #ff9800;
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin: 22px 0 0;
+  color: #f2f2f2;
+  line-height: 1.65;
+}
+
+.workflow-page .workflow-steps-grid,
+.workflow-page .value-grid,
+.workflow-page .related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.workflow-page .value-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.workflow-page .workflow-step-card,
+.workflow-page .value-card,
+.workflow-page .related-card {
+  position: relative;
+  min-height: 210px;
+  padding: 22px;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.065)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-left: 5px solid #ff9800;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.workflow-page .step-number {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: rgba(255, 152, 0, 0.30);
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.workflow-page .workflow-step-card h3,
+.workflow-page .value-card h3,
+.workflow-page .related-card h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+  padding-right: 42px;
+}
+
+.workflow-page .workflow-step-card ul {
+  margin-top: 12px;
+  padding-left: 18px;
+}
+
+.workflow-page .workflow-step-card li {
+  margin-bottom: 7px;
+  line-height: 1.55;
+}
+
+.workflow-page .value-card p,
+.workflow-page .related-card p {
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+.workflow-page .tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 18px;
+}
+
+.workflow-page .tool-list span {
+  display: inline-block;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(255, 152, 0, 0.16);
+  border: 1px solid rgba(255, 152, 0, 0.28);
+  color: #ffb347;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.workflow-page .tool-note {
+  color: #f2f2f2;
+}
+
+.workflow-page .workflow-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+@media (hover: hover) {
+  .workflow-page .workflow-step-card:hover,
+  .workflow-page .value-card:hover,
+  .workflow-page .related-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 16px 32px rgba(0, 0, 0, 0.30),
+      0 0 18px rgba(255, 152, 0, 0.16);
+    border-color: rgba(255, 152, 0, 0.30);
+  }
+}
+
+.workflow-page *,
+.workflow-page *::before,
+.workflow-page *::after {
+  box-sizing: border-box;
+}
+
+.workflow-page p,
+.workflow-page li,
+.workflow-page h1,
+.workflow-page h2,
+.workflow-page h3,
+.workflow-page span {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+@media (max-width: 1050px) {
+  .workflow-page .workflow-steps-grid,
+  .workflow-page .related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .workflow-page .workflow-main {
+    padding: 50px 6%;
+  }
+
+  .workflow-page .workflow-intro-card,
+  .workflow-page .workflow-section {
+    padding: 26px 22px;
+  }
+
+  .workflow-page .workflow-steps-grid,
+  .workflow-page .value-grid,
+  .workflow-page .related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-page .workflow-actions {
+    flex-direction: column;
+  }
+
+  .workflow-page .workflow-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .workflow-page .workflow-section h2,
+  .workflow-page .workflow-intro-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .workflow-page .step-number {
+    display: none;
+  }
+
+  .workflow-page .workflow-step-card h3,
+  .workflow-page .value-card h3,
+  .workflow-page .related-card h3 {
+    padding-right: 0;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .header,
+  .footer,
+  .workflow-page .workflow-actions {
+    display: none;
+  }
+
+  .workflow-page,
+  .workflow-page .workflow-main,
+  .workflow-page .workflow-intro-card,
+  .workflow-page .workflow-section,
+  .workflow-page .workflow-step-card,
+  .workflow-page .value-card,
+  .workflow-page .related-card {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: none;
+  }
+
+  .workflow-page .workflow-steps-grid,
+  .workflow-page .value-grid,
+  .workflow-page .related-grid {
+    display: block;
+  }
+
+  .workflow-page .workflow-step-card,
+  .workflow-page .value-card,
+  .workflow-page .related-card {
+    margin-bottom: 12px;
+  }
+}
