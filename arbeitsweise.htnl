@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meine Arbeitsweise | Jovanka Schauder</title>
+
+  <meta name="description" content="Jovanka Schauder zeigt ihre Arbeitsweise in IT-nahen Projekten: Verstehen, Strukturieren, Abstimmen, Umsetzen und Verbessern an der Schnittstelle von Fachbereich, IT und Dokumentation.">
+  <meta name="keywords" content="Arbeitsweise, PMO, Projektassistenz, Prozessanalyse, Anforderungsmanagement, technische Dokumentation, Projektkoordination, IT-Projektunterstützung">
+  <meta name="author" content="Jovanka Schauder">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Meine Arbeitsweise | Jovanka Schauder">
+  <meta property="og:description" content="Wie Jovanka Schauder Projekte strukturiert: Verstehen, Strukturieren, Abstimmen, Umsetzen und Verbessern.">
+  <meta property="og:image" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/img/Jo_Portfolio.png">
+  <meta property="og:url" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/arbeitsweise.html">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/arbeitsweise.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="arbeitsweise.css">
+</head>
+
+<body class="workflow-page">
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen" type="button">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Start</a></li>
+        <li><a href="arbeitsweise.html">Arbeitsweise</a></li>
+        <li><a href="index.html#experience">Arbeitsproben</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">
+        PMO · Prozessanalyse · Anforderungen · Dokumentation
+      </p>
+
+      <h1>Meine Arbeitsweise</h1>
+
+      <h2>
+        Projekte strukturiert begleiten: von der Analyse bis zur Verbesserung
+      </h2>
+
+      <p class="hero-text">
+        Gute Projektarbeit entsteht für mich dort, wo Menschen, Prozesse und Technik
+        sinnvoll miteinander verbunden werden. Diese Seite zeigt, wie ich an Aufgaben herangehe.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#workflow" class="btn btn-primary">Arbeitsweise ansehen</a>
+        <a href="index.html#experience" class="btn btn-secondary">Arbeitsproben öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inhalt -->
+  <main class="workflow-main">
+    <div class="workflow-wrapper">
+
+      <!-- Intro -->
+      <section class="workflow-intro-card">
+        <p class="work-sample-meta">
+          Projektarbeit · Struktur · Kommunikation · Dokumentation
+        </p>
+
+        <h2>Wie ich an Projekte herangehe</h2>
+
+        <p>
+          Ich arbeite gern an der Schnittstelle zwischen Fachbereich, IT und Projektorganisation.
+          Dabei ist mir wichtig, komplexe Abläufe zuerst zu verstehen, dann zu strukturieren
+          und anschließend so zu dokumentieren, dass andere damit weiterarbeiten können.
+        </p>
+
+        <p>
+          Meine Arbeitsweise verbindet Prozessanalyse, Anforderungsaufnahme, technische Dokumentation
+          und Projektunterstützung. Der Fokus liegt auf Klarheit, Nachvollziehbarkeit und gemeinsamer Abstimmung.
+        </p>
+
+        <div class="workflow-note">
+          <strong>Mein Grundsatz:</strong><br>
+          Nicht sofort in eine Lösung springen, sondern zuerst verstehen, was gebraucht wird,
+          wer beteiligt ist und welche Informationen für eine tragfähige Umsetzung fehlen.
+        </div>
+      </section>
+
+      <!-- 5 Schritte -->
+      <section class="workflow-section" id="workflow">
+        <h2>1. Fünf Schritte meiner Arbeitsweise</h2>
+
+        <div class="workflow-steps-grid">
+          <article class="workflow-step-card">
+            <span class="step-number">01</span>
+            <span class="workflow-label">Verstehen</span>
+            <h3>Ausgangslage erfassen</h3>
+            <ul>
+              <li>Prozesse aufnehmen</li>
+              <li>Beteiligte kennenlernen</li>
+              <li>Anforderungen sammeln</li>
+              <li>Ziele und Rahmenbedingungen klären</li>
+            </ul>
+          </article>
+
+          <article class="workflow-step-card">
+            <span class="step-number">02</span>
+            <span class="workflow-label">Strukturieren</span>
+            <h3>Informationen ordnen</h3>
+            <ul>
+              <li>Abläufe sichtbar machen</li>
+              <li>Use Cases und Anforderungen formulieren</li>
+              <li>Risiken und Abhängigkeiten erkennen</li>
+              <li>Dokumentation nachvollziehbar aufbauen</li>
+            </ul>
+          </article>
+
+          <article class="workflow-step-card">
+            <span class="step-number">03</span>
+            <span class="workflow-label">Abstimmen</span>
+            <h3>Gemeinsames Verständnis schaffen</h3>
+            <ul>
+              <li>Rückfragen klären</li>
+              <li>Stakeholder einbinden</li>
+              <li>Prioritäten sichtbar machen</li>
+              <li>Erwartungen und Verantwortlichkeiten abstimmen</li>
+            </ul>
+          </article>
+
+          <article class="workflow-step-card">
+            <span class="step-number">04</span>
+            <span class="workflow-label">Umsetzen</span>
+            <h3>Struktur in Handlung bringen</h3>
+            <ul>
+              <li>Aufgaben nachverfolgen</li>
+              <li>Status und Fortschritt sichtbar machen</li>
+              <li>Qualität und Dokumentation sichern</li>
+              <li>technische Unterstützung vorbereiten</li>
+            </ul>
+          </article>
+
+          <article class="workflow-step-card">
+            <span class="step-number">05</span>
+            <span class="workflow-label">Verbessern</span>
+            <h3>Aus Ergebnissen lernen</h3>
+            <ul>
+              <li>Rückmeldungen aufnehmen</li>
+              <li>Lessons Learned dokumentieren</li>
+              <li>Verbesserungspotenziale ableiten</li>
+              <li>Prozesse kontinuierlich weiterentwickeln</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Business Value -->
+      <section class="workflow-section">
+        <h2>2. Was diese Arbeitsweise leistet</h2>
+
+        <div class="value-grid">
+          <div class="value-card">
+            <span class="workflow-label">Transparenz</span>
+            <h3>Zusammenhänge sichtbar machen</h3>
+            <p>
+              Prozesse, Rollen, offene Punkte und Abhängigkeiten werden klarer erkennbar.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span class="workflow-label">Kommunikation</span>
+            <h3>Abstimmung erleichtern</h3>
+            <p>
+              Fachbereich, IT und Projektbeteiligte erhalten eine gemeinsame Grundlage.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span class="workflow-label">Nachvollziehbarkeit</span>
+            <h3>Entscheidungen dokumentieren</h3>
+            <p>
+              Anforderungen, Annahmen und Ergebnisse werden verständlich festgehalten.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span class="workflow-label">Qualität</span>
+            <h3>Fehlerquellen reduzieren</h3>
+            <p>
+              Klare Strukturen helfen, Rückfragen, Missverständnisse und Doppelarbeit zu verringern.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Verbindung zu Arbeitsproben -->
+      <section class="workflow-section">
+        <h2>3. Verbindung zu meinen Arbeitsproben</h2>
+
+        <p>
+          Meine Arbeitsproben zeigen einzelne Aspekte dieser Arbeitsweise: Prozessanalyse,
+          Anforderungsableitung, Dashboard-Struktur, Risikoübersicht, technische Dokumentation
+          und Datenaufbereitung.
+        </p>
+
+        <div class="related-grid">
+          <article class="related-card">
+            <span class="workflow-label">Analyse</span>
+            <h3>Prozessanalyse &amp; Anforderungen</h3>
+            <p>
+              Beispiel dafür, wie aus einem uneinheitlichen Ablauf eine strukturierte Prozesssicht entsteht.
+            </p>
+            <a href="prozessanalyse-anforderungen.html" class="btn btn-primary">Case Study ansehen</a>
+          </article>
+
+          <article class="related-card">
+            <span class="workflow-label">PMO</span>
+            <h3>Projekt-Dashboard</h3>
+            <p>
+              Beispiel dafür, wie Status, Aufgaben, Meilensteine und Risiken sichtbar gemacht werden können.
+            </p>
+            <a href="project-dashboard.html" class="btn btn-primary">Dashboard ansehen</a>
+          </article>
+
+          <article class="related-card">
+            <span class="workflow-label">Dokumentation</span>
+            <h3>Systemanalyse</h3>
+            <p>
+              Beispiel für strukturierte technische Dokumentation und Systemverständnis.
+            </p>
+            <a href="systemanalyse.html" class="btn btn-primary">Systemanalyse ansehen</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tools -->
+      <section class="workflow-section">
+        <h2>4. Werkzeuge, die meine Arbeitsweise unterstützen</h2>
+
+        <div class="tool-list">
+          <span>Jira</span>
+          <span>Confluence</span>
+          <span>M365</span>
+          <span>Excel</span>
+          <span>Python</span>
+          <span>GitHub</span>
+          <span>Dokumentation</span>
+          <span>Requirements</span>
+        </div>
+
+        <p class="tool-note">
+          Für mich stehen Tools nicht im Mittelpunkt. Entscheidend ist, mit ihnen Struktur,
+          Transparenz und Nachvollziehbarkeit zu schaffen.
+        </p>
+      </section>
+
+      <!-- Abschluss -->
+      <section class="workflow-section">
+        <h2>5. Fazit</h2>
+
+        <p>
+          Meine Arbeitsweise ist besonders hilfreich in Rollen, in denen Projektorganisation,
+          Prozessverständnis und technische Nähe zusammenkommen: PMO, Projektassistenz,
+          Projektkoordination, Requirements Engineering und technische Dokumentation.
+        </p>
+
+        <div class="workflow-actions">
+          <a href="index.html#experience" class="btn btn-primary">Arbeitsproben ansehen</a>
+          <a href="index.html#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Jovanka Schauder</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
