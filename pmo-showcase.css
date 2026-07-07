@@ -1,0 +1,347 @@
+/* =========================
+   PMO SHOWCASE – ISOLIERT
+   Diese Datei ergänzt styles.css
+   Wichtig: Die HTML-Seite braucht <body class="pmo-page">
+========================= */
+
+.pmo-page {
+  background: linear-gradient(180deg, #34495e, #22313f);
+  color: #ffffff;
+}
+
+.pmo-page .pmo-main {
+  background:
+    radial-gradient(circle at top left, rgba(255, 152, 0, 0.10), transparent 34%),
+    linear-gradient(180deg, #34495e, #22313f);
+  padding: 70px 10%;
+}
+
+.pmo-page .pmo-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pmo-page .pmo-intro-card,
+.pmo-page .pmo-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 34px auto;
+  padding: 32px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.07)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.pmo-page .pmo-intro-card {
+  border-left: 6px solid #ff9800;
+}
+
+.pmo-page .pmo-section h2,
+.pmo-page .pmo-intro-card h2 {
+  color: #ff9800;
+  margin-bottom: 22px;
+  text-align: left;
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+.pmo-page .pmo-section h3,
+.pmo-page .pmo-intro-card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.pmo-page .pmo-section p,
+.pmo-page .pmo-intro-card p {
+  max-width: 880px;
+  margin: 12px 0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.pmo-page strong {
+  color: #ffffff;
+}
+
+.pmo-page .work-sample-meta,
+.pmo-page .pmo-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 152, 0, 0.16);
+  color: #ffb347;
+  font-size: 0.84rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.pmo-page .pmo-note {
+  background: rgba(255, 255, 255, 0.075);
+  border-left: 5px solid #ff9800;
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin: 22px 0 0;
+  color: #f2f2f2;
+  line-height: 1.65;
+}
+
+.pmo-page .module-grid,
+.pmo-page .human-ai-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.pmo-page .module-card,
+.pmo-page .human-ai-card,
+.pmo-page .hybrid-card,
+.pmo-page .matrix-cell {
+  position: relative;
+  padding: 22px;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.065)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-left: 5px solid #ff9800;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.pmo-page .module-card h3,
+.pmo-page .human-ai-card h3,
+.pmo-page .hybrid-card h3,
+.pmo-page .matrix-cell h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.pmo-page .module-card p,
+.pmo-page .human-ai-card p,
+.pmo-page .matrix-cell p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.pmo-page .stakeholder-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.pmo-page .matrix-high {
+  border-left-color: #4a90e2;
+}
+
+.pmo-page .matrix-low {
+  border-left-color: #ff6b6b;
+}
+
+.pmo-page .risk-table-wrapper {
+  margin-top: 24px;
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pmo-page .pmo-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.pmo-page .pmo-table th,
+.pmo-page .pmo-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  line-height: 1.5;
+}
+
+.pmo-page .pmo-table th {
+  color: #ffb347;
+  background: rgba(255, 152, 0, 0.12);
+}
+
+.pmo-page .communication-timeline,
+.pmo-page .process-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.pmo-page .timeline-item,
+.pmo-page .process-flow span {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px 10px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  font-weight: bold;
+}
+
+.pmo-page .timeline-item.done {
+  border-left: 5px solid #4a90e2;
+  background: rgba(74, 144, 226, 0.12);
+}
+
+.pmo-page .timeline-item.active {
+  border-left: 5px solid #ff9800;
+  background: rgba(255, 152, 0, 0.14);
+  box-shadow: 0 0 18px rgba(255, 152, 0, 0.14);
+}
+
+.pmo-page .ai-section {
+  border-left: 6px solid #4a90e2;
+}
+
+.pmo-page .human-ai-grid {
+  margin-top: 24px;
+}
+
+.pmo-page .hybrid-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.pmo-page .hybrid-card ul,
+.pmo-page .lesson-list {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.pmo-page .hybrid-card li,
+.pmo-page .lesson-list li {
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+.pmo-page .lesson-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pmo-page .lesson-list li {
+  padding: 13px 14px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pmo-page .lesson-list li::before {
+  content: "✔";
+  color: #ff9800;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.pmo-page .pmo-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+@media (hover: hover) {
+  .pmo-page .module-card:hover,
+  .pmo-page .human-ai-card:hover,
+  .pmo-page .hybrid-card:hover,
+  .pmo-page .matrix-cell:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 16px 32px rgba(0, 0, 0, 0.30),
+      0 0 18px rgba(255, 152, 0, 0.16);
+    border-color: rgba(255, 152, 0, 0.30);
+  }
+}
+
+.pmo-page *,
+.pmo-page *::before,
+.pmo-page *::after {
+  box-sizing: border-box;
+}
+
+.pmo-page p,
+.pmo-page li,
+.pmo-page h1,
+.pmo-page h2,
+.pmo-page h3,
+.pmo-page span,
+.pmo-page td,
+.pmo-page th {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+@media (max-width: 1050px) {
+  .pmo-page .module-grid,
+  .pmo-page .human-ai-grid,
+  .pmo-page .communication-timeline,
+  .pmo-page .process-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .pmo-page .pmo-main {
+    padding: 50px 6%;
+  }
+
+  .pmo-page .pmo-intro-card,
+  .pmo-page .pmo-section {
+    padding: 26px 22px;
+  }
+
+  .pmo-page .module-grid,
+  .pmo-page .stakeholder-matrix,
+  .pmo-page .human-ai-grid,
+  .pmo-page .hybrid-grid,
+  .pmo-page .communication-timeline,
+  .pmo-page .process-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .pmo-page .pmo-actions {
+    flex-direction: column;
+  }
+
+  .pmo-page .pmo-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .pmo-page .pmo-section h2,
+  .pmo-page .pmo-intro-card h2 {
+    font-size: 1.45rem;
+  }
+}
