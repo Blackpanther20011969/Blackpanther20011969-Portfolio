@@ -1,0 +1,96 @@
+/* Zusatz für arbeitsweise.html: Prozesslinie und Timeline */
+
+.workflow-process-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.workflow-process-line span {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 152, 0, 0.16);
+  color: #ffb347;
+  font-weight: bold;
+  font-size: 0.92rem;
+}
+
+.workflow-process-line .process-arrow {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.workflow-timeline {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.workflow-timeline div {
+  position: relative;
+  padding: 14px 10px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  background: rgba(255, 152, 0, 0.14);
+  border: 1px solid rgba(255, 152, 0, 0.26);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.workflow-timeline div::after {
+  content: "→";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: bold;
+}
+
+.workflow-timeline div:last-child::after {
+  content: "";
+}
+
+@media (max-width: 900px) {
+  .workflow-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-timeline div {
+    text-align: left;
+  }
+
+  .workflow-timeline div::after {
+    content: "↓";
+    right: 16px;
+    top: auto;
+    bottom: -17px;
+    transform: none;
+  }
+
+  .workflow-timeline div:last-child::after {
+    content: "";
+  }
+}
+
+@media (max-width: 768px) {
+  .workflow-process-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .workflow-process-line .process-arrow {
+    padding-left: 12px;
+  }
+}
