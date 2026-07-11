@@ -1,0 +1,241 @@
+/* Zusatzgrafiken für arbeitsweise.html: interessantere Darstellung + Schriftumbrüche */
+
+.workflow-page .workflow-map,
+.workflow-page .workflow-path,
+.workflow-page .workflow-timeline {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.workflow-map {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at center, rgba(255, 152, 0, 0.16), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.055));
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.workflow-map::before {
+  content: "";
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 152, 0, 0.70), transparent);
+  opacity: 0.85;
+}
+
+.workflow-map-center {
+  grid-column: 3 / 5;
+  grid-row: 2;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  padding: 22px;
+  text-align: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(255, 152, 0, 0.27), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 152, 0, 0.42);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+.workflow-map-center .center-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffb347;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+}
+
+.workflow-map-center strong {
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.workflow-map-node {
+  z-index: 2;
+  min-height: 168px;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.065));
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-left: 5px solid #ff9800;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.26);
+}
+
+.workflow-map-node h3 {
+  color: #ff9800;
+  margin: 8px 0 8px;
+  padding-right: 0;
+}
+
+.workflow-map-node p {
+  margin: 0;
+  line-height: 1.55;
+  max-width: none;
+}
+
+.node-icon {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 152, 0, 0.17);
+  border: 1px solid rgba(255, 152, 0, 0.32);
+  font-size: 1.2rem;
+}
+
+.node-1 { grid-column: 1 / 3; grid-row: 1; }
+.node-2 { grid-column: 3 / 5; grid-row: 1; }
+.node-3 { grid-column: 5 / 7; grid-row: 1; }
+.node-4 { grid-column: 2 / 4; grid-row: 3; }
+.node-5 { grid-column: 4 / 6; grid-row: 3; }
+
+.workflow-path {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.path-step {
+  position: relative;
+  padding: 18px;
+  min-height: 140px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 4px solid #ff9800;
+}
+
+.path-step::after {
+  content: "→";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: bold;
+  z-index: 3;
+}
+
+.path-step:last-child::after { content: ""; }
+
+.path-step span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #ffb347;
+  font-weight: bold;
+}
+
+.path-step strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff9800;
+  line-height: 1.3;
+}
+
+.path-step p {
+  margin: 0;
+  line-height: 1.5;
+  max-width: none;
+}
+
+.workflow-timeline {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.workflow-timeline div {
+  position: relative;
+  padding: 14px 10px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  background: rgba(255, 152, 0, 0.14);
+  border: 1px solid rgba(255, 152, 0, 0.26);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.workflow-timeline div::after {
+  content: "→";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: bold;
+}
+
+.workflow-timeline div:last-child::after { content: ""; }
+
+@media (max-width: 1050px) {
+  .workflow-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .workflow-map::before { display: none; }
+
+  .workflow-map-center,
+  .node-1,
+  .node-2,
+  .node-3,
+  .node-4,
+  .node-5 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .workflow-map-center {
+    border-radius: 18px;
+    min-height: auto;
+  }
+
+  .workflow-path {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .path-step::after { display: none; }
+
+  .workflow-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflow-timeline div::after { display: none; }
+}
+
+@media (max-width: 768px) {
+  .workflow-map,
+  .workflow-path,
+  .workflow-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-map {
+    padding: 18px;
+  }
+
+  .workflow-map-node,
+  .path-step,
+  .workflow-timeline div {
+    text-align: left;
+  }
+}
