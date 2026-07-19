@@ -31,17 +31,25 @@
   box-sizing: border-box;
 }
 
+/* Schriftumbruch: lesbar, aber nicht brutal mitten im Wort */
 .pmo-page p,
 .pmo-page li,
-.pmo-page h1,
-.pmo-page h2,
-.pmo-page h3,
 .pmo-page span,
 .pmo-page td,
-.pmo-page th {
-  overflow-wrap: anywhere;
+.pmo-page th,
+.pmo-page strong,
+.pmo-page small {
+  overflow-wrap: break-word;
   word-break: normal;
   hyphens: auto;
+}
+
+.pmo-page h1,
+.pmo-page h2,
+.pmo-page h3 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 /* =========================
@@ -115,6 +123,12 @@
   letter-spacing: 0.03em;
 }
 
+.pmo-page .pmo-label {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.35;
+}
+
 .pmo-page .pmo-note {
   background: rgba(255, 255, 255, 0.075);
   border-left: 5px solid #ff9800;
@@ -127,19 +141,20 @@
 
 /* =========================
    CASE STUDY FLOW
+   Wichtig: bewusst NICHT mehr 7 Spalten, damit keine hässlichen Worttrennungen entstehen.
 ========================= */
 
 .pmo-page .case-flow {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
   margin-top: 28px;
 }
 
 .pmo-page .case-step {
   position: relative;
-  min-height: 170px;
-  padding: 18px;
+  min-height: 160px;
+  padding: 20px;
   border-radius: 16px;
   background: linear-gradient(
     145deg,
@@ -156,7 +171,7 @@
 .pmo-page .case-step::after {
   content: "→";
   position: absolute;
-  right: -12px;
+  right: -13px;
   top: 50%;
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.70);
@@ -374,7 +389,7 @@
 }
 
 .pmo-page .process-flow {
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
 }
 
 .pmo-page .timeline-item,
@@ -523,16 +538,8 @@
 ========================= */
 
 @media (max-width: 1150px) {
-  .pmo-page .case-flow {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .pmo-page .case-step::after {
     display: none;
-  }
-
-  .pmo-page .process-flow {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -541,8 +548,7 @@
   .pmo-page .human-ai-grid,
   .pmo-page .business-value-grid,
   .pmo-page .three-worlds-grid,
-  .pmo-page .communication-timeline,
-  .pmo-page .process-flow {
+  .pmo-page .communication-timeline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
