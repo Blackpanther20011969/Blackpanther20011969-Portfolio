@@ -354,3 +354,20 @@
     min-width: 700px;
   }
 }
+.ai-page .ai-table th {
+  white-space: normal;
+  hyphens: none;
+  word-break: keep-all;
+}
+
+.ai-page .ai-table td {
+  hyphens: auto;
+}
+
+.ai-page .ai-section h2,
+.ai-page .ai-section h3,
+.ai-page .ai-card h3 {
+  hyphens: none;
+  overflow-wrap: normal;
+}
+
