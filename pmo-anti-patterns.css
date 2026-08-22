@@ -1,0 +1,321 @@
+/* =========================
+   PMO ANTI-PATTERNS - ISOLIERT
+   Diese Datei ergänzt styles.css
+   Wichtig: <body class="anti-patterns-page">
+========================= */
+
+.anti-patterns-page {
+  background: linear-gradient(180deg, #34495e, #22313f);
+  color: #ffffff;
+}
+
+.anti-patterns-page .anti-main {
+  background:
+    radial-gradient(circle at top left, rgba(255, 152, 0, 0.10), transparent 34%),
+    linear-gradient(180deg, #34495e, #22313f);
+  padding: 70px 10%;
+}
+
+.anti-patterns-page .anti-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.anti-patterns-page *,
+.anti-patterns-page *::before,
+.anti-patterns-page *::after {
+  box-sizing: border-box;
+}
+
+.anti-patterns-page p,
+.anti-patterns-page li,
+.anti-patterns-page span,
+.anti-patterns-page td,
+.anti-patterns-page th,
+.anti-patterns-page strong,
+.anti-patterns-page h1,
+.anti-patterns-page h2,
+.anti-patterns-page h3 {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.anti-patterns-page .anti-intro-card,
+.anti-patterns-page .anti-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 34px auto;
+  padding: 32px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.07)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.anti-patterns-page .anti-intro-card {
+  border-left: 6px solid #ff9800;
+}
+
+.anti-patterns-page .signal-section,
+.anti-patterns-page .canvas-link-section {
+  border-left: 6px solid #4a90e2;
+}
+
+.anti-patterns-page .outlook-section {
+  border-left: 6px solid #ff9800;
+}
+
+.anti-patterns-page .anti-section h2,
+.anti-patterns-page .anti-intro-card h2 {
+  color: #ff9800;
+  margin-bottom: 22px;
+  text-align: left;
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+.anti-patterns-page .anti-section h3,
+.anti-patterns-page .anti-intro-card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.anti-patterns-page .anti-section p,
+.anti-patterns-page .anti-intro-card p {
+  max-width: 880px;
+  margin: 12px 0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.anti-patterns-page strong {
+  color: #ffffff;
+}
+
+.anti-patterns-page .work-sample-meta,
+.anti-patterns-page .anti-label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 152, 0, 0.16);
+  color: #ffb347;
+  font-size: 0.84rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.anti-patterns-page .anti-note {
+  background: rgba(255, 255, 255, 0.075);
+  border-left: 5px solid #ff9800;
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin: 22px 0 0;
+  color: #f2f2f2;
+  line-height: 1.65;
+}
+
+.anti-patterns-page .anti-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.anti-patterns-page .anti-card,
+.anti-patterns-page .check-card {
+  position: relative;
+  min-height: 250px;
+  padding: 22px;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.065)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-left: 5px solid #ff9800;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.anti-patterns-page .responsibility-card,
+.anti-patterns-page .stakeholder-card {
+  border-left-color: #4a90e2;
+}
+
+.anti-patterns-page .risk-card,
+.anti-patterns-page .reporting-card {
+  border-left-color: #ff6b6b;
+}
+
+.anti-patterns-page .anti-icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 152, 0, 0.18);
+  border: 1px solid rgba(255, 152, 0, 0.32);
+  font-size: 1.15rem;
+}
+
+.anti-patterns-page .anti-card h3,
+.anti-patterns-page .check-card h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.anti-patterns-page .anti-card p,
+.anti-patterns-page .check-card p {
+  max-width: none;
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.anti-patterns-page .anti-question {
+  margin-top: 16px;
+  padding: 13px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  line-height: 1.55;
+}
+
+.anti-patterns-page .signal-list {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+}
+
+.anti-patterns-page .signal-list li {
+  padding: 13px 14px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 1.55;
+}
+
+.anti-patterns-page .signal-list li::before {
+  content: "⚠";
+  color: #ffb347;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.anti-patterns-page .check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.anti-patterns-page .check-card {
+  min-height: 185px;
+  border-left-color: #4a90e2;
+}
+
+.anti-patterns-page .check-card > span {
+  display: block;
+  color: #ffb347;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.anti-patterns-page .comparison-wrapper {
+  overflow-x: auto;
+  margin-top: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.anti-patterns-page .comparison-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.anti-patterns-page .comparison-table th,
+.anti-patterns-page .comparison-table td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  line-height: 1.5;
+}
+
+.anti-patterns-page .comparison-table th {
+  color: #ffb347;
+  background: rgba(255, 152, 0, 0.12);
+}
+
+.anti-patterns-page .anti-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+@media (hover: hover) {
+  .anti-patterns-page .anti-card:hover,
+  .anti-patterns-page .check-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 16px 32px rgba(0, 0, 0, 0.30),
+      0 0 18px rgba(255, 152, 0, 0.16);
+    border-color: rgba(255, 152, 0, 0.30);
+  }
+}
+
+@media (max-width: 900px) {
+  .anti-patterns-page .anti-grid,
+  .anti-patterns-page .check-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .anti-patterns-page .anti-main {
+    padding: 50px 6%;
+  }
+
+  .anti-patterns-page .anti-intro-card,
+  .anti-patterns-page .anti-section {
+    padding: 26px 22px;
+  }
+
+  .anti-patterns-page .anti-actions {
+    flex-direction: column;
+  }
+
+  .anti-patterns-page .anti-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .anti-patterns-page .anti-section h2,
+  .anti-patterns-page .anti-intro-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .anti-patterns-page .comparison-table {
+    min-width: 650px;
+  }
+}
