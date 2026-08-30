@@ -53,6 +53,7 @@
       <div class="hero-actions">
         <a href="#anti-patterns" class="btn btn-primary">Anti-Patterns ansehen</a>
         <a href="#early-signals" class="btn btn-secondary">Frühwarnsignale</a>
+        <a href="#gegenexperiment" class="btn btn-secondary">Gegenexperiment</a>
         <a href="pmo-canvas.html" class="btn btn-secondary">PMO Canvas</a>
       </div>
     </div>
@@ -229,16 +230,93 @@
         </div>
       </section>
 
-      <!-- Ausblick -->
-      <section class="anti-section outlook-section">
-        <h2>5. Ausblick: Vom Problem zur Lösung</h2>
+      <!-- Vom Anti-Pattern zum Gegenexperiment -->
+      <section class="anti-section counter-section" id="gegenexperiment">
+        <p class="work-sample-meta">PMO Insight #11 · Beobachten · Erproben · Verbessern</p>
+        <h2>5. Vom Anti-Pattern zum Gegenexperiment</h2>
         <p>
-          Anti-Patterns sichtbar zu machen ist der erste Schritt. Diagnose allein verändert jedoch noch keinen Projektverlauf.
-          Im nächsten Schritt geht es darum, aus Beobachtungen konkrete Maßnahmen, Verantwortlichkeiten und Entscheidungen abzuleiten.
+          Ein Anti-Pattern zu erkennen, reicht nicht aus. Damit aus einer Beobachtung eine überprüfbare Verbesserung
+          entstehen kann, braucht es eine Ursachenhypothese, ein begrenztes Gegenexperiment, eine klare Verantwortung,
+          einen geeigneten Indikator und einen vereinbarten Folgetermin.
         </p>
+
+        <div class="counter-grid" aria-label="Sechs Schritte vom Anti-Pattern zum Gegenexperiment">
+          <article class="counter-card">
+            <span class="counter-number">01</span>
+            <span class="counter-icon" aria-hidden="true">🔎</span>
+            <h3>Beobachtung</h3>
+            <p><strong>Was passiert konkret?</strong></p>
+            <p>Beobachtbares Verhalten beschreiben, ohne eine Ursache bereits als Tatsache festzulegen.</p>
+          </article>
+
+          <article class="counter-card">
+            <span class="counter-number">02</span>
+            <span class="counter-icon" aria-hidden="true">❔</span>
+            <h3>Ursachenhypothese</h3>
+            <p><strong>Was vermuten wir?</strong></p>
+            <p>Eine überprüfbare Annahme formulieren, wodurch das beobachtete Verhalten entstehen könnte.</p>
+          </article>
+
+          <article class="counter-card">
+            <span class="counter-number">03</span>
+            <span class="counter-icon" aria-hidden="true">🔄</span>
+            <h3>Gegenexperiment</h3>
+            <p><strong>Was probieren wir aus?</strong></p>
+            <p>Eine kleine, zeitlich begrenzte Veränderung festlegen, mit der die Hypothese geprüft wird.</p>
+          </article>
+
+          <article class="counter-card">
+            <span class="counter-number">04</span>
+            <span class="counter-icon" aria-hidden="true">✅</span>
+            <h3>Verantwortung</h3>
+            <p><strong>Wer kümmert sich?</strong></p>
+            <p>Eine verantwortliche Person für Durchführung, Dokumentation und Nachverfolgung benennen.</p>
+          </article>
+
+          <article class="counter-card">
+            <span class="counter-number">05</span>
+            <span class="counter-icon" aria-hidden="true">📈</span>
+            <h3>Indikator</h3>
+            <p><strong>Woran messen wir?</strong></p>
+            <p>Festlegen, welche beobachtbare Veränderung auf eine Verbesserung hindeutet.</p>
+          </article>
+
+          <article class="counter-card">
+            <span class="counter-number">06</span>
+            <span class="counter-icon" aria-hidden="true">📅</span>
+            <h3>Folgetermin</h3>
+            <p><strong>Wann prüfen wir?</strong></p>
+            <p>Einen verbindlichen Termin zur gemeinsamen Auswertung von Beobachtung, Indikator und Ergebnis vereinbaren.</p>
+          </article>
+        </div>
+
+        <div class="mini-case">
+          <span class="anti-label">Mini-Case · Entscheidungen vertagt</span>
+          <h3>Aus einem wiederkehrenden Muster wird ein überprüfbarer Versuch</h3>
+          <div class="mini-case-grid">
+            <div><strong>Beobachtung</strong><p>Entscheidungsthemen werden wiederholt in das nächste Meeting verschoben.</p></div>
+            <div><strong>Ursachenhypothese</strong><p>Entscheidungsbefugnis und benötigte Informationen sind möglicherweise nicht eindeutig geklärt.</p></div>
+            <div><strong>Gegenexperiment</strong><p>Vor dem Meeting werden entscheidungsverantwortliche Person, Entscheidungsfrage, benötigte Informationen und Termin festgelegt.</p></div>
+            <div><strong>Verantwortung</strong><p>Die Projektleitung entscheidet. Das PMO dokumentiert offene Punkte, Termin und Ergebnis.</p></div>
+            <div><strong>Indikator</strong><p>Anteil der Entscheidungen, die zum vereinbarten Termin getroffen wurden.</p></div>
+            <div><strong>Folgetermin</strong><p>Gemeinsame Auswertung nach zwei Wochen.</p></div>
+          </div>
+        </div>
+
         <div class="anti-note">
-          <strong>Nächste Leitfrage:</strong><br>
-          Wie kann PMO aus einem wiederkehrenden Problem eine verbindliche und nachverfolgbare Gegenmaßnahme machen?
+          <strong>Wichtige Einordnung:</strong><br>
+          Ein Gegenexperiment ist noch keine bewiesene Lösung. Es prüft eine Ursachenhypothese in einem begrenzten Rahmen.
+          Auch ein nicht erfolgreiches Experiment kann wertvoll sein, wenn dadurch eine falsche Annahme,
+          ein ungeeigneter Indikator oder eine unerwartete Nebenwirkung sichtbar wird.
+        </div>
+
+        <div class="ai-support-note">
+          <span class="anti-label">KI als Unterstützung</span>
+          <p>
+            KI kann Protokolle, Statusberichte oder Risikoeinträge strukturieren und wiederkehrende Themen sichtbar machen.
+            Sie kann erste Formulierungen für Hypothesen oder Indikatoren vorschlagen. Ob tatsächlich ein Anti-Pattern vorliegt,
+            welche Ursachenhypothese geprüft wird und welches Gegenexperiment verantwortbar ist, entscheiden die Projektbeteiligten.
+          </p>
         </div>
       </section>
 
