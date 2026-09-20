@@ -6,8 +6,8 @@
 
   <title>KI im Projektmanagement | Jovanka Schauder</title>
 
-  <meta name="description" content="Portfolio-Arbeitsprobe von Jovanka Schauder zur verantwortungsvollen Nutzung von KI im Projektmanagement: Unterstützung statt Ersatz, Human-in-the-Loop, Governance, Datenschutz, Risiken und PMO-Dokumentation.">
-  <meta name="keywords" content="KI im Projektmanagement, AI Project Management, PMO, Projektassistenz, Human-in-the-Loop, Governance, Datenschutz, Risikoanalyse, Projektorganisation, Prozessanalyse, Requirements Engineering">
+  <meta name="description" content="Portfolio-Arbeitsprobe von Jovanka Schauder zur verantwortungsvollen Nutzung von KI im Projektmanagement: Unterstützung statt Ersatz, Human-in-the-Loop, Governance, Datenschutz, Prüfraster, Qualitätssicherung und PMO-Dokumentation.">
+  <meta name="keywords" content="KI im Projektmanagement, AI Project Management, PMO, Projektassistenz, Human-in-the-Loop, Governance, Datenschutz, Risikoanalyse, KI-Qualitätssicherung, Prüfraster, Nachweismanagement, Projektorganisation, Prozessanalyse, Requirements Engineering">
   <meta name="author" content="Jovanka Schauder">
   <meta name="robots" content="index, follow">
 
@@ -21,6 +21,144 @@
   <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/ki-projektmanagement.html">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="ki-projektmanagement.css">
+
+  <style>
+    .plausibility-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plausibility-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .plausibility-header h2 {
+      margin-bottom: 0.35rem;
+    }
+
+    .section-lead {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    .plausibility-definition {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .plausibility-definition > div {
+      padding: 1.25rem;
+      border-radius: 14px;
+      border: 1px solid rgba(212, 163, 55, 0.35);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .plausibility-definition p {
+      margin-bottom: 0;
+    }
+
+    .plausibility-label {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .plausibility-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .plausibility-card {
+      position: relative;
+      padding: 1.35rem;
+      border-radius: 16px;
+      border: 1px solid rgba(212, 163, 55, 0.35);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .plausibility-number {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6rem;
+      opacity: 0.75;
+    }
+
+    .plausibility-icon {
+      display: block;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .plausibility-card h3 {
+      margin: 0 0 0.55rem;
+    }
+
+    .plausibility-question {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .plausibility-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .plausibility-raster {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 1rem 1.15rem;
+      margin: 1.5rem 0;
+      border-radius: 14px;
+      background: rgba(212, 163, 55, 0.09);
+      border: 1px solid rgba(212, 163, 55, 0.3);
+    }
+
+    .competence-box {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .competence-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.85rem;
+    }
+
+    .competence-tags span {
+      display: inline-block;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 163, 55, 0.35);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .plausibility-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .plausibility-definition,
+      .plausibility-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
 </head>
 
 <body class="ai-page">
@@ -32,6 +170,7 @@
 
       <ul class="nav-links">
         <li><a href="index.html#hero">Start</a></li>
+        <li><a href="#plausibel-geprueft">Prüfraster</a></li>
         <li><a href="arbeitsweise.html">Arbeitsweise</a></li>
         <li><a href="index.html#experience">Arbeitsproben</a></li>
         <li><a href="index.html#contact">Kontakt</a></li>
@@ -95,6 +234,7 @@
           KI bereitet vor. Der Mensch bewertet. Das PMO dokumentiert. Entscheidungen bleiben nachvollziehbar.
         </div>
       </section>
+
 
       <!-- KI Module -->
       <section class="ai-section">
@@ -256,9 +396,126 @@
         </div>
       </section>
 
+      <!-- PMO Insight #14: Plausibel ist noch nicht geprüft -->
+      <section class="ai-section plausibility-section" id="plausibel-geprueft">
+        <div class="plausibility-header">
+          <p class="work-sample-meta">PMO Insight #14 · KI · Qualitätssicherung · Governance</p>
+          <h2>6. Plausibel ist noch nicht geprüft</h2>
+          <p class="section-lead">Vom KI-Output zum belastbaren Arbeitsergebnis</p>
+        </div>
+
+        <p>
+          KI kann überzeugende Texte, Analysen, Statusberichte und Dokumentationen erzeugen.
+          Die sprachliche Qualität eines Ergebnisses sagt jedoch noch nichts darüber aus,
+          ob die Informationen vollständig, aktuell oder fachlich geprüft sind.
+        </p>
+
+        <p>
+          Deshalb unterscheide ich zwischen einer <strong>plausiblen KI-Ausgabe</strong> und einem
+          <strong>belastbaren Arbeitsergebnis</strong>. Erst wenn Quellen, Annahmen,
+          Verantwortlichkeiten und Freigaben nachvollziehbar sind, kann ein Ergebnis
+          verantwortungsvoll genutzt werden.
+        </p>
+
+        <div class="plausibility-definition">
+          <div>
+            <span class="plausibility-label">Plausibel</span>
+            <p>Das Ergebnis wirkt sprachlich und logisch überzeugend.</p>
+          </div>
+          <div>
+            <span class="plausibility-label">Geprüft</span>
+            <p>Herkunft, Aktualität, Vollständigkeit, Annahmen, fachliche Beurteilung und zulässige Verwendung wurden nachvollziehbar bewertet.</p>
+          </div>
+        </div>
+
+        <div class="plausibility-grid">
+          <article class="plausibility-card">
+            <span class="plausibility-number">01</span>
+            <span class="plausibility-icon" aria-hidden="true">📚</span>
+            <h3>Herkunft</h3>
+            <p class="plausibility-question">Woher stammen die Informationen, Daten oder Quellen?</p>
+            <p>Nachvollziehbarkeit ist die Grundlage jeder Bewertung.</p>
+          </article>
+
+          <article class="plausibility-card">
+            <span class="plausibility-number">02</span>
+            <span class="plausibility-icon" aria-hidden="true">📅</span>
+            <h3>Aktualität</h3>
+            <p class="plausibility-question">Entspricht der Wissensstand dem aktuellen Stand der Aufgabe, des Projekts oder der Organisation?</p>
+          </article>
+
+          <article class="plausibility-card">
+            <span class="plausibility-number">03</span>
+            <span class="plausibility-icon" aria-hidden="true">🧩</span>
+            <h3>Vollständigkeit</h3>
+            <p class="plausibility-question">Welche Perspektiven, Ausnahmen, Randbedingungen oder Abhängigkeiten könnten fehlen?</p>
+          </article>
+
+          <article class="plausibility-card">
+            <span class="plausibility-number">04</span>
+            <span class="plausibility-icon" aria-hidden="true">❓</span>
+            <h3>Annahmen</h3>
+            <p class="plausibility-question">Welche Aussagen wurden ergänzt, geschätzt oder interpretiert?</p>
+            <p>Annahmen sollten als solche erkennbar bleiben.</p>
+          </article>
+
+          <article class="plausibility-card">
+            <span class="plausibility-number">05</span>
+            <span class="plausibility-icon" aria-hidden="true">🔍</span>
+            <h3>Prüfung</h3>
+            <p class="plausibility-question">Wer besitzt die fachliche Kompetenz, das Ergebnis inhaltlich zu bewerten?</p>
+            <p>Sprachliche Qualität ersetzt kein Fachwissen.</p>
+          </article>
+
+          <article class="plausibility-card">
+            <span class="plausibility-number">06</span>
+            <span class="plausibility-icon" aria-hidden="true">✅</span>
+            <h3>Freigabe</h3>
+            <p class="plausibility-question">Für welchen Zweck darf das Ergebnis genutzt werden?</p>
+            <p>Entwurf, Entscheidungsvorlage und Veröffentlichung brauchen unterschiedliche Absicherung.</p>
+          </article>
+        </div>
+
+        <div class="plausibility-raster">
+          <strong>Mein Prüfraster</strong>
+          <span>Herkunft</span>
+          <span>·</span>
+          <span>Aktualität</span>
+          <span>·</span>
+          <span>Vollständigkeit</span>
+          <span>·</span>
+          <span>Annahmen</span>
+          <span>·</span>
+          <span>Prüfung</span>
+          <span>·</span>
+          <span>Freigabe</span>
+        </div>
+
+        <div class="ai-note">
+          <strong>PMO-Perspektive:</strong><br>
+          KI kann Entwürfe beschleunigen und Informationen strukturieren. Ein belastbares
+          Arbeitsergebnis entsteht jedoch erst durch nachvollziehbare Prüfung, dokumentierte
+          Verantwortung und eine bewusste Freigabe.
+        </div>
+
+        <div class="competence-box">
+          <strong>Kompetenzen in diesem Themenfeld</strong>
+          <div class="competence-tags">
+            <span>KI-Governance</span>
+            <span>Human-in-the-Loop</span>
+            <span>Nachweismanagement</span>
+            <span>Qualitätsprüfung</span>
+            <span>Freigabeprozesse</span>
+            <span>PMO-Reporting</span>
+            <span>Prozessanalyse</span>
+            <span>Dokumentation</span>
+          </div>
+        </div>
+      </section>
+
       <!-- Verbindung PMO Showcase -->
       <section class="ai-section showcase-link-section">
-        <h2>6. Verbindung zum PMO Showcase</h2>
+        <h2>7. Verbindung zum PMO Showcase</h2>
 
         <p>
           Im PMO Showcase wird KI als ein unterstützender Baustein eingeordnet: zum Strukturieren,
@@ -280,7 +537,7 @@
 
       <!-- Fazit -->
       <section class="ai-section">
-        <h2>7. Fazit</h2>
+        <h2>8. Fazit</h2>
 
         <p>
           KI im Projektmanagement ist für mich kein Ersatz für Projektarbeit, sondern ein Werkzeug,
@@ -303,4 +560,4 @@
 
   <script src="script.js"></script>
 </body>
-</html> 
+</html>
