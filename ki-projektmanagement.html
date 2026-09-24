@@ -44,7 +44,7 @@
 
     .plausibility-definition {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
       margin: 2rem 0;
     }
@@ -66,6 +66,55 @@
       font-weight: 700;
       letter-spacing: 0.03em;
     }
+    .plausibility-precheck {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+      margin: 2rem 0;
+      padding: 1.35rem;
+      border-radius: 16px;
+      border: 1px solid rgba(74, 144, 226, 0.48);
+      border-left: 6px solid #4a90e2;
+      background: linear-gradient(145deg, rgba(74, 144, 226, 0.16), rgba(255, 255, 255, 0.055));
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+    .plausibility-precheck .plausibility-icon {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(74, 144, 226, 0.20);
+      border: 1px solid rgba(74, 144, 226, 0.42);
+      font-size: 1.25rem;
+    }
+    .plausibility-precheck h3 {
+      margin: 0 0 0.45rem;
+      color: #ffffff;
+    }
+    .plausibility-precheck p {
+      max-width: none;
+      margin: 0.35rem 0 0;
+    }
+    .role-clarity-box {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      border-radius: 14px;
+      border: 1px solid rgba(74, 144, 226, 0.30);
+      border-left: 5px solid #4a90e2;
+      background: rgba(74, 144, 226, 0.10);
+    }
+    .role-clarity-box strong {
+      display: block;
+      margin-bottom: 0.45rem;
+    }
+    .role-clarity-box p:last-child {
+      margin-bottom: 0;
+    }
+
 
     .plausibility-grid {
       display: grid;
@@ -146,6 +195,9 @@
     }
 
     @media (max-width: 900px) {
+      .plausibility-definition {
+        grid-template-columns: 1fr;
+      }
       .plausibility-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -154,6 +206,11 @@
     @media (max-width: 650px) {
       .plausibility-definition,
       .plausibility-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+      @media (max-width: 650px) {
+      .plausibility-precheck {
         grid-template-columns: 1fr;
       }
     }
