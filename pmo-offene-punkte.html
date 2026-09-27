@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PMO-Steuerung: offene Punkte & Entscheidungen | Jovanka Schauder</title>
+  <meta name="description" content="Praxisnahe PMO-Arbeitsprobe: Wie aus dem Status 'Freigabe noch offen' eine steuerbare Klärung mit Abhängigkeit, Rollen, Termin, Eskalation und dokumentiertem Abschluss wird.">
+  <meta name="keywords" content="PMO, offene Punkte, Issue Management, Dependency, Projektplan, Gantt, RAID Log, Eskalation, Entscheidungsmanagement, Projektsteuerung">
+  <meta name="author" content="Jovanka Schauder">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="PMO-Steuerung: offene Punkte & Entscheidungen | Jovanka Schauder">
+  <meta property="og:description" content="Vom unklaren Status zur steuerbaren Klärung: Projektplan, Rollen, Fristen, Eskalation und Abschlussnachweis.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/pmo-offene-punkte.html">
+  <meta property="og:image" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/img/Jo_Portfolio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/pmo-offene-punkte.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pmo-offene-punkte.css">
+</head>
+<body class="open-points-page">
+  <header class="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen" type="button">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Start</a></li>
+        <li><a href="#case">Praxisfall</a></li>
+        <li><a href="#project-plan">Projektplan</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="index.html#experience">Arbeitsproben</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero open-points-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">PMO · Projektsteuerung · Rollenklärung · Dokumentation</p>
+      <h1>Offen ist noch keine steuerbare Information</h1>
+      <h2>Vom offenen Punkt zur nachvollziehbaren Klärung</h2>
+      <p class="hero-text">
+        Diese Arbeitsprobe zeigt, wie aus dem Status „Freigabe noch offen“ ein Vorgang wird,
+        mit dem Projektbeteiligte tatsächlich arbeiten können.
+      </p>
+      <div class="hero-actions">
+        <a href="#case" class="btn btn-primary">Praxisfall ansehen</a>
+        <a href="#reflection" class="btn btn-secondary">PMO-Perspektive</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="open-main">
+    <div class="open-wrapper">
+      <section class="open-intro" id="case">
+        <p class="work-sample-meta">PMO Insight #15 · Praxisfall · Arbeitsprobe</p>
+        <h2>Ausgangslage</h2>
+        <p>
+          Ein Websitebeitrag ist redaktionell vorbereitet. Vor der Veröffentlichung benötigt der Inhalt
+          eine fachliche Prüfung und eine dokumentierte Freigabe.
+        </p>
+        <div class="status-comparison">
+          <article class="status-card status-before">
+            <span class="status-label">Zunächst dokumentiert</span>
+            <h3>„Freigabe noch offen.“</h3>
+            <p>Der Satz beschreibt den Zustand, aber noch nicht die weitere Bearbeitung.</p>
+          </article>
+          <article class="status-card status-after">
+            <span class="status-label">Steuerbar formuliert</span>
+            <h3>Klärung mit Rollen, Frist und Handlung</h3>
+            <p>Auswirkung, Verantwortung, nächster Schritt, Zieltermin und Eskalationsauslöser sind sichtbar.</p>
+          </article>
+        </div>
+        <div class="open-note">
+          <strong>Leitgedanke:</strong><br>
+          Ein Owner und ein Zieltermin reichen noch nicht aus. Steuerbarkeit entsteht durch Auswirkung,
+          Verantwortung, Handlung, Termin, Entscheidung, Eskalation und dokumentierten Abschluss.
+        </div>
+      </section>
+
+      <section class="open-section" id="classification">
+        <h2>1. Derselbe Vorgang kann seinen Charakter verändern</h2>
+        <p>
+          Die ausstehende Freigabe ist nicht automatisch ein Issue. Ihre Einordnung hängt davon ab,
+          ob sie planmäßig aussteht, nur möglicherweise zu spät kommt oder bereits eine Frist überschritten wurde.
+        </p>
+        <div class="classification-grid">
+          <article class="classification-card">
+            <span class="step-number">01</span>
+            <h3>Dependency + Action</h3>
+            <p><strong>Innerhalb der Frist:</strong> Die Veröffentlichung hängt von einem vorgesehenen Prüfschritt ab.</p>
+          </article>
+          <article class="classification-card">
+            <span class="step-number">02</span>
+            <h3>Risk</h3>
+            <p><strong>Noch unsicher:</strong> Eine mögliche Verzögerung könnte den Veröffentlichungstermin gefährden.</p>
+          </article>
+          <article class="classification-card">
+            <span class="step-number">03</span>
+            <h3>Issue</h3>
+            <p><strong>Problem eingetreten:</strong> Die Prüffrist ist überschritten oder der Termin ist konkret gefährdet.</p>
+          </article>
+          <article class="classification-card">
+            <span class="step-number">04</span>
+            <h3>Decision</h3>
+            <p><strong>Entscheidung nötig:</strong> Vertretung einbinden, Termin verschieben oder anders priorisieren?</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="open-section" id="project-plan">
+        <h2>2. Projektplan mit Vorgängen und Meilensteinen</h2>
+        <p>
+          Die fachliche Prüfung ist ein Vorgang mit Dauer. Die erteilte Freigabe ist ein Meilenstein.
+          Die Veröffentlichung startet erst, wenn Freigabe und technische Vorbereitung abgeschlossen sind.
+        </p>
+        <div class="plan-table-wrapper">
+          <table class="plan-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Vorgang oder Meilenstein</th>
+                <th>Dauer</th>
+                <th>Vorgänger</th>
+                <th>Verantwortung</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Websitebeitrag redaktionell erstellen</td><td>2 AT</td><td>–</td><td>Redaktion</td><td><span class="badge done">Erledigt</span></td></tr>
+              <tr><td>2</td><td>Meilenstein: redaktionell fertig</td><td>0 AT</td><td>1 FS</td><td>Redaktion</td><td><span class="badge done">Erreicht</span></td></tr>
+              <tr><td>3</td><td>Entwurf zur fachlichen Prüfung versenden</td><td>0,25 AT</td><td>2 FS</td><td>Tracking Owner</td><td><span class="badge done">Erledigt</span></td></tr>
+              <tr><td>4</td><td>Fachliche Prüfung durchführen</td><td>2 AT</td><td>3 FS</td><td>Fachrolle</td><td><span class="badge open">Offen</span></td></tr>
+              <tr><td>5</td><td>Meilenstein: fachliche Freigabe erteilt</td><td>0 AT</td><td>4 FS</td><td>Freigaberolle</td><td><span class="badge open">Offen</span></td></tr>
+              <tr><td>6</td><td>Veröffentlichung technisch vorbereiten</td><td>0,5 AT</td><td>2 FS</td><td>Webteam</td><td><span class="badge done">Erledigt</span></td></tr>
+              <tr><td>7</td><td>Websitebeitrag veröffentlichen</td><td>0,25 AT</td><td>5 FS; 6 FS</td><td>Webteam</td><td><span class="badge waiting">Wartet</span></td></tr>
+              <tr><td>8</td><td>Veröffentlichung technisch prüfen</td><td>0,25 AT</td><td>7 FS</td><td>Webteam</td><td><span class="badge open">Offen</span></td></tr>
+              <tr><td>9</td><td>Meilenstein: Veröffentlichung abgeschlossen</td><td>0 AT</td><td>8 FS</td><td>Tracking Owner</td><td><span class="badge open">Offen</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">AT = Arbeitstag. FS = Ende-Anfang-Beziehung.</p>
+      </section>
+
+      <section class="open-section" id="steering-questions">
+        <h2>3. Sechs Fragen machen den Punkt steuerbar</h2>
+        <div class="question-grid">
+          <article class="question-card"><span>01</span><h3>Was ist offen?</h3><p>Die fachliche Freigabe des vorbereiteten Websitebeitrags liegt noch nicht vor.</p></article>
+          <article class="question-card"><span>02</span><h3>Welche Auswirkung?</h3><p>Ohne Freigabe kann der geplante Veröffentlichungstermin nicht sicher eingehalten werden.</p></article>
+          <article class="question-card"><span>03</span><h3>Wer verfolgt?</h3><p>Die veröffentlichungsverantwortliche Rolle hält Status, Frist und Rückmeldung nach.</p></article>
+          <article class="question-card"><span>04</span><h3>Was passiert jetzt?</h3><p>Der Entwurf wird mit Prüffrist und gewünschtem Rückmeldeformat übermittelt.</p></article>
+          <article class="question-card"><span>05</span><h3>Bis wann?</h3><p>Die Freigabe wird spätestens zwei Arbeitstage vor der Veröffentlichung benötigt.</p></article>
+          <article class="question-card"><span>06</span><h3>Was bei Stillstand?</h3><p>Vertretung oder Freigaberolle einbinden und über Termin oder Priorität entscheiden.</p></article>
+        </div>
+      </section>
+
+      <section class="open-section" id="roles">
+        <h2>4. Rollen klar voneinander trennen</h2>
+        <div class="role-grid">
+          <article class="role-card"><h3>Tracking Owner oder PMO</h3><p>Verfolgt Status, Frist, nächste Handlung und Eskalationsauslöser.</p></article>
+          <article class="role-card"><h3>Fachrolle</h3><p>Prüft Inhalt und fachliche Richtigkeit und beantwortet Rückfragen.</p></article>
+          <article class="role-card"><h3>Freigaberolle</h3><p>Erteilt eine verbindliche Freigabe oder Ablehnung.</p></article>
+          <article class="role-card"><h3>Webteam</h3><p>Bereitet die Veröffentlichung technisch vor und prüft das veröffentlichte Ergebnis.</p></article>
+        </div>
+        <div class="open-note blue-note">
+          <strong>PMO-Merksatz:</strong><br>
+          Wer nachverfolgt, muss nicht selbst fachlich prüfen. Wer fachlich prüft, darf nicht automatisch freigeben.
+        </div>
+      </section>
+
+      <section class="open-section" id="register">
+        <h2>5. Steuerbares Register</h2>
+        <p>
+          Das Register hält nicht nur einen Status fest. Es verbindet den offenen Punkt mit Auswirkung,
+          Rollen, Handlung, Termin, Eskalation und Ergebnis.
+        </p>
+        <div class="register-flow" aria-label="Übergang von Dependency zu Issue und Decision">
+          <article><span>DEP-015</span><strong>Dependency</strong><p>Veröffentlichung hängt von fachlicher Freigabe ab.</p></article>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <article><span>ISS-006</span><strong>Issue</strong><p>Prüffrist überschritten, Veröffentlichung gefährdet.</p></article>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <article><span>DEC-004</span><strong>Decision</strong><p>Vertretung einbinden oder Termin verschieben?</p></article>
+        </div>
+        <div class="field-list">
+          <span>ID</span><span>Kategorie</span><span>Beschreibung</span><span>Auswirkung</span>
+          <span>Tracking Owner</span><span>Fachrolle</span><span>Freigaberolle</span><span>Nächster Schritt</span>
+          <span>Fällig am</span><span>Status</span><span>Eskalation ab</span><span>Ergebnis</span>
+        </div>
+      </section>
+
+      <section class="open-section" id="status-report">
+        <h2>6. Ampelstatus mit Entscheidungsaussage</h2>
+        <div class="traffic-grid">
+          <article class="traffic-card green"><h3>Grün</h3><p>Prüfung läuft innerhalb der Frist. Der Endtermin ist nicht gefährdet.</p></article>
+          <article class="traffic-card yellow"><h3>Gelb</h3><p>Der Termin ist gefährdet, aber mit vereinbarter Maßnahme voraussichtlich haltbar.</p></article>
+          <article class="traffic-card red"><h3>Rot</h3><p>Der Termin ist ohne sofortige Entscheidung oder Unterstützung nicht mehr haltbar.</p></article>
+        </div>
+        <div class="management-status">
+          <strong>Beispiel Status GELB</strong>
+          <p>
+            Der Websitebeitrag ist redaktionell abgeschlossen. Die Veröffentlichung hängt von der fachlichen
+            Freigabe bis zum vereinbarten Zieltermin ab. Liegt bis dahin keine Rückmeldung vor, werden Vertretung
+            und Veröffentlichungstermin mit der freigabeberechtigten Rolle geklärt.
+          </p>
+        </div>
+      </section>
+
+      <section class="open-section" id="closure">
+        <h2>7. Schließen heißt Ergebnis dokumentieren</h2>
+        <div class="closure-flow">
+          <span>Offen</span><b>→</b><span>In Klärung</span><b>→</b><span>Entscheidung oder Handlung</span><b>→</b><span>Ergebnis dokumentiert</span><b>→</b><span>Geschlossen</span>
+        </div>
+        <ul class="check-list">
+          <li>Die notwendige Entscheidung wurde getroffen oder die Handlung durchgeführt.</li>
+          <li>Das Ergebnis ist nachvollziehbar dokumentiert.</li>
+          <li>Betroffene Rollen wurden informiert.</li>
+          <li>Notwendige Folgeaufgaben wurden neu erfasst und zugeordnet.</li>
+        </ul>
+      </section>
+
+      <section class="open-section reflection-section" id="reflection">
+        <h2>8. Meine PMO-Perspektive</h2>
+        <p>
+          Das PMO löst nicht automatisch die fachliche Frage. Es sorgt dafür, dass erkennbar bleibt,
+          was offen ist, welche Wirkung die fehlende Klärung hat, wer fachlich beitragen muss,
+          wer entscheiden darf und wann zusätzliche Unterstützung notwendig wird.
+        </p>
+        <div class="open-note">
+          <strong>Mein Fazit:</strong><br>
+          „Offen“ beschreibt einen Zustand. Steuerbar wird ein Punkt durch Auswirkung, Verantwortung,
+          Handlung, Termin und Eskalationsregel. Geschlossen ist er erst, wenn das Ergebnis dokumentiert ist.
+        </div>
+        <div class="open-actions">
+          <a href="pmo-showcase.html" class="btn btn-primary">PMO Showcase ansehen</a>
+          <a href="project-dashboard.html" class="btn btn-secondary">Dashboard & Risk Register</a>
+          <a href="index.html#experience" class="btn btn-secondary">Zurück zu den Arbeitsproben</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer"><p>© 2026 Jovanka Schauder</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
