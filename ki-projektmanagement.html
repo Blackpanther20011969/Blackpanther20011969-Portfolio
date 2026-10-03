@@ -1,28 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>KI im Projektmanagement | Jovanka Schauder</title>
-
-  <meta name="description" content="Portfolio-Arbeitsprobe von Jovanka Schauder zur verantwortungsvollen Nutzung von KI im Projektmanagement: Unterstützung statt Ersatz, Human-in-the-Loop, Funktionsprüfung, fachliche Prüfung, Governance, Freigabe und PMO-Dokumentation.">
-  <meta name="keywords" content="KI im Projektmanagement, AI Project Management, PMO, Projektassistenz, Human-in-the-Loop, Governance, Datenschutz, Risikoanalyse, KI-Qualitätssicherung, Funktionsprüfung, Prüfraster, Nachweismanagement, Rollenklärung, Freigabeprozesse, Projektorganisation, Prozessanalyse, Requirements Engineering">
-  <meta name="author" content="Jovanka Schauder">
-  <meta name="robots" content="index, follow">
-
-  <meta property="og:title" content="KI im Projektmanagement | Jovanka Schauder">
-  <meta property="og:description" content="KI kann Projektarbeit unterstützen, ersetzt aber keine Verantwortung. Eine praxisnahe Einordnung für PMO, Projektassistenz und Prozessanalyse.">
-  <meta property="og:image" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/img/Jo_Portfolio.png">
-  <meta property="og:url" content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/ki-projektmanagement.html">
-  <meta property="og:type" content="article">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/ki-projektmanagement.html">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="ki-projektmanagement.css">
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KI im Projektmanagement | Jovanka Schauder</title>
+<meta content="Portfolio-Arbeitsprobe von Jovanka Schauder zur verantwortungsvollen Nutzung von KI im Projektmanagement: Unterstützung statt Ersatz, Human-in-the-Loop, Funktionsprüfung, fachliche Prüfung, Governance, Freigabe und PMO-Dokumentation." name="description"/>
+<meta content="KI im Projektmanagement, AI Project Management, PMO, Projektassistenz, Human-in-the-Loop, Governance, Datenschutz, Risikoanalyse, KI-Qualitätssicherung, Funktionsprüfung, Prüfraster, Nachweismanagement, Rollenklärung, Freigabeprozesse, Projektorganisation, Prozessanalyse, Requirements Engineering" name="keywords"/>
+<meta content="Jovanka Schauder" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta content="KI im Projektmanagement | Jovanka Schauder" property="og:title"/>
+<meta content="KI kann Projektarbeit unterstützen, ersetzt aber keine Verantwortung. Eine praxisnahe Einordnung für PMO, Projektassistenz und Prozessanalyse." property="og:description"/>
+<meta content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/img/Jo_Portfolio.png" property="og:image"/>
+<meta content="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/ki-projektmanagement.html" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/ki-projektmanagement.html" rel="canonical"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="ki-projektmanagement.css" rel="stylesheet"/>
+<style>
     .plausibility-section {
       position: relative;
       overflow: hidden;
@@ -214,461 +210,502 @@
         grid-template-columns: 1fr;
       }
     }
-  </style>
+  
 
+    .review-quality-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(212, 163, 55, 0.34);
+      border-left: 6px solid #d4a337;
+      background: linear-gradient(145deg, rgba(212, 163, 55, 0.11), rgba(255, 255, 255, 0.045));
+    }
+    .review-quality-section h3 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+    .review-quality-intro {
+      margin-bottom: 1.25rem;
+    }
+    .review-quality-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .review-quality-card {
+      padding: 1.2rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.055);
+    }
+    .review-quality-card span {
+      display: inline-flex;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.65rem;
+      border-radius: 50%;
+      background: rgba(212, 163, 55, 0.16);
+      border: 1px solid rgba(212, 163, 55, 0.35);
+      font-size: 1.15rem;
+    }
+    .review-quality-card strong {
+      display: block;
+      margin-bottom: 0.45rem;
+    }
+    .review-quality-card p:last-child {
+      margin-bottom: 0;
+    }
+    .review-quality-checks {
+      margin: 1rem 0 0;
+      padding-left: 1.3rem;
+    }
+    .review-quality-checks li {
+      margin-bottom: 0.55rem;
+      line-height: 1.55;
+    }
+    @media (max-width: 650px) {
+      .review-quality-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+</style>
 </head>
-
 <body class="ai-page">
-
-  <!-- Navigation -->
-  <header class="header">
-    <nav class="nav" aria-label="Hauptnavigation">
-      <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen" type="button">☰</button>
-
-      <ul class="nav-links">
-        <li><a href="index.html#hero">Start</a></li>
-        <li><a href="#plausibel-geprueft">Prüfraster</a></li>
-        <li><a href="arbeitsweise.html">Arbeitsweise</a></li>
-        <li><a href="index.html#experience">Arbeitsproben</a></li>
-        <li><a href="index.html#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <p class="hero-kicker">
+<!-- Navigation -->
+<header class="header">
+<nav aria-label="Hauptnavigation" class="nav">
+<button aria-label="Menü öffnen" class="menu-icon" onclick="toggleMenu()" type="button">☰</button>
+<ul class="nav-links">
+<li><a href="index.html#hero">Start</a></li>
+<li><a href="#plausibel-geprueft">Prüfraster</a></li>
+<li><a href="arbeitsweise.html">Arbeitsweise</a></li>
+<li><a href="index.html#experience">Arbeitsproben</a></li>
+<li><a href="index.html#contact">Kontakt</a></li>
+</ul>
+</nav>
+</header>
+<!-- Hero -->
+<section class="hero">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<p class="hero-kicker">
         KI · PMO · Human-in-the-Loop · Governance · Verantwortung
       </p>
-
-      <h1>KI im Projektmanagement</h1>
-
-      <h2>
+<h1>KI im Projektmanagement</h1>
+<h2>
         Unterstützung statt Ersatz
       </h2>
-
-      <p class="hero-text">
+<p class="hero-text">
         KI kann Projektarbeit unterstützen: Informationen strukturieren, Entwürfe vorbereiten,
         Risiken clustern und Statusberichte beschleunigen. Verantwortung, Bewertung,
         Kommunikation und Entscheidungen bleiben jedoch menschliche Aufgaben.
       </p>
-
-      <div class="hero-actions">
-        <a href="#ai-overview" class="btn btn-primary">Überblick ansehen</a>
-        <a href="pmo-showcase.html" class="btn btn-secondary">PMO Showcase öffnen</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Inhalt -->
-  <main class="ai-main">
-    <div class="ai-wrapper">
-
-      <!-- Intro -->
-      <section class="ai-intro-card" id="ai-overview">
-        <p class="work-sample-meta">
+<div class="hero-actions">
+<a class="btn btn-primary" href="#ai-overview">Überblick ansehen</a>
+<a class="btn btn-secondary" href="pmo-showcase.html">PMO Showcase öffnen</a>
+</div>
+</div>
+</section>
+<!-- Inhalt -->
+<main class="ai-main">
+<div class="ai-wrapper">
+<!-- Intro -->
+<section class="ai-intro-card" id="ai-overview">
+<p class="work-sample-meta">
           KI im Projektmanagement · PMO · Governance · Dokumentation
         </p>
-
-        <h2>Warum dieses Thema wichtig ist</h2>
-
-        <p>
+<h2>Warum dieses Thema wichtig ist</h2>
+<p>
           KI wird zunehmend Teil von Projektarbeit. Projektteams nutzen KI, um Informationen schneller zu strukturieren,
           Zusammenfassungen zu erstellen, Muster zu erkennen oder Statusberichte vorzubereiten.
         </p>
-
-        <p>
+<p>
           Gleichzeitig entstehen neue Anforderungen: Datenschutz, Governance, Nachvollziehbarkeit,
           Qualitätssicherung und klare Verantwortlichkeiten. Deshalb betrachte ich KI nicht als Ersatz,
           sondern als unterstützendes Werkzeug im Projektumfeld.
         </p>
-
-        <div class="ai-note">
-          <strong>Leitgedanke:</strong><br>
+<div class="ai-note">
+<strong>Leitgedanke:</strong><br/>
           KI bereitet vor. Der Mensch bewertet. Das PMO dokumentiert. Entscheidungen bleiben nachvollziehbar.
         </div>
-      </section>
-
-
-      <!-- KI Module -->
-      <section class="ai-section">
-        <h2>1. Was KI in Projektarbeit unterstützen kann</h2>
-
-        <div class="ai-card-grid">
-          <article class="ai-card">
-            <span class="ai-icon" aria-hidden="true">✨</span>
-            <span class="ai-label">KI unterstützt</span>
-            <h3>Informationen strukturieren</h3>
-            <p>Unsortierte Notizen, E-Mails oder Stichpunkte können in eine erste Struktur gebracht werden.</p>
-          </article>
-
-          <article class="ai-card">
-            <span class="ai-icon" aria-hidden="true">📝</span>
-            <span class="ai-label">Entwurf</span>
-            <h3>Statusberichte vorbereiten</h3>
-            <p>KI kann Entwürfe für Statusberichte, Zusammenfassungen oder Meetingnotizen liefern.</p>
-          </article>
-
-          <article class="ai-card">
-            <span class="ai-icon" aria-hidden="true">🔎</span>
-            <span class="ai-label">Analyse</span>
-            <h3>Risiken clustern</h3>
-            <p>Risiken können thematisch gruppiert werden. Die Bewertung bleibt Aufgabe des Menschen.</p>
-          </article>
-
-          <article class="ai-card">
-            <span class="ai-icon" aria-hidden="true">📋</span>
-            <span class="ai-label">Dokumentation</span>
-            <h3>Checklisten erzeugen</h3>
-            <p>Aus Anforderungen können erste Prüfpunkte oder Dokumentationsstrukturen entstehen.</p>
-          </article>
-
-          <article class="ai-card">
-            <span class="ai-icon" aria-hidden="true">🔗</span>
-            <span class="ai-label">PMO</span>
-            <h3>Zusammenhänge sichtbar machen</h3>
-            <p>KI kann Hinweise auf Abhängigkeiten geben, wenn Informationen sauber vorbereitet wurden.</p>
-          </article>
-
-          <article class="ai-card">
-            <span class="ai-icon" aria-hidden="true">🧭</span>
-            <span class="ai-label">Orientierung</span>
-            <h3>Entscheidungen vorbereiten</h3>
-            <p>KI kann Optionen zusammenfassen. Die Entscheidung selbst bleibt verantwortlich beim Menschen.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- Mensch verantwortlich -->
-      <section class="ai-section human-section">
-        <h2>2. Was menschliche Verantwortung bleibt</h2>
-
-        <p>
+</section>
+<!-- KI Module -->
+<section class="ai-section">
+<h2>1. Was KI in Projektarbeit unterstützen kann</h2>
+<div class="ai-card-grid">
+<article class="ai-card">
+<span aria-hidden="true" class="ai-icon">✨</span>
+<span class="ai-label">KI unterstützt</span>
+<h3>Informationen strukturieren</h3>
+<p>Unsortierte Notizen, E-Mails oder Stichpunkte können in eine erste Struktur gebracht werden.</p>
+</article>
+<article class="ai-card">
+<span aria-hidden="true" class="ai-icon">📝</span>
+<span class="ai-label">Entwurf</span>
+<h3>Statusberichte vorbereiten</h3>
+<p>KI kann Entwürfe für Statusberichte, Zusammenfassungen oder Meetingnotizen liefern.</p>
+</article>
+<article class="ai-card">
+<span aria-hidden="true" class="ai-icon">🔎</span>
+<span class="ai-label">Analyse</span>
+<h3>Risiken clustern</h3>
+<p>Risiken können thematisch gruppiert werden. Die Bewertung bleibt Aufgabe des Menschen.</p>
+</article>
+<article class="ai-card">
+<span aria-hidden="true" class="ai-icon">📋</span>
+<span class="ai-label">Dokumentation</span>
+<h3>Checklisten erzeugen</h3>
+<p>Aus Anforderungen können erste Prüfpunkte oder Dokumentationsstrukturen entstehen.</p>
+</article>
+<article class="ai-card">
+<span aria-hidden="true" class="ai-icon">🔗</span>
+<span class="ai-label">PMO</span>
+<h3>Zusammenhänge sichtbar machen</h3>
+<p>KI kann Hinweise auf Abhängigkeiten geben, wenn Informationen sauber vorbereitet wurden.</p>
+</article>
+<article class="ai-card">
+<span aria-hidden="true" class="ai-icon">🧭</span>
+<span class="ai-label">Orientierung</span>
+<h3>Entscheidungen vorbereiten</h3>
+<p>KI kann Optionen zusammenfassen. Die Entscheidung selbst bleibt verantwortlich beim Menschen.</p>
+</article>
+</div>
+</section>
+<!-- Mensch verantwortlich -->
+<section class="ai-section human-section">
+<h2>2. Was menschliche Verantwortung bleibt</h2>
+<p>
           Gerade im Projektmanagement reicht ein KI-Ergebnis nicht aus. Ergebnisse müssen eingeordnet,
           geprüft, erklärt und verantwortet werden.
         </p>
-
-        <div class="responsibility-grid">
-          <div class="responsibility-card"><span>🛡️</span><strong>Entscheidungen treffen</strong><p>Prioritäten, Freigaben und Zielkonflikte brauchen menschliches Urteil.</p></div>
-          <div class="responsibility-card"><span>💬</span><strong>Kommunikation gestalten</strong><p>Stakeholder brauchen Kontext, Transparenz und verbindliche Abstimmung.</p></div>
-          <div class="responsibility-card"><span>🔒</span><strong>Datenschutz prüfen</strong><p>Sensible Informationen dürfen nicht unbedacht in KI-Werkzeuge gelangen.</p></div>
-          <div class="responsibility-card"><span>⚠️</span><strong>Risiken bewerten</strong><p>KI kann Risiken sammeln, aber Auswirkungen und Maßnahmen müssen bewertet werden.</p></div>
-        </div>
-      </section>
-
-      <!-- Matrix -->
-      <section class="ai-section matrix-section">
-        <h2>3. KI, Mensch und PMO im Zusammenspiel</h2>
-
-        <p>
+<div class="responsibility-grid">
+<div class="responsibility-card"><span>🛡️</span><strong>Entscheidungen treffen</strong><p>Prioritäten, Freigaben und Zielkonflikte brauchen menschliches Urteil.</p></div>
+<div class="responsibility-card"><span>💬</span><strong>Kommunikation gestalten</strong><p>Stakeholder brauchen Kontext, Transparenz und verbindliche Abstimmung.</p></div>
+<div class="responsibility-card"><span>🔒</span><strong>Datenschutz prüfen</strong><p>Sensible Informationen dürfen nicht unbedacht in KI-Werkzeuge gelangen.</p></div>
+<div class="responsibility-card"><span>⚠️</span><strong>Risiken bewerten</strong><p>KI kann Risiken sammeln, aber Auswirkungen und Maßnahmen müssen bewertet werden.</p></div>
+</div>
+</section>
+<!-- Matrix -->
+<section class="ai-section matrix-section">
+<h2>3. KI, Mensch und PMO im Zusammenspiel</h2>
+<p>
           Diese Matrix zeigt, wie ich KI im Projektumfeld einordnen würde: unterstützend,
           aber nie ohne Prüfung, Kontext und Dokumentation.
         </p>
-
-        <div class="ai-table-wrapper">
-          <table class="ai-table">
-            <thead>
-              <tr>
-                <th>Aufgabe</th>
-                <th>KI geeignet?</th>
-                <th>Mensch erforderlich?</th>
-                <th>PMO-Beitrag</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Meetingnotizen zusammenfassen</td>
-                <td>Ja</td>
-                <td>Prüfung und Kontext</td>
-                <td>Ergebnis dokumentieren</td>
-              </tr>
-              <tr>
-                <td>Statusbericht vorbereiten</td>
-                <td>Ja</td>
-                <td>Freigabe und Priorisierung</td>
-                <td>Status nachvollziehbar machen</td>
-              </tr>
-              <tr>
-                <td>Risiken clustern</td>
-                <td>Teilweise</td>
-                <td>Bewertung und Maßnahmen</td>
-                <td>Risk Register pflegen</td>
-              </tr>
-              <tr>
-                <td>Anforderungen sortieren</td>
-                <td>Teilweise</td>
-                <td>Fachliche Prüfung</td>
-                <td>Dokumentation strukturieren</td>
-              </tr>
-              <tr>
-                <td>Budgetfreigabe</td>
-                <td>Nein</td>
-                <td>Verantwortliche Entscheidung</td>
-                <td>Entscheidung dokumentieren</td>
-              </tr>
-              <tr>
-                <td>Datenschutz bewerten</td>
-                <td>Teilweise</td>
-                <td>Governance und Prüfung</td>
-                <td>Risiken und Regeln sichtbar machen</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Risiken -->
-      <section class="ai-section risk-section">
-        <h2>4. Risiken beim KI-Einsatz bewusst machen</h2>
-
-        <p>
+<div class="ai-table-wrapper">
+<table class="ai-table">
+<thead>
+<tr>
+<th>Aufgabe</th>
+<th>KI geeignet?</th>
+<th>Mensch erforderlich?</th>
+<th>PMO-Beitrag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meetingnotizen zusammenfassen</td>
+<td>Ja</td>
+<td>Prüfung und Kontext</td>
+<td>Ergebnis dokumentieren</td>
+</tr>
+<tr>
+<td>Statusbericht vorbereiten</td>
+<td>Ja</td>
+<td>Freigabe und Priorisierung</td>
+<td>Status nachvollziehbar machen</td>
+</tr>
+<tr>
+<td>Risiken clustern</td>
+<td>Teilweise</td>
+<td>Bewertung und Maßnahmen</td>
+<td>Risk Register pflegen</td>
+</tr>
+<tr>
+<td>Anforderungen sortieren</td>
+<td>Teilweise</td>
+<td>Fachliche Prüfung</td>
+<td>Dokumentation strukturieren</td>
+</tr>
+<tr>
+<td>Budgetfreigabe</td>
+<td>Nein</td>
+<td>Verantwortliche Entscheidung</td>
+<td>Entscheidung dokumentieren</td>
+</tr>
+<tr>
+<td>Datenschutz bewerten</td>
+<td>Teilweise</td>
+<td>Governance und Prüfung</td>
+<td>Risiken und Regeln sichtbar machen</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Risiken -->
+<section class="ai-section risk-section">
+<h2>4. Risiken beim KI-Einsatz bewusst machen</h2>
+<p>
           KI kann entlasten, aber sie erzeugt auch neue Risiken. Besonders wichtig sind klare Regeln,
           geprüfte Ergebnisse und transparente Verantwortlichkeiten.
         </p>
-
-        <div class="ai-risk-grid">
-          <div class="ai-risk-card"><span>⚠️</span><strong>Halluzinationen</strong><p>KI kann überzeugend klingen, obwohl Inhalte falsch oder unvollständig sind.</p></div>
-          <div class="ai-risk-card"><span>🔒</span><strong>Datenschutz</strong><p>Nicht jede Information darf in ein KI-Tool eingegeben werden.</p></div>
-          <div class="ai-risk-card"><span>🧩</span><strong>fehlender Kontext</strong><p>KI kennt nicht automatisch Organisationslogik, Kultur oder implizite Erwartungen.</p></div>
-          <div class="ai-risk-card"><span>📌</span><strong>unklare Verantwortung</strong><p>Es muss klar bleiben, wer prüft, entscheidet und freigibt.</p></div>
-        </div>
-      </section>
-
-      <!-- Human in the Loop -->
-      <section class="ai-section loop-section">
-        <h2>5. Human-in-the-Loop: mein Leitmodell</h2>
-
-        <p>
+<div class="ai-risk-grid">
+<div class="ai-risk-card"><span>⚠️</span><strong>Halluzinationen</strong><p>KI kann überzeugend klingen, obwohl Inhalte falsch oder unvollständig sind.</p></div>
+<div class="ai-risk-card"><span>🔒</span><strong>Datenschutz</strong><p>Nicht jede Information darf in ein KI-Tool eingegeben werden.</p></div>
+<div class="ai-risk-card"><span>🧩</span><strong>fehlender Kontext</strong><p>KI kennt nicht automatisch Organisationslogik, Kultur oder implizite Erwartungen.</p></div>
+<div class="ai-risk-card"><span>📌</span><strong>unklare Verantwortung</strong><p>Es muss klar bleiben, wer prüft, entscheidet und freigibt.</p></div>
+</div>
+</section>
+<!-- Human in the Loop -->
+<section class="ai-section loop-section">
+<h2>5. Human-in-the-Loop: mein Leitmodell</h2>
+<p>
           Für mich ist KI im Projektmanagement dann sinnvoll, wenn sie bewusst in einen überprüfbaren Ablauf eingebettet wird.
         </p>
-
-        <div class="loop-flow" aria-label="Human-in-the-Loop Ablauf">
-          <div><span>01</span><strong>KI bereitet vor</strong><p>Zusammenfassung, Struktur oder Entwurf</p></div>
-          <div><span>02</span><strong>Mensch prüft</strong><p>Kontext, Qualität, Risiko und Verantwortung</p></div>
-          <div><span>03</span><strong>PMO dokumentiert</strong><p>Status, Entscheidung, Annahmen und offene Punkte</p></div>
-          <div><span>04</span><strong>Entscheidung bleibt nachvollziehbar</strong><p>Ergebnis, Freigabe und nächste Schritte sind klar</p></div>
-        </div>
-      </section>
-
-      <!-- PMO Insight #14: Plausibel ist noch nicht geprüft -->
-      <section class="ai-section plausibility-section" id="plausibel-geprueft">
-        <div class="plausibility-header">
-          <p class="work-sample-meta">PMO Insight #14 · KI · Qualitätssicherung · Governance</p>
-          <h2>6. Plausibel ist noch nicht geprüft</h2>
-          <p class="section-lead">Vom funktionierenden KI-Output zum verantwortbar verwendbaren Arbeitsergebnis</p>
-        </div>
-
-        <p>
+<div aria-label="Human-in-the-Loop Ablauf" class="loop-flow">
+<div><span>01</span><strong>KI bereitet vor</strong><p>Zusammenfassung, Struktur oder Entwurf</p></div>
+<div><span>02</span><strong>Mensch prüft</strong><p>Kontext, Qualität, Risiko und Verantwortung</p></div>
+<div><span>03</span><strong>PMO dokumentiert</strong><p>Status, Entscheidung, Annahmen und offene Punkte</p></div>
+<div><span>04</span><strong>Entscheidung bleibt nachvollziehbar</strong><p>Ergebnis, Freigabe und nächste Schritte sind klar</p></div>
+</div>
+</section>
+<!-- PMO Insight #14: Plausibel ist noch nicht geprüft -->
+<section class="ai-section plausibility-section" id="plausibel-geprueft">
+<div class="plausibility-header">
+<p class="work-sample-meta">PMO Insight #14 · KI · Qualitätssicherung · Governance</p>
+<h2>6. Plausibel ist noch nicht geprüft</h2>
+<p class="section-lead">Vom funktionierenden KI-Output zum verantwortbar verwendbaren Arbeitsergebnis</p>
+</div>
+<p>
           KI kann überzeugende Texte, Analysen, Statusberichte oder technische Artefakte erzeugen.
           Ein Ergebnis kann inhaltlich plausibel wirken und trotzdem technisch nicht funktionieren.
           Umgekehrt ist ein technisch funktionierendes Ergebnis noch nicht automatisch fachlich richtig,
           vollständig oder für den vorgesehenen Zweck freigegeben.
         </p>
-
-        <p>
+<p>
           Deshalb unterscheide ich zwischen <strong>Funktionsprüfung</strong>,
           <strong>fachlicher Beurteilung</strong> und <strong>organisatorischer Freigabe</strong>.
           Das PMO muss nicht jede Fachfrage selbst beantworten. Es schafft Transparenz darüber,
           was geprüft wurde, welche Annahmen offen sind, wer fachlich verantwortlich ist
           und wofür ein Ergebnis verwendet werden darf.
         </p>
-
-        <div class="plausibility-definition">
-          <div>
-            <span class="plausibility-label">Funktionsfähig</span>
-            <p>Das Ergebnis lässt sich technisch oder praktisch ausführen, öffnen und verwenden.</p>
-          </div>
-          <div>
-            <span class="plausibility-label">Fachlich geprüft</span>
-            <p>Eine zuständige Fachrolle hat Inhalt, Kontext, Grenzen und relevante Kriterien beurteilt.</p>
-          </div>
-          <div>
-            <span class="plausibility-label">Freigegeben</span>
-            <p>Das Ergebnis darf für einen klar benannten Zweck verwendet, weitergegeben oder veröffentlicht werden.</p>
-          </div>
-        </div>
-
-        <div class="plausibility-precheck">
-          <span class="plausibility-icon" aria-hidden="true">⚙️</span>
-          <div>
-            <h3>Vorprüfung: Funktion und Verwendbarkeit</h3>
-            <p class="plausibility-question">Funktioniert das Ergebnis technisch und praktisch überhaupt?</p>
-            <p>
+<div class="plausibility-definition">
+<div>
+<span class="plausibility-label">Funktionsfähig</span>
+<p>Das Ergebnis lässt sich technisch oder praktisch ausführen, öffnen und verwenden.</p>
+</div>
+<div>
+<span class="plausibility-label">Fachlich geprüft</span>
+<p>Eine zuständige Fachrolle hat Inhalt, Kontext, Grenzen und relevante Kriterien beurteilt.</p>
+</div>
+<div>
+<span class="plausibility-label">Freigegeben</span>
+<p>Das Ergebnis darf für einen klar benannten Zweck verwendet, weitergegeben oder veröffentlicht werden.</p>
+</div>
+</div>
+<div class="plausibility-precheck">
+<span aria-hidden="true" class="plausibility-icon">⚙️</span>
+<div>
+<h3>Vorprüfung: Funktion und Verwendbarkeit</h3>
+<p class="plausibility-question">Funktioniert das Ergebnis technisch und praktisch überhaupt?</p>
+<p>
               Dateien, Links, Formeln, Code und automatisierte Abläufe sollten zunächst getestet werden.
               Eine erfolgreiche Funktionsprüfung bestätigt jedoch noch nicht die fachliche Richtigkeit.
             </p>
-          </div>
-        </div>
+</div>
+</div>
+<div class="review-quality-section">
+<h3>Auch der Prüfprozess braucht eine Vorprüfung</h3>
+<p class="review-quality-intro">
+    Ein grüner Test, ein automatischer Check oder ein sauber wirkender Review-Kommentar ist zunächst ein Signal.
+    Belastbar wird dieses Signal erst, wenn vorher feststeht, was geprüft werden soll und anschließend erkennbar ist,
+    ob die Prüfung vollständig und aussagekräftig durchgeführt wurde.
+  </p>
+<div class="review-quality-grid">
+<div class="review-quality-card">
+<span aria-hidden="true">1</span>
+<strong>Prüfkriterien vorab festlegen</strong>
+<p>
+        Zweck, Mindestanforderungen, Ausschlusskriterien und notwendige Nachweise sollten vor der Erstellung
+        oder Übernahme des KI-Ergebnisses benannt sein. Sonst besteht die Gefahr, dass im Nachhinein vor allem
+        das geprüft wird, was bereits überzeugend dargestellt wurde.
+      </p>
+</div>
+<div class="review-quality-card">
+<span aria-hidden="true">2</span>
+<strong>Aussagekraft der Prüfung kontrollieren</strong>
+<p>
+        Auch ein Prüfverfahren kann unvollständig, technisch abgebrochen oder für die konkrete Fragestellung
+        ungeeignet sein. Deshalb muss nachvollziehbar bleiben, welche Bereiche tatsächlich geprüft wurden und
+        welche ausdrücklich nicht.
+      </p>
+</div>
+</div>
+<ul class="review-quality-checks">
+<li>Wurde die Prüfung vollständig ausgeführt oder vorzeitig abgebrochen?</li>
+<li>Welche Bereiche und Risiken deckt sie tatsächlich ab?</li>
+<li>Welcher Vergleichsstand oder welche Baseline wurde verwendet?</li>
+<li>Sind technische Fehler des Prüfverfahrens von fachlichen Befunden unterscheidbar?</li>
+<li>Wer bewertet Ergebnisse, die das Werkzeug nicht sicher einordnen kann?</li>
+</ul>
+<div class="ai-note">
+<strong>Ergänzender Merksatz:</strong><br/>
+    Ein Prüfergebnis ist nur so belastbar wie der Prüfprozess, der es erzeugt hat.
+    Ein grüner Check zeigt einen Status. Er erklärt noch nicht, was tatsächlich geprüft wurde.
+  </div>
+</div>
 
-        <div class="plausibility-grid">
-          <article class="plausibility-card">
-            <span class="plausibility-number">01</span>
-            <span class="plausibility-icon" aria-hidden="true">📚</span>
-            <h3>Herkunft</h3>
-            <p class="plausibility-question">Woher stammen die Informationen, Daten oder Quellen?</p>
-            <p>
+<div class="plausibility-grid">
+<article class="plausibility-card">
+<span class="plausibility-number">01</span>
+<span aria-hidden="true" class="plausibility-icon">📚</span>
+<h3>Herkunft</h3>
+<p class="plausibility-question">Woher stammen die Informationen, Daten oder Quellen?</p>
+<p>
               Quellen, Systeme und fachliche Zulieferungen sollten nachvollziehbar sein.
               Die Übergabe durch eine Fachkraft ist eine wichtige Grundlage, aber nicht automatisch eine Freigabe.
             </p>
-          </article>
-
-          <article class="plausibility-card">
-            <span class="plausibility-number">02</span>
-            <span class="plausibility-icon" aria-hidden="true">📅</span>
-            <h3>Aktualität</h3>
-            <p class="plausibility-question">Passt der Informationsstand zur aktuellen Aufgabe?</p>
-            <p>Auch eine fachlich richtige Information kann für den aktuellen Projektstand bereits überholt sein.</p>
-          </article>
-
-          <article class="plausibility-card">
-            <span class="plausibility-number">03</span>
-            <span class="plausibility-icon" aria-hidden="true">🧩</span>
-            <h3>Vollständigkeit</h3>
-            <p class="plausibility-question">Welche relevante Perspektive könnte fehlen?</p>
-            <p>
+</article>
+<article class="plausibility-card">
+<span class="plausibility-number">02</span>
+<span aria-hidden="true" class="plausibility-icon">📅</span>
+<h3>Aktualität</h3>
+<p class="plausibility-question">Passt der Informationsstand zur aktuellen Aufgabe?</p>
+<p>Auch eine fachlich richtige Information kann für den aktuellen Projektstand bereits überholt sein.</p>
+</article>
+<article class="plausibility-card">
+<span class="plausibility-number">03</span>
+<span aria-hidden="true" class="plausibility-icon">🧩</span>
+<h3>Vollständigkeit</h3>
+<p class="plausibility-question">Welche relevante Perspektive könnte fehlen?</p>
+<p>
               Vollständigkeit lässt sich selten absolut beweisen. Kriterien, Fachrollen und bekannte Ausnahmen
               helfen, relevante Lücken für den konkreten Zweck sichtbar zu machen.
             </p>
-          </article>
-
-          <article class="plausibility-card">
-            <span class="plausibility-number">04</span>
-            <span class="plausibility-icon" aria-hidden="true">❓</span>
-            <h3>Annahmen</h3>
-            <p class="plausibility-question">Was wurde ergänzt, interpretiert oder vorausgesetzt?</p>
-            <p>
+</article>
+<article class="plausibility-card">
+<span class="plausibility-number">04</span>
+<span aria-hidden="true" class="plausibility-icon">❓</span>
+<h3>Annahmen</h3>
+<p class="plausibility-question">Was wurde ergänzt, interpretiert oder vorausgesetzt?</p>
+<p>
               Schätzungen, Interpretationen und Vertrauensannahmen sollten erkennbar bleiben
               und nicht unbemerkt als bestätigte Tatsachen weitergegeben werden.
             </p>
-          </article>
-
-          <article class="plausibility-card">
-            <span class="plausibility-number">05</span>
-            <span class="plausibility-icon" aria-hidden="true">🔍</span>
-            <h3>Fachliche Prüfung</h3>
-            <p class="plausibility-question">Wer kann das Ergebnis belastbar beurteilen?</p>
-            <p>
+</article>
+<article class="plausibility-card">
+<span class="plausibility-number">05</span>
+<span aria-hidden="true" class="plausibility-icon">🔍</span>
+<h3>Fachliche Prüfung</h3>
+<p class="plausibility-question">Wer kann das Ergebnis belastbar beurteilen?</p>
+<p>
               Die fachliche Bewertung gehört zu einer Rolle mit passendem Wissen,
               ausreichenden Informationen und entsprechender Entscheidungsbefugnis.
             </p>
-          </article>
-
-          <article class="plausibility-card">
-            <span class="plausibility-number">06</span>
-            <span class="plausibility-icon" aria-hidden="true">✅</span>
-            <h3>Freigabe</h3>
-            <p class="plausibility-question">Wofür darf das Ergebnis verwendet werden?</p>
-            <p>
+</article>
+<article class="plausibility-card">
+<span class="plausibility-number">06</span>
+<span aria-hidden="true" class="plausibility-icon">✅</span>
+<h3>Freigabe</h3>
+<p class="plausibility-question">Wofür darf das Ergebnis verwendet werden?</p>
+<p>
               Ein interner Entwurf, eine Entscheidungsvorlage und eine externe Veröffentlichung
               benötigen unterschiedliche Prüf- und Freigabestufen.
             </p>
-          </article>
-        </div>
-
-        <div class="plausibility-raster">
-          <strong>Mein Prüfmodell</strong>
-          <span>Funktionsprüfung</span>
-          <span>→</span>
-          <span>Herkunft</span>
-          <span>·</span>
-          <span>Aktualität</span>
-          <span>·</span>
-          <span>Vollständigkeit</span>
-          <span>·</span>
-          <span>Annahmen</span>
-          <span>→</span>
-          <span>Fachprüfung</span>
-          <span>→</span>
-          <span>Freigabe</span>
-        </div>
-
-        <div class="ai-note">
-          <strong>PMO-Perspektive:</strong><br>
+</article>
+</div>
+<div class="plausibility-raster">
+<strong>Mein Prüfmodell</strong>
+<span>Funktionsprüfung</span>
+<span>→</span>
+<span>Herkunft</span>
+<span>·</span>
+<span>Aktualität</span>
+<span>·</span>
+<span>Vollständigkeit</span>
+<span>·</span>
+<span>Annahmen</span>
+<span>→</span>
+<span>Fachprüfung</span>
+<span>→</span>
+<span>Freigabe</span>
+</div>
+<div class="ai-note">
+<strong>PMO-Perspektive:</strong><br/>
           Das PMO übernimmt nicht automatisch die fachliche Verantwortung für jedes Ergebnis.
           Es strukturiert den Prüfprozess, macht Quellen und Annahmen sichtbar, bindet die zuständigen
           Fachrollen ein und dokumentiert Prüfstatus, offene Bedingungen und Freigaben.
         </div>
-
-        <div class="role-clarity-box">
-          <strong>Orientierung statt fachlicher Flaschenhals</strong>
-          <p>
+<div class="role-clarity-box">
+<strong>Orientierung statt fachlicher Flaschenhals</strong>
+<p>
             Gute Steuerung bedeutet nicht, jede Antwort selbst zu kennen. Sie bedeutet,
             die richtigen Fragen an die richtigen Rollen zu richten und Verantwortung dort zu lassen,
             wo das notwendige Fachwissen und die Entscheidungsbefugnis liegen.
           </p>
-        </div>
-
-        <div class="ai-note">
-          <strong>Merksatz:</strong><br>
+</div>
+<div class="ai-note">
+<strong>Merksatz:</strong><br/>
           Technisch funktionsfähig ist noch nicht fachlich richtig.
           Fachlich plausibel ist noch nicht geprüft.
           Geprüft ist noch nicht für jeden Zweck freigegeben.
         </div>
-
-        <div class="competence-box">
-          <strong>Kompetenzen in diesem Themenfeld</strong>
-          <div class="competence-tags">
-            <span>KI-Governance</span>
-            <span>Human-in-the-Loop</span>
-            <span>Funktionsprüfung</span>
-            <span>Rollenklärung</span>
-            <span>Nachweismanagement</span>
-            <span>Qualitätsprüfung</span>
-            <span>Freigabeprozesse</span>
-            <span>PMO-Reporting</span>
-            <span>Prozessanalyse</span>
-            <span>Dokumentation</span>
-          </div>
-        </div>
-      </section>
-      <!-- Verbindung PMO Showcase -->
-      <section class="ai-section showcase-link-section">
-        <h2>7. Verbindung zum PMO Showcase</h2>
-
-        <p>
+<div class="competence-box">
+<strong>Kompetenzen in diesem Themenfeld</strong>
+<div class="competence-tags">
+<span>KI-Governance</span>
+<span>Human-in-the-Loop</span>
+<span>Funktionsprüfung</span>
+<span>Rollenklärung</span>
+<span>Nachweismanagement</span>
+<span>Qualitätsprüfung</span>
+<span>Freigabeprozesse</span>
+<span>PMO-Reporting</span>
+<span>Prozessanalyse</span>
+<span>Dokumentation</span>
+</div>
+</div>
+</section>
+<!-- Verbindung PMO Showcase -->
+<section class="ai-section showcase-link-section">
+<h2>7. Verbindung zum PMO Showcase</h2>
+<p>
           Im PMO Showcase wird KI als ein unterstützender Baustein eingeordnet: zum Strukturieren,
           Zusammenfassen und Vorbereiten. Diese Seite vertieft den Gedanken und zeigt,
           wo menschliche Verantwortung und PMO-Dokumentation wichtig bleiben.
         </p>
-
-        <div class="ai-note">
-          <strong>Beispiel:</strong><br>
+<div class="ai-note">
+<strong>Beispiel:</strong><br/>
           Im Veröffentlichungsprozess könnte KI helfen, Anfragen zusammenzufassen oder Risiken zu gruppieren.
           Der Mensch prüft Inhalt, Datenschutz und Priorität. Das PMO dokumentiert Status, Entscheidung und offenen Klärungsbedarf.
         </div>
-
-        <div class="ai-actions">
-          <a href="pmo-showcase.html" class="btn btn-primary">PMO Showcase ansehen</a>
-          <a href="index.html#experience" class="btn btn-secondary">Zurück zu den Arbeitsproben</a>
-        </div>
-      </section>
-
-      <!-- Fazit -->
-      <section class="ai-section">
-        <h2>8. Fazit</h2>
-
-        <p>
+<div class="ai-actions">
+<a class="btn btn-primary" href="pmo-showcase.html">PMO Showcase ansehen</a>
+<a class="btn btn-secondary" href="index.html#experience">Zurück zu den Arbeitsproben</a>
+</div>
+</section>
+<!-- Fazit -->
+<section class="ai-section">
+<h2>8. Fazit</h2>
+<p>
           KI im Projektmanagement ist für mich kein Ersatz für Projektarbeit, sondern ein Werkzeug,
           das bei guter Einbettung Struktur, Geschwindigkeit und Übersicht unterstützen kann.
         </p>
-
-        <div class="ai-note">
-          <strong>Mein Ziel:</strong><br>
+<div class="ai-note">
+<strong>Mein Ziel:</strong><br/>
           KI so einsetzen, dass Projektarbeit transparenter wird und Entscheidungen nachvollziehbar bleiben.
         </div>
-      </section>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2026 Jovanka Schauder</p>
-  </footer>
-
-  <script src="script.js"></script>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<p>© 2026 Jovanka Schauder</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
