@@ -44,3 +44,11 @@
     border-radius: 9px;
   }
 }
+/* Abstand für Sprungmarken unter der festen Navigation */
+
+#ausgangslage,
+#prueflogik,
+#ergebnis,
+#arbeitsprobe {
+  scroll-margin-top: 110px;
+}
