@@ -1,2 +1,46 @@
 /* PMO Insight #15 */
 .open-page{background:linear-gradient(180deg,#34495e,#22313f);color:#fff}.open-page *{box-sizing:border-box}.open-hero{min-height:72vh}.open-main{padding:70px 10%;background:radial-gradient(circle at top left,rgba(255,152,0,.1),transparent 34%),linear-gradient(180deg,#34495e,#22313f)}.open-wrapper{max-width:1100px;margin:auto}.intro-card,.content-section{max-width:1000px;margin:34px auto;padding:32px;border:1px solid rgba(255,255,255,.12);border-left:6px solid #4a90e2;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.07));box-shadow:0 14px 34px rgba(0,0,0,.26)}.intro-card,.orange-border{border-left-color:#ff9800}.intro-card h2,.content-section h2{color:#ff9800;font-size:1.9rem;margin-bottom:18px}.intro-card p,.content-section p,.content-section li{line-height:1.65}.meta-pill,.card>span,.divider>span{display:inline-block;color:#ffb347;font-weight:700;margin-bottom:10px}.meta-pill,.divider>span{padding:6px 12px;border-radius:999px;background:rgba(255,152,0,.16)}.two-grid,.three-grid,.before-after{display:grid;gap:18px;margin-top:24px}.two-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.three-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.before-after{grid-template-columns:.8fr 1.4fr}.card{padding:22px;border:1px solid rgba(255,255,255,.11);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.055));box-shadow:0 10px 24px rgba(0,0,0,.2)}.card h3{color:#fff}.card.orange{border-left:5px solid #ff9800}.card.blue{border-left:5px solid #4a90e2}.green{border-top:6px solid #43a047}.yellow{border-top:6px solid #f9a825}.red{border-top:6px solid #e53935}.note{margin-top:24px;padding:18px 20px;border-left:5px solid #ff9800;border-radius:12px;background:rgba(255,255,255,.075);line-height:1.65}.blue-note{border-left-color:#4a90e2;background:rgba(74,144,226,.1)}.steps,.check{padding-left:24px}.steps li,.check li{margin-bottom:10px}.flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:24px 0}.flow span{padding:10px 13px;border:1px solid rgba(255,255,255,.12);border-radius:10px;background:rgba(255,255,255,.08)}.flow b,.register>b{color:#ffb347}.divider{max-width:1000px;margin:58px auto 34px;padding:30px 32px;text-align:center;border:1px solid rgba(255,152,0,.3);border-radius:18px;background:rgba(255,152,0,.1)}.divider h2{color:#fff}.table-wrap{overflow-x:auto;margin-top:22px;border:1px solid rgba(255,255,255,.12);border-radius:14px}.table-wrap table{width:100%;min-width:760px;border-collapse:collapse}.table-wrap th,.table-wrap td{padding:13px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}.table-wrap th{color:#ffb347;background:rgba(255,152,0,.12)}.small{font-size:.88rem;color:rgba(255,255,255,.75)}.register{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center}.register>b{font-size:1.7rem}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}@media(max-width:900px){.three-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.register{grid-template-columns:1fr}.register>b{transform:rotate(90deg);justify-self:center}}@media(max-width:768px){.open-main{padding:50px 6%}.intro-card,.content-section,.divider{padding:25px 21px}.two-grid,.three-grid,.before-after{grid-template-columns:1fr}.actions{flex-direction:column}.actions .btn{width:100%;text-align:center}}
+/* Arbeitsproben-Grafiken PMO Insight #16 */
+
+.work-sample-figure {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+}
+
+.work-sample-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: #f4f7fa;
+}
+
+.work-sample-figure figcaption {
+  padding: 14px 6px 2px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.download-note {
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .work-sample-figure {
+    padding: 8px;
+    margin: 22px auto;
+    border-radius: 14px;
+  }
+
+  .work-sample-figure img {
+    border-radius: 9px;
+  }
+}
