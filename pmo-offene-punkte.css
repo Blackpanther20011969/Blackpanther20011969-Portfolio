@@ -52,3 +52,28 @@
 #arbeitsprobe {
   scroll-margin-top: 110px;
 }
+/* Abstände innerhalb PMO Insight #16 */
+
+.content-section {
+  margi*-bottom: 36px;
+}
+
+.content-section*> h2 {
+  margin-bottom: 22px;
+}
+
+.*ontent-section > h3 {
+  margin-top* 34px;
+  margin-bottom: 12px;
+}
+
+.*wo-grid,
+.three-grid {
+  margin-to*: 22px;
+  margin-bottom: 26px;
+}
+
+*key-message {
+  margin-top: 24px;
+* margin-bottom: 24px;
+}
