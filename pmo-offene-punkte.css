@@ -44,36 +44,59 @@
     border-radius: 9px;
   }
 }
-/* Abstand für Sprungmarken unter der festen Navigation */
 
+/* Abstand für Sprungmarken unter der festen Navigation */
 #ausgangslage,
 #prueflogik,
 #ergebnis,
 #arbeitsprobe {
   scroll-margin-top: 110px;
 }
-/* Abstände innerhalb PMO Insight #16 */
 
+/* Abstaende innerhalb PMO Insight #16 */
 .content-section {
-  margi*-bottom: 36px;
+  margin-bottom: 36px;
 }
 
-.content-section*> h2 {
+.content-section > h2 {
   margin-bottom: 22px;
 }
 
-.*ontent-section > h3 {
-  margin-top* 34px;
+.content-section > h3 {
+  margin-top: 34px;
   margin-bottom: 12px;
 }
 
-.*wo-grid,
+.two-grid,
 .three-grid {
-  margin-to*: 22px;
+  margin-top: 22px;
   margin-bottom: 26px;
 }
 
-*key-message {
+.key-message {
   margin-top: 24px;
-* margin-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+/* Kriterienliste gleichmaessig ausrichten */
+.weight-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 44px;
+  margin: 20px 0 18px;
+  padding-left: 22px;
+  columns: initial;
+}
+
+.weight-list li {
+  margin: 0;
+  padding-left: 4px;
+  break-inside: auto;
+}
+
+@media (max-width: 768px) {
+  .weight-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
