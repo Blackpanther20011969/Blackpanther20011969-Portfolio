@@ -712,3 +712,69 @@ RESPONSIVE
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   NEUE POSITIONIERUNG 2026
+========================= */
+.positioning-intro,
+.experience-intro {
+  max-width: 940px;
+  margin: -8px auto 30px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.positioning-intro {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.position-card-wide {
+  grid-column: 1 / -1;
+  min-height: auto;
+}
+
+.principle-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 36px;
+  padding-left: 20px;
+}
+
+.principle-list li {
+  margin-bottom: 0;
+}
+
+.principle-list strong {
+  color: #ffb347;
+}
+
+.series-card {
+  border-left-color: #4a90e2;
+  background: linear-gradient(145deg, rgba(74, 144, 226, 0.20), rgba(255, 255, 255, 0.065));
+}
+
+.series-card::after {
+  background: rgba(74, 144, 226, 0.14);
+  border-color: rgba(74, 144, 226, 0.30);
+}
+
+#positioning,
+#experience,
+#contact {
+  scroll-margin-top: 88px;
+}
+
+@media (max-width: 768px) {
+  .positioning-intro,
+  .experience-intro {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .principle-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
