@@ -100,3 +100,72 @@
     gap: 10px;
   }
 }
+/* PMO Insight #16 - Feinschliff Entscheidungsfolgen und Navigation */
+#entscheidungsfolgen {
+  scroll-margin-top: 110px;
+}
+
+.decision-consequences {
+  border-left-color: #ff9800;
+}
+
+.decision-outcomes {
+  align-items: stretch;
+}
+
+.decision-outcomes .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.decision-outcomes .card h3 {
+  margin: 0 0 12px;
+}
+
+.decision-outcomes .card p {
+  margin: 0;
+}
+
+/* Kriterien gleichmaessig, ohne unruhige Einrueckungen */
+.weight-list {
+  list-style-position: outside;
+  align-items: start;
+}
+
+.weight-list li {
+  line-height: 1.5;
+}
+
+/* Navigation bei vielen Menuepunkten stabil halten */
+.open-page .nav {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.open-page .nav-links {
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
+}
+
+.open-page .nav-links a {
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .open-page .nav-links {
+    gap: 18px;
+  }
+
+  .open-page .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .decision-outcomes {
+    grid-template-columns: 1fr;
+  }
+}
+
