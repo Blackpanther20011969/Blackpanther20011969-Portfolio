@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PMO Insight #17: Entschieden ist noch nicht umgesetzt | Jovanka Schauder</title>
+  <meta name="description" content="Fiktive PMO-Arbeitsprobe zur Nachverfolgung von Beschlüssen: Verantwortung, Termine, Nachweise, Abweichungen und Wirksamkeitsprüfung.">
+  <meta name="author" content="Jovanka Schauder">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/pmo-wirksamkeit.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pmo-offene-punkte.css">
+  <style>
+    #ausgangslage,
+    #prozess,
+    #praxisbeispiel,
+    #wirksamkeit,
+    #lernerkenntnis {
+      scroll-margin-top: 110px;
+    }
+
+    .pmo17-process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin: 28px 0;
+    }
+
+    .pmo17-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-left: 5px solid #4a90e2;
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.07));
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+    }
+
+    .pmo17-card:nth-child(2),
+    .pmo17-card:nth-child(5) {
+      border-left-color: #ff9800;
+    }
+
+    .pmo17-card:nth-child(6) {
+      border-color: rgba(255, 179, 71, 0.50);
+      border-left-color: #ffb347;
+      box-shadow: 0 14px 35px rgba(255, 152, 0, 0.12);
+    }
+
+    .pmo17-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: rgba(74, 144, 226, 0.20);
+      color: #dcecff;
+      font-weight: 700;
+    }
+
+    .pmo17-card:nth-child(2) .pmo17-number,
+    .pmo17-card:nth-child(5) .pmo17-number,
+    .pmo17-card:nth-child(6) .pmo17-number {
+      background: rgba(255, 152, 0, 0.18);
+      color: #ffd28a;
+    }
+
+    .pmo17-icon {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .pmo17-card h3 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 1.24rem;
+    }
+
+    .pmo17-question {
+      margin: 0 0 14px;
+      color: #ffb347;
+      font-weight: 700;
+    }
+
+    .pmo17-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .decision-record {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .decision-record > div {
+      padding: 20px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .decision-record strong {
+      color: #ffb347;
+    }
+
+    .effect-chain {
+      margin: 28px 0;
+      padding: 24px;
+      border-left: 5px solid #ff9800;
+      border-radius: 14px;
+      background: rgba(255, 152, 0, 0.10);
+      text-align: center;
+      font-size: 1.06rem;
+      font-weight: 700;
+      line-height: 1.8;
+    }
+
+    .quality-check {
+      margin: 24px 0;
+      padding: 24px;
+      border-radius: 16px;
+      background: rgba(74, 144, 226, 0.10);
+      border: 1px solid rgba(74, 144, 226, 0.30);
+    }
+
+    .quality-check ul {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 980px) {
+      .pmo17-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .pmo17-process-grid,
+      .decision-record {
+        grid-template-columns: 1fr;
+      }
+
+      .pmo17-card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body class="open-page">
+  <header class="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen" type="button">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Start</a></li>
+        <li><a href="#ausgangslage">Ausgangslage</a></li>
+        <li><a href="#prozess">Sechs Schritte</a></li>
+        <li><a href="#praxisbeispiel">Praxisbeispiel</a></li>
+        <li><a href="#wirksamkeit">Wirksamkeit</a></li>
+        <li><a href="#lernerkenntnis">Lernerkenntnis</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero open-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">PMO Insight #17 · Beschlussnachverfolgung · Umsetzung · Wirkung</p>
+      <h1>Entschieden ist noch nicht umgesetzt</h1>
+      <h2>Vom Beschluss zur nachweisbaren Wirkung</h2>
+      <p class="hero-text">
+        Ein Beschluss kann sauber dokumentiert sein und trotzdem ohne Wirkung bleiben.
+        Erst wenn Verantwortung, Termin, Nachweis, Abweichung und Wirksamkeitsprüfung
+        miteinander verbunden sind, wird aus einer Entscheidung ein steuerbarer Umsetzungsauftrag.
+      </p>
+      <div class="hero-actions">
+        <a href="#prozess" class="btn btn-primary">Sechs Schritte ansehen</a>
+        <a href="#praxisbeispiel" class="btn btn-secondary">Zum Praxisbeispiel</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="open-main">
+    <section class="intro-card">
+      <p>
+        <strong>Hinweis zum Übungsfall:</strong> Projekte, Rollen, Termine, Beschlüsse und
+        Wirksamkeitsnachweise sind fiktiv. Die Arbeitsprobe zeigt eine methodische PMO-Sicht
+        auf die Nachverfolgung von Entscheidungen und keine reale Unternehmenssteuerung.
+      </p>
+    </section>
+
+    <section id="ausgangslage" class="content-section">
+      <p class="section-label">Ausgangslage</p>
+      <h2>Die Entscheidung ist gefallen. Was passiert danach?</h2>
+      <p>
+        PMO Insight #16 beschäftigte sich mit der Frage, wann eine Entscheidungsvorlage
+        entscheidungsreif ist. Im fiktiven Portfoliofall wurde Option 4 mit Auflagen empfohlen:
+        Projekt B soll im angenommenen Mindestumfang priorisiert, Projekt A gestaffelt gestartet
+        und Projekt C zunächst zurückgestellt werden.
+      </p>
+      <p>
+        Mit dem Beschluss beginnt jedoch eine neue Aufgabe. Eine dokumentierte Entscheidung
+        beantwortet noch nicht automatisch, wer welchen Schritt übernimmt, bis wann ein Ergebnis
+        benötigt wird, welcher Nachweis ausreicht und was bei einer Abweichung geschieht.
+      </p>
+
+      <div class="note blue-note">
+        <strong>Leitfrage:</strong><br>
+        Wie wird aus einem Beschluss ein nachverfolgbarer Auftrag, dessen Umsetzung und Wirkung
+        später nachvollziehbar überprüft werden können?
+      </div>
+
+      <p class="key-message">
+        <strong>Wichtige Abgrenzung:</strong> „Erledigt“ beschreibt zunächst nur einen Status.
+        „Wirksam“ bedeutet, dass der beabsichtigte Zustand eingetreten und durch einen geeigneten
+        Nachweis überprüfbar ist.
+      </p>
+    </section>
+
+    <section id="prozess" class="content-section">
+      <p class="section-label">Nachverfolgungsprozess</p>
+      <h2>Sechs Bausteine vom Beschluss zur Wirkung</h2>
+      <p>
+        Die sechs Karten bilden eine zusammenhängende Steuerungslogik. Kein einzelner Baustein
+        genügt allein. Erst die Verbindung macht den Umsetzungsstand nachvollziehbar.
+      </p>
+
+      <div class="pmo17-process-grid">
+        <article class="pmo17-card">
+          <span class="pmo17-number">1</span>
+          <span class="pmo17-icon" aria-hidden="true">✓</span>
+          <h3>Beschluss</h3>
+          <p class="pmo17-question">Was wurde tatsächlich entschieden?</p>
+          <p>
+            Der Beschluss muss eindeutig von Diskussion, Empfehlung und Protokollnotiz getrennt sein.
+            Festgehalten werden Option, Umfang, Auflagen, Entscheidungsdatum und entscheidendes Gremium.
+          </p>
+        </article>
+
+        <article class="pmo17-card">
+          <span class="pmo17-number">2</span>
+          <span class="pmo17-icon" aria-hidden="true">◎</span>
+          <h3>Verantwortung</h3>
+          <p class="pmo17-question">Wer setzt um, wer prüft und wer entscheidet bei Abweichungen?</p>
+          <p>
+            Umsetzungsverantwortung, fachliche Bestätigung, PMO-Nachverfolgung und Eskalationsentscheidung
+            dürfen nicht vermischt werden. Jede Rolle benötigt eine klar benannte Aufgabe.
+          </p>
+        </article>
+
+        <article class="pmo17-card">
+          <span class="pmo17-number">3</span>
+          <span class="pmo17-icon" aria-hidden="true">⌚</span>
+          <h3>Termin</h3>
+          <p class="pmo17-question">Bis wann muss welcher Zustand erreicht sein?</p>
+          <p>
+            Neben einem Endtermin können Starttermin, Zwischenmeilenstein, Prüftermin und Eskalationsfrist
+            erforderlich sein. Termine müssen mit dem erwarteten Ergebnis verbunden werden.
+          </p>
+        </article>
+
+        <article class="pmo17-card">
+          <span class="pmo17-number">4</span>
+          <span class="pmo17-icon" aria-hidden="true">▤</span>
+          <h3>Nachweis</h3>
+          <p class="pmo17-question">Woran erkennen wir die Umsetzung?</p>
+          <p>
+            Ein geeigneter Nachweis kann ein freigegebener Projektplan, eine bestätigte Ressourcenzuweisung,
+            ein Prüfprotokoll, eine Abnahme oder ein dokumentierter Meilenstein sein.
+          </p>
+        </article>
+
+        <article class="pmo17-card">
+          <span class="pmo17-number">5</span>
+          <span class="pmo17-icon" aria-hidden="true">!</span>
+          <h3>Abweichung</h3>
+          <p class="pmo17-question">Wann reicht Nachverfolgung nicht mehr aus?</p>
+          <p>
+            Bei Termin-, Ressourcen- oder Ergebnisabweichungen müssen Auswirkung, verantwortliche Rolle,
+            Toleranzgrenze und Eskalationsweg benannt sein. Nicht jede Abweichung benötigt sofort einen neuen Beschluss.
+          </p>
+        </article>
+
+        <article class="pmo17-card">
+          <span class="pmo17-number">6</span>
+          <span class="pmo17-icon" aria-hidden="true">◇</span>
+          <h3>Wirksamkeit</h3>
+          <p class="pmo17-question">Hat die Maßnahme den beabsichtigten Zustand erreicht?</p>
+          <p>
+            Die Wirksamkeitsprüfung betrachtet nicht nur die abgeschlossene Aufgabe. Sie prüft, ob die beschlossene
+            Maßnahme die erwartete Veränderung bewirkt hat und ob weitere Schritte erforderlich sind.
+          </p>
+        </article>
+      </div>
+
+      <div class="effect-chain">
+        Beschluss → Verantwortung → Termin → Nachweis → Abweichung → Wirksamkeit
+      </div>
+    </section>
+
+    <section id="praxisbeispiel" class="content-section">
+      <p class="section-label">Fiktives Praxisbeispiel</p>
+      <h2>Option 4 nach dem Portfolio-Beschluss</h2>
+      <p>
+        Das Beispiel führt den Fall aus PMO Insight #16 weiter. Angenommen, das Portfoliogremium
+        beschließt Option 4 mit den dort genannten Auflagen.
+      </p>
+
+      <div class="decision-record">
+        <div><strong>Beschluss</strong><br>Projekt B wird im angenommenen Mindestumfang priorisiert. Projekt A startet gestaffelt. Projekt C bleibt bis zur fachlichen Vorprüfung zurückgestellt.</div>
+        <div><strong>Umsetzungsverantwortung</strong><br>Die Projektleitungen planen Arbeitspakete und Meilensteine. Ressourcenmanagement bestätigt benötigte FTE und Schlüsselrollen.</div>
+        <div><strong>PMO-Aufgabe</strong><br>Beschluss, Verantwortlichkeiten, Termine, Nachweise und Abweichungen dokumentieren und für den Portfolio-Review aufbereiten.</div>
+        <div><strong>Prüftermin</strong><br>Monatlicher Kapazitäts- und Meilensteincheck; im Übungsfall zusätzlich ein Review vor dem Start betroffener Arbeitspakete.</div>
+        <div><strong>Nachweise</strong><br>Freigegebener Ressourcen- und Meilensteinplan, bestätigte Schlüsselrollen, dokumentierter Mindestumfang und aktueller Statusbericht.</div>
+        <div><strong>Eskalation</strong><br>Wenn Mindestumfang, Termin oder benötigte Kapazität gefährdet sind, wird die Auswirkung dokumentiert und eine Anpassungsentscheidung vorbereitet.</div>
+      </div>
+
+      <div class="note blue-note">
+        <strong>Wichtig:</strong><br>
+        Das PMO verfolgt den Beschluss nach und macht Abweichungen sichtbar. Das PMO bestätigt jedoch
+        nicht automatisch fachliche Inhalte und entscheidet nicht eigenständig über zusätzliche Ressourcen
+        oder eine Änderung der Portfolio-Priorität.
+      </div>
+    </section>
+
+    <section id="wirksamkeit" class="content-section">
+      <p class="section-label">Wirksamkeitsprüfung</p>
+      <h2>Umgesetzt, abgeschlossen oder wirksam?</h2>
+
+      <div class="three-grid">
+        <article class="card blue">
+          <h3>Umgesetzt</h3>
+          <p>Die vereinbarte Handlung wurde ausgeführt, zum Beispiel wurde ein Ressourcenplan erstellt.</p>
+        </article>
+        <article class="card orange">
+          <h3>Abgeschlossen</h3>
+          <p>Der Vorgang wurde formal beendet, dokumentiert und den zuständigen Rollen zugeordnet.</p>
+        </article>
+        <article class="card green">
+          <h3>Wirksam</h3>
+          <p>Der beabsichtigte Zustand ist eingetreten, zum Beispiel waren die benötigten Rollen tatsächlich verfügbar und der vereinbarte Meilenstein wurde erreicht.</p>
+        </article>
+      </div>
+
+      <div class="quality-check">
+        <h3>Fragen für den Wirksamkeitscheck</h3>
+        <ul class="check">
+          <li>Welcher Zielzustand sollte durch den Beschluss erreicht werden?</li>
+          <li>Welcher mess- oder beobachtbare Indikator zeigt den Zielzustand?</li>
+          <li>Zu welchem Zeitpunkt wird die Wirkung überprüft?</li>
+          <li>Wer bestätigt das Ergebnis fachlich?</li>
+          <li>Welche Nebenwirkungen oder neuen Risiken sind entstanden?</li>
+          <li>Ist ein Folgeauftrag oder eine neue Entscheidung erforderlich?</li>
+        </ul>
+      </div>
+
+      <p class="key-message">
+        <strong>Merksatz:</strong> Ein grüner Status beweist noch keine Wirkung. Ohne definierten
+        Zielzustand, geeigneten Nachweis, Prüftermin und fachliche Bestätigung bleibt „erledigt“
+        vor allem eine Statusangabe.
+      </p>
+    </section>
+
+    <section id="lernerkenntnis" class="content-section">
+      <p class="section-label">Lernerkenntnis</p>
+      <h2>Was ich daraus mitnehme</h2>
+      <p>
+        PMO-Arbeit endet nicht mit dem Protokollieren einer Entscheidung. Nach dem Beschluss müssen
+        Aufträge, Verantwortlichkeiten, Termine und Nachweise so miteinander verbunden werden, dass
+        Fortschritt, Abweichung und Wirkung nachvollziehbar bleiben.
+      </p>
+      <p>
+        Dabei ist erneut eine klare Rollentrennung wichtig: Die Projektverantwortlichen setzen um,
+        Fachrollen bestätigen Inhalte, das PMO strukturiert die Nachverfolgung und das zuständige
+        Gremium entscheidet über wesentliche Abweichungen oder eine veränderte Priorisierung.
+      </p>
+      <p>
+        Für mich ist neu besonders wichtig: Eine erledigte Aufgabe ist noch kein Wirksamkeitsnachweis.
+        Erst wenn der erwartete Zielzustand benannt und später überprüft wird, lässt sich beurteilen,
+        ob ein Beschluss tatsächlich die beabsichtigte Wirkung erzielt hat.
+      </p>
+
+      <div class="divider">
+        <h2>Dokumentiert ist noch nicht wirksam. Entscheidend ist, ob aus dem Beschluss ein überprüfbarer Zielzustand entsteht.</h2>
+      </div>
+
+      <div class="two-grid">
+        <article class="card blue">
+          <h3>Werkzeuge</h3>
+          <p>Beschlussprotokoll, Maßnahmen- und Entscheidungsregister, Meilensteintracking, Statusbericht und Wirksamkeitscheck</p>
+        </article>
+        <article class="card orange">
+          <h3>Meine Rolle</h3>
+          <p>Konzeption, Strukturierung und Dokumentation eines fiktiven PMO-Nachverfolgungsprozesses</p>
+        </article>
+      </div>
+
+      <div class="actions">
+        <a href="pmo-entscheidungsreife.html" class="btn btn-secondary">Zurück zu PMO Insight #16</a>
+        <a href="index.html#experience" class="btn btn-primary">Zurück zu den Arbeitsproben</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Jovanka Schauder · PMO Insight #17 · Fiktiver Übungsfall</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
