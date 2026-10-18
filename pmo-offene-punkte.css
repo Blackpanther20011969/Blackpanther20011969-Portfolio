@@ -127,6 +127,30 @@
   margin: 0;
 }
 
+.quality-check h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.quality-check .check {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 24px;
+}
+
+.quality-check .check li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.quality-check .check li:last-child {
+  margin-bottom: 0;
+}
+
+#wirksamkeit .key-message {
+  margin-top: 28px;
+}
+
 /* Kriterien gleichmaessig, ohne unruhige Einrueckungen */
 .weight-list {
   list-style-position: outside;
