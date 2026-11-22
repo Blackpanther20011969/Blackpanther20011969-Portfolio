@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PMO Insight #20: Rot ist noch keine Maßnahme | Jovanka Schauder</title>
+  <meta name="description" content="Fiktive PMO-Arbeitsprobe: Von der roten Projektampel zur fachlich begründeten Reaktionsentscheidung.">
+  <meta name="author" content="Jovanka Schauder">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://blackpanther20011969.github.io/Blackpanther20011969-Portfolio/pmo-reaktionsentscheidung.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pmo-offene-punkte.css">
+  <style>
+    #signal, #ursache, #auswirkung, #optionen, #entscheidung, #lernerkenntnis, #arbeitsprobe {
+      scroll-margin-top: 110px;
+    }
+
+    .signal-grid,
+    .reaction-grid,
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .reaction-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .signal-card,
+    .reaction-card,
+    .role-card {
+      padding: 24px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-left: 5px solid #4a90e2;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .signal-card.orange,
+    .reaction-card.orange {
+      border-left-color: #ff9800;
+    }
+
+    .reaction-card.green,
+    .role-card.green {
+      border-left-color: #62b36f;
+    }
+
+    .signal-card h3,
+    .reaction-card h3,
+    .role-card h3 {
+      margin-top: 0;
+      color: #ffb347;
+    }
+
+    .fact-table,
+    .evidence-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+    }
+
+    .fact-table th,
+    .fact-table td,
+    .evidence-table th,
+    .evidence-table td {
+      padding: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .fact-table th,
+    .evidence-table th {
+      background: #17365d;
+      color: #ffffff;
+    }
+
+    .status-pill {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+
+    .status-confirmed {
+      background: rgba(80, 180, 100, 0.2);
+      color: #bce8c4;
+      border: 1px solid rgba(80, 180, 100, 0.45);
+    }
+
+    .status-partial {
+      background: rgba(255, 179, 71, 0.18);
+      color: #ffd59a;
+      border: 1px solid rgba(255, 179, 71, 0.42);
+    }
+
+    .status-open {
+      background: rgba(226, 92, 92, 0.18);
+      color: #ffc2c2;
+      border: 1px solid rgba(226, 92, 92, 0.42);
+    }
+
+    .status-na {
+      background: rgba(180, 190, 200, 0.16);
+      color: #dde3e8;
+      border: 1px solid rgba(180, 190, 200, 0.36);
+    }
+
+    .warning-box {
+      padding: 22px;
+      border-left: 5px solid #ff9800;
+      border-radius: 14px;
+      background: rgba(255, 152, 0, 0.10);
+      margin: 24px 0;
+    }
+
+    .decision-box {
+      padding: 26px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 179, 71, 0.38);
+      border-left: 6px solid #ffb347;
+      background: linear-gradient(145deg, rgba(255, 152, 0, 0.14), rgba(255, 255, 255, 0.06));
+      margin: 24px 0;
+    }
+
+    .decision-box h3 {
+      color: #ffb347;
+      margin-top: 0;
+    }
+
+    .process-chain {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin: 26px 0;
+    }
+
+    .process-step {
+      padding: 17px 10px;
+      text-align: center;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .process-step strong {
+      display: block;
+      color: #ffb347;
+      margin-bottom: 6px;
+    }
+
+    .source-list li {
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 950px) {
+      .reaction-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-chain {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .signal-grid,
+      .role-grid,
+      .process-chain {
+        grid-template-columns: 1fr;
+      }
+
+      .fact-table,
+      .evidence-table {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body class="open-page">
+  <header class="header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <button class="menu-icon" onclick="toggleMenu()" aria-label="Menü öffnen" type="button">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Start</a></li>
+        <li><a href="#signal">Signal</a></li>
+        <li><a href="#ursache">Ursache</a></li>
+        <li><a href="#optionen">Optionen</a></li>
+        <li><a href="#entscheidung">Ergebnis</a></li>
+        <li><a href="#lernerkenntnis">Lernerkenntnis</a></li>
+        <li><a href="#arbeitsprobe">Arbeitsprobe</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero open-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">PMO Insight #20 · Project Controls · Ursachenprüfung · Reaktionsentscheidung</p>
+      <h1>Rot ist noch keine Maßnahme</h1>
+      <h2>Vom Warnsignal zur fachlich begründeten Reaktion</h2>
+      <p class="hero-text">Eine rote Ampel zeigt, dass eine definierte Regel ausgelöst wurde. Sie erklärt noch nicht, warum die Abweichung entstanden ist oder welche Reaktion geeignet ist.</p>
+      <div class="hero-actions">
+        <a href="#signal" class="btn btn-primary">Prüfweg ansehen</a>
+        <a href="#arbeitsprobe" class="btn btn-secondary">Lernpaper öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="open-main">
+    <section class="intro-card">
+      <p><strong>Hinweis:</strong> Alle Termine, Toleranzen, Rollen, Ursachen und Reaktionsoptionen sind fiktiv. Die Seite zeigt ein selbst entwickeltes Lernmodell und keine reale Projekt- oder Portfolioentscheidung.</p>
+    </section>
+
+    <section class="content-section">
+      <p class="section-label">Verbindung zu PMO Insight #15</p>
+      <h2>Das Ampelsystem liefert das Signal</h2>
+      <p>PMO Insight #15 zeigt, wie ein offener Punkt mit Zuständigkeit, Termin, Nachweis, Ampellogik und Eskalationshinweis steuerbar gemacht werden kann. PMO Insight #20 setzt beim roten Signal an und untersucht, welche Reaktion fachlich begründet werden kann.</p>
+      <div class="actions">
+        <a href="pmo-offene-punkte.html#ampelsystem" class="btn btn-secondary">Zur Ampellogik aus PMO Insight #15</a>
+      </div>
+    </section>
+
+    <section id="signal" class="content-section">
+      <p class="section-label">Warnsignal prüfen</p>
+      <h2>Was Rot zeigt und was Rot nicht zeigt</h2>
+      <div class="signal-grid">
+        <article class="signal-card">
+          <h3>Rot zeigt</h3>
+          <ul class="check">
+            <li>Eine definierte Regel wurde ausgelöst.</li>
+            <li>Die Prognose überschreitet im Übungsfall die Toleranz.</li>
+            <li>Ein kritischer Meilenstein ist betroffen.</li>
+            <li>Prüfung und Steuerung sind erforderlich.</li>
+          </ul>
+        </article>
+        <article class="signal-card orange">
+          <h3>Rot zeigt nicht</h3>
+          <ul class="check">
+            <li>welche Ursache tatsächlich vorliegt,</li>
+            <li>welche Auswirkungen vollständig entstehen,</li>
+            <li>welche Reaktion geeignet ist,</li>
+            <li>wer die notwendige Entscheidung treffen darf.</li>
+          </ul>
+        </article>
+      </div>
+
+      <table class="fact-table">
+        <thead>
+          <tr><th>Prüffeld</th><th>Fiktiver Wert</th><th>Einordnung</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Soll-Ende</td><td>24.11.2026</td><td>Aktuell gültiger Plantermin</td></tr>
+          <tr><td>Prognose-Ende</td><td>29.11.2026</td><td>Aktuell erwarteter Abschluss</td></tr>
+          <tr><td>Abweichung</td><td>+5 Kalendertage</td><td>Prognose minus Soll</td></tr>
+          <tr><td>Toleranz</td><td>2 Kalendertage</td><td>Annahme des Übungsfalls, kein allgemeiner Standard</td></tr>
+          <tr><td>Kritischer Meilenstein</td><td>Ja</td><td>Mögliche höhere Steuerungsrelevanz</td></tr>
+          <tr><td>Ampel</td><td>Rot</td><td>Rechnerisch nachvollziehbares Signal</td></tr>
+          <tr><td>Hinweis</td><td>Eskalation prüfen</td><td>Kein automatischer Eskalationsbeschluss</td></tr>
+        </tbody>
+      </table>
+      <p class="key-message"><strong>Merksatz:</strong> Rot ist ein Signal für Untersuchung und Steuerung. Rot ist noch keine fachlich begründete Maßnahme.</p>
+    </section>
+
+    <section id="ursache" class="content-section">
+      <p class="section-label">Ursachenprüfung</p>
+      <h2>Beobachtung, Hypothese und bestätigte Ursache trennen</h2>
+      <table class="evidence-table">
+        <thead>
+          <tr><th>Aussage</th><th>Einordnung</th><th>Was fehlt zur Bestätigung?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Die Fachprüfung ist noch nicht abgeschlossen.</td><td><span class="status-pill status-confirmed">Beobachtung</span></td><td>Aktueller Prüfstatus der zuständigen Fachrolle</td></tr>
+          <tr><td>Die eingereichten Unterlagen sind unvollständig.</td><td><span class="status-pill status-partial">Mögliche Ursache</span></td><td>Abgleich mit verbindlicher Prüfliste</td></tr>
+          <tr><td>Eine alternative Prüfperson könnte helfen.</td><td><span class="status-pill status-open">Lösungshypothese</span></td><td>Eignung, Verfügbarkeit und Übergabeaufwand</td></tr>
+          <tr><td>Eine Neuplanung kann Folgeauswirkungen transparent machen.</td><td><span class="status-pill status-partial">Planungshypothese</span></td><td>Abhängigkeitsanalyse und Terminbefugnis</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        <strong>Five Whys mit Vorsicht:</strong><br>
+        Wiederholtes Nachfragen kann hinter ein sichtbares Symptom führen. Die Antworten bleiben jedoch Hypothesen, bis sie durch Daten, Unterlagen oder die zuständige Fachrolle bestätigt wurden.
+      </div>
+
+      <div class="two-grid">
+        <article class="card blue">
+          <h3>Korrektur</h3>
+          <p>Das aktuelle Problem beheben oder begrenzen.</p>
+          <p><strong>Beispiel:</strong> Fehlende Prüfunterlagen nachreichen.</p>
+        </article>
+        <article class="card orange">
+          <h3>Ursachenmaßnahme</h3>
+          <p>Die zugrunde liegende Ursache so bearbeiten, dass eine Wiederholung weniger wahrscheinlich wird.</p>
+          <p><strong>Beispiel:</strong> Verbindliche Übergabecheckliste einführen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="auswirkung" class="content-section">
+      <p class="section-label">Auswirkungen einordnen</p>
+      <h2>Wie weit reicht die Abweichung?</h2>
+      <div class="process-chain">
+        <div class="process-step"><strong>1</strong>Arbeitspaket</div>
+        <div class="process-step"><strong>2</strong>Meilenstein</div>
+        <div class="process-step"><strong>3</strong>Abhängigkeiten</div>
+        <div class="process-step"><strong>4</strong>Ressourcen / Qualität</div>
+        <div class="process-step"><strong>5</strong>Projekt oder Portfolio</div>
+      </div>
+      <p>Die Einordnung verhindert zwei Fehler: Ein lokales Problem wird nicht unnötig eskaliert, und eine projektübergreifende Folge wird nicht als operative Kleinigkeit behandelt.</p>
+    </section>
+
+    <section id="optionen" class="content-section">
+      <p class="section-label">Reaktionsoptionen</p>
+      <h2>Drei mögliche Reaktionen vergleichen</h2>
+      <div class="reaction-grid">
+        <article class="reaction-card">
+          <h3>Option A</h3>
+          <h4>Unterlagen ergänzen und Prüfung priorisieren</h4>
+          <p><strong>Ansatz:</strong> Ursache beziehungsweise Hindernis beseitigen.</p>
+          <p><strong>Voraussetzung:</strong> Fehlende Unterlagen sind eindeutig benannt und die Fachrolle kann nach Eingang weiterprüfen.</p>
+          <p><strong>Offen:</strong> Reicht die Reaktion aus, um die Prognose zu verbessern?</p>
+        </article>
+        <article class="reaction-card orange">
+          <h3>Option B</h3>
+          <h4>Alternative Prüfperson einsetzen</h4>
+          <p><strong>Ansatz:</strong> Kapazität oder Bearbeitungsengpass verändern.</p>
+          <p><strong>Voraussetzung:</strong> Eignung, Verfügbarkeit, Übergabeaufwand und Freigabe sind bestätigt.</p>
+          <p><strong>Risiko:</strong> Einarbeitung, Doppelarbeit oder Ressourcenkonflikt ohne Termingarantie.</p>
+        </article>
+        <article class="reaction-card green">
+          <h3>Option C</h3>
+          <h4>Ablauf und Termin neu planen</h4>
+          <p><strong>Ansatz:</strong> Auswirkungen und Ablauf realistisch neu ordnen.</p>
+          <p><strong>Voraussetzung:</strong> Abhängigkeiten, Folgearbeiten und Terminbefugnis sind geprüft.</p>
+          <p><strong>Grenze:</strong> Die Ursache wird nicht beseitigt, aber der Plan wird realistischer.</p>
+        </article>
+      </div>
+
+      <h3>Bewertung ohne Scheingenauigkeit</h3>
+      <p>Die Optionen werden nicht mit einer künstlichen Gewinnerpunktzahl bewertet. Stattdessen verwende ich vier Belegzustände:</p>
+      <table class="evidence-table">
+        <thead>
+          <tr><th>Status</th><th>Bedeutung</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="status-pill status-confirmed">Belegt</span></td><td>Ein Nachweis liegt vor und unterstützt die Aussage.</td></tr>
+          <tr><td><span class="status-pill status-partial">Teilweise belegt</span></td><td>Ein Teil ist nachvollziehbar, aber eine wesentliche Bestätigung fehlt.</td></tr>
+          <tr><td><span class="status-pill status-open">Offen</span></td><td>Die erforderliche Information fehlt noch.</td></tr>
+          <tr><td><span class="status-pill status-na">Nicht zutreffend</span></td><td>Das Kriterium spielt für diese Option fachlich keine Rolle.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="entscheidung" class="content-section">
+      <p class="section-label">Vorläufiges Ergebnis</p>
+      <h2>Klärung erforderlich</h2>
+      <div class="decision-box">
+        <h3>Noch keine endgültige Reaktion auswählen</h3>
+        <p>Die rote Ampel ist rechnerisch bestätigt. Für Option A fehlt die konkrete Unterlagenliste, für Option B die Eignungs- und Kapazitätszusage und für Option C die vollständige Abhängigkeitsanalyse.</p>
+        <p><strong>Eine Gewinneroption wäre auf diesem Datenstand nicht belastbar.</strong></p>
+      </div>
+      <div class="three-grid">
+        <article class="card blue">
+          <h3>Klärung 1</h3>
+          <p>Fehlende Unterlagen konkret benennen und Nachreichtermin bestätigen.</p>
+        </article>
+        <article class="card orange">
+          <h3>Klärung 2</h3>
+          <p>Eignung, Verfügbarkeit und Übergabeaufwand der alternativen Prüfperson prüfen.</p>
+        </article>
+        <article class="card green">
+          <h3>Klärung 3</h3>
+          <p>Auswirkungen einer Neuplanung auf Folgearbeiten und Meilenstein bewerten.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <p class="section-label">Rollen und Verantwortung</p>
+      <h2>Das PMO bereitet vor, die zuständige Rolle entscheidet</h2>
+      <div class="role-grid">
+        <article class="role-card"><h3>Fachrolle</h3><p>Unterlagenlage und fachliche Voraussetzungen bestätigen.</p></article>
+        <article class="role-card"><h3>Ressourcenverantwortung</h3><p>Eignung und Verfügbarkeit einer alternativen Prüfperson bestätigen.</p></article>
+        <article class="role-card green"><h3>Projektleitung</h3><p>Operative Reaktion bewerten und innerhalb des Projektmandats entscheiden.</p></article>
+        <article class="role-card green"><h3>Lenkungskreis / Portfolio</h3><p>Entscheidungen außerhalb des Projektmandats treffen.</p></article>
+        <article class="role-card"><h3>PMO</h3><p>Informationen strukturieren, Lücken sichtbar machen, Optionen vergleichen und die Entscheidung dokumentieren.</p></article>
+      </div>
+    </section>
+
+    <section id="lernerkenntnis" class="content-section">
+      <p class="section-label">Lernerkenntnis</p>
+      <h2>Was ich daraus mitnehme</h2>
+      <p>Ein gutes PMO erkennt nicht nur, dass ein Projekt vom Plan abweicht. Es macht sichtbar, welche Reaktionen geprüft wurden, welche Informationen fehlen, wer entscheiden darf und warum eine Auswahl getroffen oder bewusst vertagt wurde.</p>
+      <p class="key-message"><strong>Merksatz:</strong> Rot erzeugt Aufmerksamkeit. Steuerung beginnt erst mit einer geprüften Ursache und einer begründeten Reaktion.</p>
+    </section>
+
+    <section id="arbeitsprobe" class="content-section">
+      <p class="section-label">Arbeitsprobe</p>
+      <h2>Lernpaper zum Übungsfall</h2>
+      <div class="two-grid">
+        <article class="card blue">
+          <h3>Lernpaper als PDF</h3>
+          <p>Schrittweise Erklärung von Signalprüfung, Ursachenklärung, Reaktionsoptionen, Belegstatus, Rollen und Lerntests.</p>
+          <a href="dokument/PMO_Insight_20_Lernpaper_Rot_ist_noch_keine_Massnahme.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Lernpaper öffnen</a>
+        </article>
+        <article class="card orange">
+          <h3>Interne Excel-Arbeitsmappe</h3>
+          <p>Die vollständige Reaktionsmatrix bleibt meine interne Lern- und Entwicklungsunterlage. Öffentlich zeige ich bewusst nur die nachvollziehbare Logik und das Lernpaper.</p>
+        </article>
+      </div>
+      <div class="actions">
+        <a href="pmo-offene-punkte.html#ampelsystem" class="btn btn-secondary">Zurück zur Ampellogik</a>
+        <a href="index.html#experience" class="btn btn-primary">Zu den Arbeitsproben</a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <p class="section-label">Quellen und Einordnung</p>
+      <h2>Methodische Orientierung</h2>
+      <ul class="check source-list">
+        <li><strong>Association for Project Management:</strong> Project Controls als Messen, Prognostizieren und Bewerten geeigneter Korrekturhandlungen.</li>
+        <li><strong>ASQ:</strong> Five Whys als Hilfsmittel, um hinter sichtbare Symptome zu gelangen.</li>
+        <li><strong>PMI Netherlands Chapter:</strong> Trennung zwischen kurzfristiger Korrektur und ursachenbezogener Korrekturmaßnahme.</li>
+      </ul>
+      <div class="warning-box">
+        <strong>Einordnung:</strong> Das Fünf-Schritte-Raster, die drei Optionen und die Belegzustände sind ein selbst entwickeltes Lernmodell. Sie sind kein offizieller PMO-, APM-, ASQ- oder PMI-Standard.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Jovanka Schauder · PMO Insight #20 · Fiktiver Übungsfall</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
